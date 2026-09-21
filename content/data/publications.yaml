@@ -1,0 +1,12 @@
+# Publications and papers. Newest first. Shared across languages.
+# type: paper | thesis | abstract | poster | report
+#
+# - title: ""
+#   authors: ["Oshiyama, T."]
+#   venue: ""
+#   year: 2025
+#   type: paper
+#   url: ""
+#   pdf: ""          # /papers/<slug>.pdf
+#   abstract: ""
+publications: []

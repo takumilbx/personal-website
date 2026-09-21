@@ -1,0 +1,16 @@
+# Selected videos. Newest first. Shared across languages.
+# platform: tiktok | youtube | instagram
+# format: explainer | showcase | recap | study-abroad | media-literacy | promo
+# views is optional. Fill it only with a real figure and set viewsAsOf.
+#
+# - title: ""
+#   platform: tiktok
+#   url: ""
+#   format: explainer
+#   publishedAt: YYYY-MM-DD
+#   views:
+#   viewsAsOf:
+#   thumbnail: ""    # /images/videos/<id>.jpg
+#   topics: []
+#   featured: false
+videos: []

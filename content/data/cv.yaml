@@ -1,0 +1,47 @@
+# Source for both the web CV (/cv) and the PDF.
+name: Takumi Oshiyama
+headline: ""             # what you work on, one line
+email: ""
+location: ""
+links:
+  website: https://takumyi.com
+  linkedin: ""
+  tiktok: ""
+
+education: []
+# - institution: ""
+#   degree: ""
+#   field: ""
+#   start: YYYY-MM
+#   end: YYYY-MM
+#   location: ""
+#   notes: ""
+
+experience: []
+# - org: ""
+#   role: ""
+#   start: YYYY-MM
+#   end: YYYY-MM       # or present
+#   location: ""
+#   bullets: []        # verb → action → number → outcome
+
+research: []
+# - title: ""
+#   institution: ""
+#   start: YYYY-MM
+#   end: YYYY-MM
+#   summary: ""
+
+# Publications and talks are read from publications.yaml and talks.yaml.
+
+skills: []
+# - group: ""          # e.g. Research methods, Tools, Languages
+#   items: []
+
+languages: []
+# - { language: Thai, level: native }
+# - { language: Japanese, level: "" }
+# - { language: English, level: "" }
+
+awards: []
+# - { title: "", by: "", year: }

@@ -1,7 +1,8 @@
 # Personal website: structure plan
 
-Status: draft v1, 2026-09-21
+Status: draft v2, 2026-09-21 (v1 reviewed by the owner; decisions recorded in section 12)
 Owner: Takumi Oshiyama
+Domain: takumyi.com
 Purpose of this document: agree on what the site is, who it serves, which pages exist, and how content is organised, before any code is written.
 
 ---
@@ -10,7 +11,7 @@ Purpose of this document: agree on what the site is, who it serves, which pages 
 
 The site has one job: let a stranger understand who Takumi is in thirty seconds, then go deeper in whichever direction they came for.
 
-Four audiences arrive with different questions:
+Four audiences arrive with different questions. They are weighted equally: no audience gets a bigger door, and the visual design stays neutral rather than leaning academic or leaning creator.
 
 | Audience | Arrives from | Wants to know | Should land on |
 |---|---|---|---|
@@ -19,7 +20,7 @@ Four audiences arrive with different questions:
 | Brands, event organisers, media | TikTok / Instagram profile | Channel identity, audience, past collaborations, how to book | `/creator` |
 | Followers | TikTok / Instagram bio link | Quick links, latest content, who this person is | `/links`, `/` |
 
-Design consequence: the home page cannot be optimised for one audience. It is a switchboard with three doors (Work and Research, Creator, Writing) under a short identity statement.
+Design consequence: the home page is a switchboard. Each section is its own sub-page; the home page links to them and never tries to be all of them.
 
 ## 2. Positioning
 
@@ -27,19 +28,18 @@ One-line identity, working draft (EN):
 
 > EdTech researcher working across Thailand and Japan. Creator behind @takumyi.
 
-Throughline on every page: Thailand ↔ Japan. Case studies compare Thailand's Digital Classroom with Japan's GIGA School; creator content explains Japan to a Thai audience; the study-abroad journey joins the two halves. The site should make this visible in its structure (country tags, a timeline), not only in copy.
+Throughline on every page: Thailand ↔ Japan. Case studies compare Thailand's Digital Classroom with Japan's GIGA School; creator content explains Japan to a Thai audience; the study-abroad journey joins the two halves. The site makes this visible in its structure (country tags, a timeline), not only in copy.
 
 Tone follows the existing voice charter: first person, sincere, real numbers instead of adjectives, no "passionate about" filler.
 
 ## 3. Languages
 
-Assumption for this plan: English and Thai at launch, Japanese later.
+Decision: English only at launch. Thai and Japanese exist as placeholder files in the content tree from day one so they can be developed in parallel, but nothing in those languages is built until a file is marked `published`.
 
-- EN is the default for `/work`, `/research`, `/cv`, `/contact` (academic and professional readers).
-- TH is the default for `/creator` and `/links` (the channel's audience is Thai).
-- JA: at minimum `/about` and `/research` in phase 3, because Japanese grad-school and employer readers will look for it.
-
-Implementation: route-prefixed locales (`/en/...`, `/th/...`, `/ja/...`) with `hreflang` tags. Not every page needs every language. The language switcher only shows languages that exist for the current page.
+- Routes are locale-prefixed from the start (`/en/...`, `/th/...`, `/ja/...`) so adding a language later changes no URLs. The bare root redirects to `/en`.
+- `hreflang` tags are emitted only for languages that actually exist for a page.
+- The language switcher shows only the languages available for the current page.
+- Translation order after launch: Thai for `/creator` and `/links` first (the channel's audience is Thai), then Japanese for `/about` and `/research` (grad-school and employer readers in Japan).
 
 ## 4. Sitemap
 
@@ -59,16 +59,20 @@ Implementation: route-prefixed locales (`/en/...`, `/th/...`, `/ja/...`) with `h
 └── /now                   Optional: what he is doing this season
 ```
 
+All paths above sit under a locale prefix (`/en/about`). Every section is a separate page.
+
 Primary navigation (desktop): Work · Research · Creator · Writing · About · Contact, plus a language switch.
 Mobile: the same items in a sheet menu.
 Footer: socials, email, `/cv`, `/links`, language switch.
 
 ## 5. Page specifications
 
+The Markdown skeleton for every page below already exists in `content/pages/en/` with the section headings in place.
+
 ### Home `/`
 
 1. Hero: name, one-line identity, portrait, two buttons ("See my work", "Watch @takumyi").
-2. Three doors: Work and Research / Creator / Writing, one sentence each.
+2. Three doors: Work and Research / Creator / Writing, one sentence each, equal size.
 3. Featured work: three case-study cards, each with organisation, role, and one headline number.
 4. Latest from @takumyi: three videos (thumbnail plus link, no autoplay).
 5. Latest writing: three posts. The section hides itself when there are no posts.
@@ -96,7 +100,7 @@ Every case study uses the same fixed structure so the collection reads consisten
 6. What I would do differently
 7. Related: other case studies, publications, or videos.
 
-Candidate case studies, to confirm with the owner (drawn from existing writing samples):
+Candidate case studies, awaiting the owner's approval before any is written (drawn from existing writing samples):
 
 - Broadband School case study
 - Digital Classroom (Thailand) versus GIGA School (Japan)
@@ -111,14 +115,14 @@ Candidate case studies, to confirm with the owner (drawn from existing writing s
 2. Current research plan: problem → why it matters in Thailand and Japan → gap → questions → method. Short version on the page, full PDF linked.
 3. Publications and papers: list, newest first, with venue and PDF or DOI.
 4. Talks and presentations: list with event, date, slides link.
-5. Reading and literature notes: link to `/writing` filtered by tag.
+5. Reading and literature notes: link to `/writing` filtered by type.
 
 ### Creator `/creator`
 
-1. Channel identity in one paragraph (Thai first, English below or toggled).
+1. Channel identity in one paragraph.
 2. What the channel covers: format tiles (explainers, artist showcases, concert recaps, study-abroad, media literacy).
-3. Selected videos: six to nine, grouped by format. Show view counts only when they are real and current.
-4. Audience and reach: followers, average views, audience split by country and age. Real figures only. Leave a metric blank rather than estimate it.
+3. Selected videos: six to nine, grouped by format. View counts only when real, each with its date.
+4. Audience and reach: followers, 28-day views, audience split by country and age, from a TikTok analytics export. The export date is shown next to the figures.
 5. Brand and event collaborations: logo row plus one line each on what was delivered.
 6. Media kit: PDF download and a "Work with me" button that opens `/contact` with the reason preset to "brand".
 
@@ -130,7 +134,7 @@ Launch rule: the section appears in navigation only once three posts exist.
 
 ### CV `/cv`
 
-Rendered from structured data, and the PDF is generated from the same data so the two never diverge. Sections: Education, Experience, Research, Publications, Talks, Skills and languages, Awards.
+Rendered from `content/data/cv.yaml`, and the PDF is generated from the same file so the two never diverge. Sections: Education, Experience, Research, Publications, Talks, Skills and languages, Awards.
 
 ### Contact `/contact`
 
@@ -142,113 +146,145 @@ Bare mobile page: portrait, name, six to eight buttons (latest video, `/creator`
 
 ## 6. Content model
 
-Content lives as Markdown or MDX files with typed frontmatter, one folder per collection. Adding a case study means adding a file. The CV page, the research lists, and the media kit all render from the same data.
+Decision: content is Markdown and YAML in this GitHub repository. No CMS. The skeleton is in `content/` and its `README.md` explains the rules for editing.
 
-| Collection | Key fields |
-|---|---|
-| `work` | title, slug, type, org, role, period {start, end}, location, summary, headlineNumber, tags, featured, cover, lang, body |
-| `publications` | title, authors, venue, year, type (paper / thesis / abstract / poster), url, pdf, abstract |
-| `talks` | title, event, date, place, slides, video |
-| `videos` | platform, url, title, format, publishedAt, views (optional), thumbnail, topics, featured |
-| `collabs` | brand, campaign, date, deliverables, result, url, logo |
-| `writing` | title, slug, date, lang, type, tags, summary, cover, body |
-| `timeline` | date, title, description, location (TH / JP / other), link |
-| `cv` | education[], experience[], skills[], languages[], awards[] |
-| UI strings | `en.json`, `th.json`, `ja.json` |
+Two rules govern the tree:
 
-Translation: one file per language sharing the same slug (`work/en/broadband-school.md`, `work/th/broadband-school.md`). A missing translation falls back to English with a small notice.
+1. Prose is per language; data is shared. Pages, case studies, and posts have `en/`, `th/`, `ja/` copies. Lists (publications, talks, videos, collaborations, timeline, creator statistics, CV) are single YAML files used by every language.
+2. English is the source. Every prose file carries `status: placeholder | draft | published`, and only `published` files build. A missing translation falls back to English with a notice.
+
+| Collection | Where | Key fields |
+|---|---|---|
+| pages | `content/pages/{en,th,ja}/*.md` | title, slug, lang, description, status, nav, order; body is the page's sections |
+| work | `content/work/{en,th,ja}/*.md` | title, slug, type, org, role, period, location, summary, headlineNumber, tags, featured, cover, links, related |
+| writing | `content/writing/{en,th,ja}/*.md` | title, slug, date, type, tags, summary, cover |
+| publications | `content/data/publications.yaml` | title, authors, venue, year, type, url, pdf, abstract |
+| talks | `content/data/talks.yaml` | title, event, date, place, slides, video |
+| videos | `content/data/videos.yaml` | title, platform, url, format, publishedAt, views, viewsAsOf, thumbnail, topics, featured |
+| collabs | `content/data/collabs.yaml` | brand, campaign, date, deliverables, result, url, logo |
+| creator stats | `content/data/creator-stats.yaml` | asOf, per-platform followers, 28-day views, audience split |
+| timeline | `content/data/timeline.yaml` | date, title, description, location, link |
+| cv | `content/data/cv.yaml` | education, experience, research, skills, languages, awards |
+| UI strings | `content/i18n/{en,th,ja}.json` | navigation labels, buttons, notices |
+
+Templates for a page, a case study, and a post are in `content/_templates/`.
 
 ## 7. Recommended stack
 
-Recommendation: Astro with MDX content collections and Tailwind CSS, deployed on Vercel or Cloudflare Pages.
+Recommendation: Astro with MDX content collections and Tailwind CSS, static output.
 
 Why Astro rather than Next.js for this site:
 
-- The site is content, not an application. Astro ships almost no JavaScript by default, which matters for Thai mobile readers arriving from TikTok.
-- Content collections give typed frontmatter out of the box, which is exactly the content model above.
+- The site is content, not an application. Astro ships almost no JavaScript by default, which matters for mobile readers arriving from TikTok.
+- Content collections read the `content/` tree above directly and give typed frontmatter out of the box.
 - Built-in i18n routing covers `/en`, `/th`, `/ja`.
-- Adding a case study or post is adding a Markdown file. There is no CMS to maintain.
+- Adding a case study or post is adding a Markdown file, which matches the editing decision.
 
-When to choose differently:
+When to choose differently: if interactive features are expected later (dashboards, member areas), Next.js is the safer base. If editing from a phone becomes important, Keystatic can be added on top of the same Markdown files without changing the stack.
 
-- To edit content from a phone or from Notion, add a headless layer later. Keystatic edits the same Markdown files through a UI; a Notion sync is also possible.
-- If interactive features are expected (dashboards, member areas), Next.js is the safer base.
+Supporting pieces: Plausible or Umami for analytics (cookieless, no banner), Resend or Formspree for the contact form, per-page Open Graph images, `sitemap.xml`, and RSS for `/writing`.
 
-Supporting pieces: Plausible or Umami for analytics (no cookie banner needed), Resend or Formspree for the contact form, per-page Open Graph images, `sitemap.xml`, and RSS for `/writing`.
+## 8. Hosting and domain
 
-## 8. Repository layout
+Domain: takumyi.com. As of 2026-09-21 the name has no DNS records. Registration status could not be verified from the build environment because WHOIS and RDAP lookups are blocked there, so the owner should confirm at a registrar before anything else.
+
+Recommendation: Cloudflare Pages for hosting, with DNS at Cloudflare and the domain registered or transferred to Cloudflare Registrar so all three sit in one account.
+
+Why Cloudflare Pages:
+
+- Free tier with unlimited bandwidth and no restriction on commercial use. A creator page that advertises brand work counts as commercial, which the free tiers of some competitors forbid.
+- Global edge network with locations in Bangkok and Tokyo, so both audiences get fast loads.
+- Builds straight from this GitHub repository on every push, with a preview URL per branch.
+- Custom domain and HTTPS included.
+
+Alternatives, in order of fit:
+
+| Host | Fit | Trade-off |
+|---|---|---|
+| Vercel | Best developer experience for Astro and Next.js | Free Hobby plan is non-commercial only; the paid plan is per seat per month |
+| Netlify | Similar to Cloudflare Pages, mature forms feature | Free tier caps bandwidth per month |
+| GitHub Pages | Simplest, free, already where the code is | Static only: the root locale redirect must be client-side, no server redirects, soft bandwidth cap; fine for a first deploy, weaker long term |
+
+A reasonable path: deploy the first build to Cloudflare Pages on its free `*.pages.dev` subdomain, then attach takumyi.com once the registration is sorted.
+
+## 9. Repository layout
 
 ```
 personal-website/
 ├── docs/
 │   └── site-structure.md        this plan
-├── public/
-│   ├── cv/takumi-oshiyama-cv.pdf
-│   ├── media-kit/
-│   ├── images/
-│   └── robots.txt
-├── src/
-│   ├── content/
-│   │   ├── config.ts            collection schemas (zod)
-│   │   ├── work/{en,th}/
-│   │   ├── writing/{en,th}/
-│   │   ├── research/            publications.yaml, talks.yaml
-│   │   ├── creator/             videos.yaml, collabs.yaml
-│   │   ├── about/               timeline.yaml
-│   │   └── cv/                  cv.yaml
-│   ├── i18n/                    en.json, th.json, ja.json
-│   ├── components/
-│   ├── layouts/
-│   ├── pages/
-│   │   ├── index.astro          redirects to the default locale
-│   │   └── [lang]/...
-│   └── styles/
-├── astro.config.mjs
-├── package.json
+├── content/                     all site content; see content/README.md
+│   ├── _templates/
+│   ├── pages/{en,th,ja}/
+│   ├── work/{en,th,ja}/
+│   ├── writing/{en,th,ja}/
+│   ├── data/
+│   └── i18n/
+├── public/                      (after scaffolding) CV PDF, media kit, images, robots.txt
+├── src/                         (after scaffolding) Astro components, layouts, pages, styles
+├── astro.config.mjs             (after scaffolding)
+├── package.json                 (after scaffolding)
 └── README.md
 ```
 
-## 9. Cross-cutting requirements
+## 10. Cross-cutting requirements
 
 - Performance: Lighthouse 90+ on mobile. Images through Astro's image pipeline. Videos as thumbnails that link out; no autoplaying embeds on the home page.
 - Accessibility: semantic headings, alt text on every image, keyboard-navigable menu, WCAG AA colour contrast.
 - SEO: per-page title and description, Open Graph image, `hreflang`, Person structured data on `/about`, `sitemap.xml`, RSS for `/writing`.
 - Privacy: cookieless analytics only. The contact form forwards messages and does not store them on the site.
-- Typography: Latin, Thai, and Japanese faces that harmonise. Candidates: Inter + Noto Sans Thai + Noto Sans JP, or the IBM Plex family, which covers all three scripts.
+- Typography: Latin, Thai, and Japanese faces that harmonise, chosen now even though only English ships first. Candidates: Inter + Noto Sans Thai + Noto Sans JP, or the IBM Plex family, which covers all three scripts.
+- Design: neutral. One accent colour, generous white space, no audience-specific styling. A short design pass (typography, colour tokens, spacing) happens before scaffolding the layout.
 
-## 10. Build order
+## 11. Build order
 
-Phase 1, launchable minimum:
+Phase 0, now:
 
-1. Scaffold the Astro project with i18n (en, th), base layout, navigation, footer, and theme tokens.
-2. Home, About, Contact, `/links`.
-3. Work index plus three case studies (English first, Thai optional).
-4. Creator page with selected videos and collaborations.
-5. CV page plus PDF.
-6. Deploy, custom domain, analytics.
+1. Content skeleton in `content/` (done).
+2. Owner approves the case-study list and confirms the domain registration.
+3. Owner exports TikTok analytics into `content/data/creator-stats.yaml`.
+
+Phase 1, launchable minimum, English only:
+
+4. Scaffold the Astro project reading `content/`, with i18n configured for en, th, ja and only en enabled.
+5. Base layout, navigation, footer, theme tokens.
+6. Home, About, Contact, `/links`.
+7. Work index plus the approved case studies.
+8. Creator page with selected videos, statistics, and collaborations.
+9. CV page plus PDF.
+10. Deploy to Cloudflare Pages, attach takumyi.com, add analytics.
 
 Phase 2:
 
-7. Research page with publications and talks data.
-8. Writing section with the first three posts and RSS.
-9. `/now` page.
+11. Research page with publications and talks data.
+12. Writing section with the first three posts and RSS.
+13. Thai translations of `/creator` and `/links`.
+14. `/now` page.
 
 Phase 3:
 
-10. Japanese locale for About and Research.
-11. Media-kit PDF generated from the same data as `/creator`.
-12. Optional CMS layer (Keystatic or Notion sync).
+15. Japanese translations of `/about` and `/research`.
+16. Media-kit PDF generated from the same data as `/creator`.
+17. Remaining Thai and Japanese pages as they are written.
 
-## 11. Open questions
+## 12. Decision log
 
-These change the plan materially, so they should be answered before scaffolding:
+| Date | Decision | Source |
+|---|---|---|
+| 2026-09-21 | English only at launch; Thai and Japanese placeholders in the tree from day one | Owner |
+| 2026-09-21 | All four audiences weighted equally; neutral design; each section is its own sub-page | Owner |
+| 2026-09-21 | Content is Markdown and YAML in GitHub, no CMS; skeleton built first | Owner |
+| 2026-09-21 | Case studies are listed for approval before any is written | Owner |
+| 2026-09-21 | Creator statistics come from a real TikTok analytics export | Owner |
+| 2026-09-21 | Domain is takumyi.com | Owner |
+| 2026-09-21 | Astro static site, Cloudflare Pages recommended | Proposal, not yet confirmed |
 
-1. Languages at launch: EN and TH as assumed? Should JA move into phase 1 because of grad-school applications?
-2. Priority audience for the next twelve months: admissions committees, employers, or brands? This decides what the hero says and which door comes first.
-3. Domain name, and whether it is already registered.
-4. Editing preference: adding Markdown files in GitHub, or a CMS UI from day one?
-5. Content inventory: which case studies are cleared to publish (some employer work may be confidential), and whether the source PDFs for the research plan and publications are available.
-6. Creator statistics: can current TikTok analytics (followers, 28-day views, audience split) be exported so the creator page uses real numbers?
-7. Writing section at launch, or hidden until three posts exist?
-8. Design references: sites you like, and whether the site should match the @takumyi channel branding (colours, logo) or feel more academic.
-9. Hosting preference: Vercel, Cloudflare Pages, or GitHub Pages.
+## 13. Open items
+
+1. Case-study approval: which of the six candidates in section 5 may be published, and are there others? Some employer work may be confidential.
+2. Domain: confirm whether takumyi.com is already registered to you. If not, register it before the first deploy.
+3. Hosting: confirm Cloudflare Pages, or name a preference from the table in section 8.
+4. Creator statistics: export from TikTok analytics and fill `content/data/creator-stats.yaml`.
+5. Social and profile URLs (TikTok, Instagram, YouTube, X, LinkedIn) for the contact page, footer, and links page.
+6. Design references: any sites whose look you like, and one accent colour, or leave it to the design pass.
+7. Source PDFs for the research plan and any publications, so the research page can link to them.

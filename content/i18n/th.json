@@ -1,0 +1,27 @@
+{
+  "_status": "placeholder",
+  "nav": {
+    "work": "Work",
+    "research": "Research",
+    "creator": "Creator",
+    "writing": "Writing",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "home": {
+    "seeWork": "See my work",
+    "watch": "Watch @takumyi"
+  },
+  "footer": {
+    "cv": "CV",
+    "links": "Links",
+    "email": "Email"
+  },
+  "common": {
+    "readMore": "Read more",
+    "download": "Download",
+    "updated": "Updated",
+    "asOf": "as of",
+    "translationFallback": "This page is not available in your language yet. Showing the English version."
+  }
+}

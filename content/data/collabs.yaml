@@ -1,0 +1,10 @@
+# Brand and event collaborations. Newest first. Shared across languages.
+#
+# - brand: ""
+#   campaign: ""
+#   date: YYYY-MM
+#   deliverables: ""   # e.g. "2 TikTok videos, 1 event recap"
+#   result: ""         # a real number if there is one
+#   url: ""
+#   logo: ""           # /images/collabs/<brand>.svg
+collabs: []

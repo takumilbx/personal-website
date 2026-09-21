@@ -1,0 +1,22 @@
+# Audience and reach, from a platform analytics export.
+# Leave a field empty rather than estimate. The site shows asOf next to every figure.
+asOf: ""                 # YYYY-MM-DD of the export
+platforms:
+  tiktok:
+    handle: "@takumyi"
+    url: ""
+    followers:
+    views28d:
+    likes:
+    audience:
+      countries: []      # - { country: TH, percent: }
+      gender: {}         # { female: , male: , other: }
+      age: []            # - { range: "18-24", percent: }
+  instagram:
+    handle: ""
+    url: ""
+    followers:
+  youtube:
+    handle: ""
+    url: ""
+    subscribers:
