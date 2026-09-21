@@ -5,4 +5,130 @@
 #   description: ""    # one line
 #   location: TH
 #   link: ""           # a case study slug or URL
-timeline: []
+timeline:
+  # Placeholder: neither the CV nor the résumé gives the channel start date. Fill the date and move it into order.
+  - date: "TODO"
+    title: "@takumyi channel begins"
+    description: "Start date not given in the CV or résumé; confirm and move this entry into date order."
+    location: TH
+    link: ""
+  - date: "2025-12"
+    title: "Seaizen: Urban Youth for the Blue Economy"
+    description: "Designs a 75-minute policy-making session for a 50-student forum with TUSAA under YSEALI YOUnified Beyond."
+    location: TH
+    link: seaizen-policy-session
+  - date: "2025-10"
+    title: "Begins MA at the University of Tokyo"
+    description: "Interdisciplinary Information Studies (ITASIA); thesis research at YLab under Prof. Yuhei Yamauchi."
+    location: JP
+    link: ""
+  - date: "2025-05"
+    title: "Policy & Communications Intern, Bangkok Metropolitan Administration"
+    description: "Analyses 10,849 public submissions on the BMA Act update and joins the Deputy Governor on 50+ field visits."
+    location: TH
+    link: bma-act-public-feedback
+  - date: "2025-03"
+    title: "Impact Leaders Program fellow, SOL × Khon Thai Foundation"
+    description: "Cohort 1: two months of systems thinking, design thinking and theory of change, then a four-month BMA practicum."
+    location: TH
+    link: ""
+  - date: "2025"
+    title: "Communications Volunteer, Ashoka Thailand"
+    description: "Accompanies the country representative on visits to Ashoka Fellows and writes them up as press releases."
+    location: TH
+    link: ""
+  - date: "2024-12"
+    title: "Joins Edsy as Business Development Executive, Japan & International Markets"
+    description: "Validates Japan market entry, then extends the model to Korea, Turkey and Saudi Arabia."
+    location: TH
+    link: edsy-japan-market-entry
+  - date: "2024-12"
+    title: "UN ESCAP policy paper published"
+    description: "Contributed the Japan, Korea and China case studies on older persons' digital literacy and inclusion."
+    location: INTL
+    link: escap-older-persons-digital
+  - date: "2024-09"
+    title: "Hin Lad Nai Outreach Camp, Chiang Rai"
+    description: "Leads activities and content for a three-day youth camp after flooding and landslides in the area."
+    location: TH
+    link: hin-lad-nai
+  - date: "2024-05"
+    title: "Graduates from Thammasat University with First Class Honours"
+    description: "BA in Global Studies and Social Entrepreneurship, GPA 3.72 / 4.00."
+    location: TH
+    link: ""
+  - date: "2024"
+    title: "Senior thesis on Bangkok's Digital Classroom policy and Japan's GIGA School Program"
+    description: "Compares two one-device-per-student initiatives with field data from a BMA school; graded A across both terms."
+    location: TH
+    link: digital-classroom-vs-giga-school
+  - date: "2023-05"
+    title: "Data Visualization Intern, Bangkok Metropolitan Administration"
+    description: "Consolidates 47 education policies into 8 focus areas and builds the EEF scholarship database of 700+ scholarships."
+    location: TH
+    link: bangkok-education-policy-map
+  - date: "2023-04"
+    title: "Joins the TUSAA PR & Communications Committee"
+    description: "Establishes the association's brand guidelines and corporate identity and sets up its Instagram channel."
+    location: TH
+    link: ""
+  - date: "2022-07"
+    title: "Begins freelance Japanese–Thai–English interpreting"
+    description: "Simultaneous interpreting at international summits and field interpreting for visiting Japanese student groups."
+    location: TH
+    link: ""
+  - date: "2022-06"
+    title: "Project Development Intern, Saturday School Foundation"
+    description: "Manages an e-sports classroom pilot across 8 Bangkok schools with Sea (Garena) Thailand, reaching 245 students."
+    location: TH
+    link: esports-classroom-pilot
+  - date: "2020-12"
+    title: "Begins subtitle work for bilibili"
+    description: "Translates and proofreads Japanese-to-Thai subtitles across 70+ series, including fast-turnaround simulcast episodes."
+    location: TH
+    link: ""
+  - date: "2020-08"
+    title: "Begins BA at Thammasat University, School of Global Studies"
+    description: "Global Studies and Social Entrepreneurship."
+    location: TH
+    link: ""
+  - date: "2020"
+    title: "Photo series selected for Bangkok Design Week 2020"
+    description: "\"Portrait of Charoenkrung\" is selected for exhibition."
+    location: TH
+    link: ""
+  - date: "2019-10"
+    title: "MIDL Youth Camp, Saturday School Foundation"
+    description: "Designs and facilitates a three-day media, information and digital literacy filmmaking intensive for 30 young people."
+    location: TH
+    link: ""
+  - date: "2019-08"
+    title: "Education policy fieldwork with TDRI"
+    description: "Shadows a senior researcher evaluating an ICT-in-education policy in a rural school."
+    location: TH
+    link: ""
+  - date: "2019"
+    title: "Delegate, Southeast Asia Youth Leadership Program"
+    description: "One of 60 ASEAN delegates; completes the leadership program at Northern Illinois University."
+    location: INTL
+    link: ""
+  - date: "2018-12"
+    title: "Begins volunteer teaching Japanese with Saturday School Foundation"
+    description: "Teaches Japanese in the foundation's Main Season programme at Wat Ang Keaw School, Bangkok."
+    location: TH
+    link: ""
+  - date: "2018"
+    title: "2nd place, TV Burabha 10th KOB Junior Documentary Contest"
+    description: ""
+    location: TH
+    link: ""
+  - date: "2018"
+    title: "Passes JLPT N1"
+    description: ""
+    location: TH
+    link: ""
+  - date: "2016-05"
+    title: "Begins freelance photography and filmmaking"
+    description: "Event recap films, event coverage and short-form content for organisations addressing social issues."
+    location: TH
+    link: ""

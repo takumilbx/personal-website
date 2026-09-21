@@ -1,14 +1,8 @@
 # Source for both the web CV (/cv) and the PDF.
-name: Takumi Oshiyama
-headline: ""             # what you work on, one line
-email: ""
-location: ""
-links:
-  website: https://takumyi.com
-  linkedin: ""
-  tiktok: ""
-
-education: []
+#
+# Schema
+#
+# education:
 # - institution: ""
 #   degree: ""
 #   field: ""
@@ -16,32 +10,306 @@ education: []
 #   end: YYYY-MM
 #   location: ""
 #   notes: ""
-
-experience: []
+#   coursework: []
+#
+# experience / teaching / volunteer:
 # - org: ""
 #   role: ""
 #   start: YYYY-MM
 #   end: YYYY-MM       # or present
 #   location: ""
 #   bullets: []        # verb → action → number → outcome
-
-research: []
+#   notes: ""          # where the CV and résumé differ
+#
+# research:
 # - title: ""
 #   institution: ""
 #   start: YYYY-MM
 #   end: YYYY-MM
 #   summary: ""
-
+#
+# projects:
+# - title: ""
+#   role: ""
+#   org: ""
+#   start: YYYY-MM
+#   end: YYYY-MM
+#   location: ""
+#   bullets: []
+#
 # Publications and talks are read from publications.yaml and talks.yaml.
-
-skills: []
+#
+# skills:
 # - group: ""          # e.g. Research methods, Tools, Languages
 #   items: []
-
-languages: []
+#
+# languages:
 # - { language: Thai, level: native }
 # - { language: Japanese, level: "" }
 # - { language: English, level: "" }
-
-awards: []
+#
+# awards:
 # - { title: "", by: "", year: }
+
+name: Takumi Oshiyama
+headline: "Education researcher and business developer, working between government policy and EdTech business."
+email: takumilbx@gmail.com
+location: "Tokyo, Japan / Bangkok, Thailand"
+links:
+  website: ""            # fill once the domain is registered
+  linkedin: https://linkedin.com/in/takumioshiyama
+  tiktok: https://www.tiktok.com/@takumyi
+  instagram: https://www.instagram.com/takumyi
+
+education:
+  - institution: The University of Tokyo
+    degree: Master of Arts and Sciences
+    field: Interdisciplinary Information Studies (ITASIA)
+    start: "2025-10"
+    end: "2027-09"
+    location: "Tokyo, Japan"
+    notes: "GPA 4.00 / 4.00. Expected completion Sep 2027. Graduate School of Interdisciplinary Information Studies (GSII); research conducted at YLab under Prof. Yuhei Yamauchi."
+    coursework:
+      - Learning Environment Design
+      - Research Issues in International Educational Development
+      - Behavioral Science for Public Policy
+      - "Education in the Era of Globalization: Asian Contexts"
+  - institution: Thammasat University, School of Global Studies
+    degree: BA
+    field: Global Studies and Social Entrepreneurship
+    start: "2020-08"
+    end: "2024-05"
+    location: "Bangkok, Thailand"
+    notes: "GPA 3.72 / 4.00, First Class Honours."
+    coursework:
+      - Social Innovation Foundations and Projects (four-term sequence)
+      - Human-Centered Design for Social Innovation
+      - Digital Economy and Social Innovation
+      - Social Inquiry and Assessment
+      - Sustainable Transformations
+  - institution: School of Leadership (SOL) × Khon Thai Foundation
+    degree: Impact Leaders Program
+    field: Cohort 1 Fellow
+    start: "2025-03"
+    end: "2025-08"
+    location: "Bangkok, Thailand"
+    notes: "Six-month fellowship: a two-month foundation phase in systems thinking, design thinking and theory of change, then a four-month practicum with the Bangkok Metropolitan Administration."
+
+experience:
+  - org: Bangkok Metropolitan Administration
+    role: Policy & Communications Intern, Office of the Deputy Governor
+    start: "2025-05"
+    end: "2025-08"
+    location: "Bangkok, Thailand"
+    bullets:
+      - "Analysed 10,849 public submissions on the proposed update to the Bangkok Metropolitan Administration Act (1985) using NLP and large language models, surfacing where residents' priorities diverged from the policy agenda, and turned the analysis into press releases usable by policymakers and legible to the public."
+      - "Accompanied the Deputy Governor on 50+ field visits including schools, child development centres, parks and sports fields, documenting each visit's insights and publishing synthesised summaries and reflections on his public channels."
+      - "Calculated teacher–student ratios across BMA public schools, mapped them in ArcGIS, and built an executive-facing Power BI dashboard showing where staffing ran thinnest."
+      - "Contributed to a public platform for residents to submit policy proposals to the city council."
+      - "Mentored the BKK Ranger Youth Council in developing youth-led policy proposals, and visited schools independently to collect teacher and student feedback on the city's Digital Classroom programme."
+    notes: "The 10,849 figure, ArcGIS and Power BI are from the résumé; the CV says 'public feedback' and 'contributed to an executive-facing school dashboard built from BMA public-school data'. The résumé places the role in the Secretariat team, Education, Social Development, and Cultural Policy Team."
+  - org: Edsy
+    role: Business Development Executive, Japan & International Markets
+    start: "2024-12"
+    end: "2025-08"
+    location: "Bangkok, Thailand"
+    bullets:
+      - "Validated Japan market entry through regulatory and competitive analysis, built a targeted pilot-school list and recruited local teams, then extended the model into three further markets, Korea, Turkey and Saudi Arabia, establishing strategic partnerships across all four."
+      - "Supported partnership discussions with Gakken, one of Japan's largest education companies, and its Turkey operation, working in Japanese."
+      - "Built AI-generated demo English lessons for every target market, localising each against the national curriculum using the respective ministry of education's textbooks, and tailored demos to the specific school, board of education or corporate client being pitched."
+      - "Worked with the UX/UI and engineering teams to localise the Edsy application into Japanese, Korean and Turkish, bringing market and language context into their decisions."
+    notes: "EdTech startup, AI-assisted English learning. The Gakken bullet is from the résumé only."
+  - org: Bangkok Metropolitan Administration
+    role: Data Visualization Intern, Office of the Deputy Governor
+    start: "2023-05"
+    end: "2023-09"
+    location: "Bangkok, Thailand"
+    bullets:
+      - "Consolidated Bangkok's 47 municipal education policies into 8 focus areas, mapped the public and private stakeholders behind each, and built the pitch deck and data visualisations the Deputy Governor presented to 437 school principals and the UNESCO Global Network of Learning Cities selection committee."
+      - "Built a national scholarship database for the Equitable Education Fund covering 564 organisations and 700+ scholarships, surfacing eligibility gaps including a minimum-GPA requirement that excluded many underprivileged students."
+    notes: "The pitch deck and data visualisations are from the résumé; the CV says the Deputy Governor presented 'the resulting summary'. The résumé places the role in the Education Policy Team."
+  - org: Saturday School Foundation
+    role: Project Development Intern
+    start: "2022-06"
+    end: "2022-08"
+    location: "Bangkok, Thailand"
+    bullets:
+      - "Managed an e-sports classroom pilot across 8 Bangkok schools with Sea (Garena) Thailand, designing a curriculum around 5 industry careers delivered through a student-run tournament that reached 245 students and 25 teachers."
+      - "Recruited the industry speakers, coordinated with Sea (Garena) Thailand as delivery partner, and documented every session in the pilot's final report."
+    notes: "Educational non-profit organisation. The second bullet is from the résumé, which also describes the pilot as a 3-month programme."
+  - org: bilibili
+    role: Proofreader & Translator
+    start: "2020-12"
+    end: "2024-04"
+    location: "Bangkok, Thailand"
+    bullets:
+      - "Translated and proofread Japanese-to-Thai subtitles across 70+ series, including fast-turnaround simulcast episodes checked and published within hours of the Japanese broadcast."
+  - org: Freelance
+    role: Japanese–Thai–English Translator & Interpreter
+    start: "2022-07"
+    end: present
+    location: "Thailand"
+    bullets:
+      - "Interpreted simultaneously across Japanese, Thai and English for speakers at international summits on education, technology, sustainability and renewable energy, entertainment, and Thai ethnic studies."
+      - "Provided field interpreting and research support for visiting Japanese high school and university groups in Thailand, carrying four successive annual cohorts of roughly 20 students each through site visits and fieldwork, alongside written translation across education, technical and cultural material."
+  - org: Freelance
+    role: Photographer & Filmmaker
+    start: "2016-05"
+    end: present
+    location: "Thailand"
+    bullets:
+      - "Produced event recap films, event coverage and short-form content for organisations addressing social issues; clients include UNDP Thailand, UNICEF Thailand, the U.S. Embassy Bangkok, the U.S. Mission to ASEAN, IBM, Citi and Sea Thailand, and universities including Chulalongkorn, Thammasat and Chiang Mai."
+      - "Produced the online video modules for the \"Certificate in ESG Management,\" a blended-learning course by the Sasin School of Management and the Stock Exchange of Thailand, and supported its learning-management-system design."
+
+teaching:
+  - org: School of Leadership (SOL) × Khon Thai Foundation
+    role: Teaching Assistant, Theory of Change
+    start: "2025"
+    end: "2025"
+    location: "Bangkok, Thailand"
+    bullets:
+      - "Supported fellow participants in building the impact logic behind their practicum projects."
+    notes: "Impact Leaders Program, Cohort 1."
+  - org: Saturday School Foundation
+    role: Volunteer Teacher, Japanese Language
+    start: "2018-12"
+    end: "2022-09"
+    location: "Wat Ang Keaw School, Bangkok"
+    bullets:
+      - "Taught Japanese for ten weeks in the foundation's flagship Main Season programme, setting the learning objectives and designing a full syllabus for diverse learning styles and levels, connecting Japanese language and culture to students' own backgrounds."
+
+volunteer:
+  - org: Ashoka Thailand
+    role: Communications Volunteer
+    start: "2025"
+    end: present
+    location: "Thailand"
+    bullets:
+      - "Accompany the country representative on visits to Ashoka Fellows across Thailand, synthesising visit notes into press releases published on Ashoka Thailand's channels."
+      - "Produced an online event convening Fellows with educators in the network's community."
+  - org: Thailand–United States Alumni Association (TUSAA)
+    role: PR & Communications Committee
+    start: "2023-04"
+    end: "2025-05"
+    location: "Bangkok, Thailand"
+    bullets:
+      - "Established the association's brand foundation, developing its brand guidelines and corporate identity, and set up its social-media presence including its Instagram channel."
+
+research:
+  - title: "Expert Teachers' ICT Decisions in 1:1 Classrooms: A Japan–Bangkok Comparison"
+    institution: "University of Tokyo, Graduate School of Interdisciplinary Information Studies (YLab, Prof. Yuhei Yamauchi)"
+    start: "2025-10"
+    end: present
+    supervisor: Prof. Yuhei Yamauchi
+    summary: "Master's thesis. Investigated why one-device-per-student rollouts do not convert into classroom use, comparing Japan's GIGA School Program with Bangkok's Digital Classroom policy across two education systems. Conducted classroom observation and semi-structured teacher interviews through recurring fieldwork visits to Japanese schools, set against comparative analysis of both education systems."
+    notes: "Title as given in the résumé; the CV gives it as 'Contextual Knowledge and ICT Decisions in One-Device-Per-Student Classrooms'."
+  - title: "Research Assistant, Strengthening the Labour Force Participation of Older Persons"
+    institution: United Nations ESCAP
+    start: "2024"
+    end: "2024"
+    summary: "Sourced and wrote country case studies across Japan, Korea and China on national initiatives improving older people's digital literacy and inclusion, for an ESCAP report on labour-force participation under digital transformation. Worked under the mentorship of the report's lead consultant; named as a contributor in the published paper, released through the ESCAP repository in December 2024."
+  - title: "Comparative Analysis of Bangkok's Digital Classroom Policy and Japan's GIGA School Program"
+    institution: "Thammasat University, School of Global Studies"
+    start: "2023"
+    end: "2024"
+    advisor: Dr. Shekh Mohammad Altafur Rahman
+    summary: "Senior thesis. Compared two one-device-per-student initiatives, collecting field data at a Bangkok Metropolitan Administration school and building the Japanese case from policy documentation. Identified three recurring barriers to ICT implementation in both contexts, including uneven teacher digital skills, slow connectivity, and parental concern about efficacy, and concluded that device programmes must address students, teachers, parents and the learning environment together. Graded A across both terms."
+  - title: Educational Policy Research Fieldwork
+    institution: Thailand Development Research Institute (TDRI)
+    start: "2019-08"
+    end: "2019-08"
+    location: Bangkok
+    summary: "Shadowed a senior researcher on TDRI's education team through fieldwork evaluating an ICT-in-education policy in a rural school, practising observation, interviewing, analysis and report writing."
+
+projects:
+  - title: "Seaizen: Urban Youth for the Blue Economy"
+    role: Curriculum Designer
+    org: "Thailand–United States Alumni Association, YSEALI YOUnified Beyond"
+    start: "2025-12"
+    end: "2026-04"
+    location: "Thailand"
+    bullets:
+      - "Designed a 75-minute policy-making session for a 50-student forum, built on UNDP's Data to Policy Navigator, the Thailand Policy Lab Handbook and Kingdon's three-streams model, grounded in Thai cases including Traffy Fondue and TPMAP."
+      - "Designed the follow-on stakeholder-role workshop and measured learning with pre- and post-tests: over 80% of participants could explain the link between ocean acidification and GDP loss by the end of the workshop."
+  - title: From Village to Vision Workshop
+    role: PR & Content Lead
+    org: Thailand–United States Alumni Association
+    start: "2024-11"
+    end: "2025-01"
+    location: "theCOMMONS Thonglor, Bangkok"
+    bullets:
+      - "Led PR and content design for a workshop sharing sustainable-living practices from Hin Lad Nai, a Karen ethnic village recognised as a model of environmental stewardship; the key visual and social campaign drew more than 80 applicants for 30+ places."
+      - "Produced a short documentary about the village as learning material and facilitated icebreaking sessions on the day."
+  - title: Hin Lad Nai Outreach Camp
+    role: Activity & Content Lead
+    org: Thailand–United States Alumni Association
+    start: "2024-09"
+    end: "2024-11"
+    location: Chiang Rai
+    bullets:
+      - "Designed a three-day youth camp following flooding and landslides in the area, building activities around local students' learning needs in consultation with community stakeholders and using the village's watershed forest as the learning space."
+      - "Ran daily reflection and evaluation sessions with students, villagers and volunteers to support psychosocial recovery and improve the programme for future cohorts."
+  - title: MIDL Youth Camp
+    role: Core Team & Activity Lead
+    org: Saturday School Foundation
+    start: "2019-10"
+    end: "2019-10"
+    location: Bangkok
+    bullets:
+      - "Designed and facilitated a three-day Media, Information and Digital Literacy filmmaking intensive for 30 young people, running sessions on media influence and digital literacy; participants produced short films addressing social issues in their own communities."
+
+skills:
+  - group: Research and data
+    items:
+      - qualitative research design
+      - semi-structured interviewing
+      - classroom observation
+      - comparative case study
+      - desk review and evidence synthesis
+      - report writing
+      - MAXQDA
+      - NLP and large-language-model text analysis
+      - data visualisation
+      - Looker
+      - Power BI
+      - ArcGIS
+      - database design
+      - Python
+    notes: "Power BI and ArcGIS are from the résumé's skills line; the rest is the CV's list."
+  - group: Policy and systems
+    items:
+      - policy analysis
+      - systems thinking
+      - theory of change
+      - human-centred design
+      - stakeholder mapping
+      - stakeholder management
+      - curriculum design
+      - facilitation
+      - behavioral science
+  - group: Communications
+    items:
+      - press releases and public writing
+      - brand and visual identity
+      - photography and videography
+      - presentation design
+
+languages:
+  - { language: Thai, level: native }
+  - { language: Japanese, level: professional working proficiency, certification: "JLPT N1 (2018)" }
+  - { language: English, level: professional working proficiency, certification: "IELTS 7.5" }
+
+awards:
+  - title: "Delegate, Southeast Asia Youth Leadership Program"
+    by: "U.S. Department of State / U.S. Mission Thailand"
+    year: 2019
+    notes: "One of 60 ASEAN delegates; completed leadership program at Northern Illinois University."
+  - title: First Class Honours
+    by: Thammasat University
+    year: 2024
+  - title: 2nd Place
+    by: TV Burabha 10th KOB Junior Documentary Contest
+    year: 2018
+  - title: "Selected for exhibition, \"Portrait of Charoenkrung\" photo series"
+    by: Bangkok Design Week 2020
+    year: 2020

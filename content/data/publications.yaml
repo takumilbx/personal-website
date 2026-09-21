@@ -9,4 +9,37 @@
 #   url: ""
 #   pdf: ""          # /papers/<slug>.pdf
 #   abstract: ""
-publications: []
+publications:
+  - title: "Expert Teachers' ICT Decisions in 1:1 Classrooms: A Japan–Bangkok Comparison"
+    authors: ["Oshiyama, T."]
+    venue: "Master's thesis, Graduate School of Interdisciplinary Information Studies, The University of Tokyo"
+    year: 2027
+    type: thesis
+    status: in-progress
+    start: "2025-10"
+    expected: "2027-09"
+    supervisor: Prof. Yuhei Yamauchi
+    url: ""
+    pdf: ""
+    abstract: "Studies how expert teachers in ChromebookOS classrooms decide to use, adapt, or withhold technology under Japan's GIGA School programme and Bangkok's Digital Classroom project, through observation and Japanese-language interviews with expert-nominated teachers."
+    notes: "Title as given in the résumé; the CV gives it as 'Contextual Knowledge and ICT Decisions in One-Device-Per-Student Classrooms'. Year is the expected completion; research conducted at YLab (Yamauchi Lab)."
+  - title: "Strengthening the labour force participation of older persons in the context of digital transformation and the fourth industrial revolution — insights from the Asia-Pacific region"
+    authors: ["McFarlane, D.", "Mieruch, Y.", "Ruedreal, T."]
+    venue: "Social Development Policy Papers, UN ESCAP"
+    year: 2024
+    date: "2024-12-02"
+    type: report
+    url: https://repository.unescap.org/items/b60ffa94
+    pdf: ""
+    abstract: "Contributed the country case studies on Japan, Korea and China, covering national initiatives that improve older people's digital literacy and inclusion, to a regional report on labour-force participation under digital transformation."
+    notes: "Credited as Ruedreal, T."
+  - title: "Comparative Analysis of Bangkok's Digital Classroom Policy and Japan's GIGA School Program"
+    authors: ["Oshiyama, T."]
+    venue: "Senior thesis, School of Global Studies, Thammasat University"
+    year: 2024
+    type: thesis
+    advisor: Dr. Shekh Mohammad Altafur Rahman
+    url: ""
+    pdf: ""
+    abstract: "Compares two one-device-per-student initiatives, with field data from a Bangkok Metropolitan Administration school and the Japanese case built from policy documentation, and identifies three recurring barriers to ICT implementation: uneven teacher digital skills, slow connectivity, and parental concern about efficacy."
+    notes: "Graded A across both terms (2023 to 2024)."
