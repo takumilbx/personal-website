@@ -1,6 +1,8 @@
 # Case-study candidates
 
-Source: the owner's CV (four pages) and résumé (one page), uploaded 2026-09-21. Nothing here is published until approved. Mark each row **approve**, **hold**, or **drop**.
+Source: the owner's CV (four pages) and résumé (one page), uploaded 2026-09-21.
+
+Decision 2026-09-21: the owner approved every Tier 1 and Tier 2 row. Draft files for all eleven live in `content/work/en/` with `status: draft`; each carries TODO comments where only the owner can supply the answer (what he would do differently, artefacts, cover images, and any figure the CV does not give). Tier 3 items are folded into other pages as listed. The confidentiality checks below still need answers before any draft is set to `published`.
 
 Proposed values for the `type` filter on `/work`, replacing the earlier four:
 `research · policy · edtech · learning-design · interpreting · media`
@@ -8,6 +10,8 @@ Proposed values for the `type` filter on `/work`, replacing the earlier four:
 Every case study follows the fixed seven-part structure in `content/_templates/case-study.md`. The "why it works" column says what the evidence section would rest on.
 
 ## Tier 1: recommended for launch
+
+Status of every row below: **approved**.
 
 | # | Working title | Slug | Type | Organisation, role, period | Location | Headline number | Why it works |
 |---|---|---|---|---|---|---|---|
@@ -19,6 +23,8 @@ Every case study follows the fixed seven-part structure in `content/_templates/c
 | 6 | An e-sports classroom in 8 Bangkok schools | `esports-classroom-pilot` | learning-design | Saturday School Foundation with Sea (Garena) Thailand. Project Development Intern. 2022-06 to 2022-08 | TH | 245 students, 25 teachers | A curriculum built around five industry careers, a delivery partner, a student-run tournament, and a final report. Concrete and memorable. |
 
 ## Tier 2: strong, could ship at launch or in phase 2
+
+Status of every row below: **approved**.
 
 | # | Working title | Slug | Type | Organisation, role, period | Location | Headline number | Why it works |
 |---|---|---|---|---|---|---|---|
@@ -47,9 +53,10 @@ Every case study follows the fixed seven-part structure in `content/_templates/c
 - #1 and #2: the deck was presented publicly and the database was built for the Equitable Education Fund. Confirm the database itself may be described.
 - #10 is published and safe.
 
-## What is needed for each approved entry
+## What is still needed for each approved entry
 
-1. Approve, hold, or drop.
-2. Links to any public artefact (deck, report, thesis PDF, dashboard screenshot).
-3. One cover image, or permission to use a neutral placeholder at launch.
-4. Confirmation that the numbers may appear exactly as in the CV.
+1. Answers to the confidentiality checks above (Edsy; the 2025 Bangkok work).
+2. The owner's own paragraph for "What I would do differently" in each file.
+3. Links to any public artefact (deck, report, thesis PDF, dashboard screenshot).
+4. One cover image, or permission to use a neutral placeholder at launch.
+5. Confirmation that the numbers may appear exactly as in the CV.

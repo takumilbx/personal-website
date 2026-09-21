@@ -245,8 +245,8 @@ Phase 0, now:
 
 1. Content skeleton in `content/` (done).
 2. CV, timeline, and publications data filled from the owner's CV and résumé (done; owner reviews `content/data/`).
-3. Owner approves case studies from `docs/case-study-candidates.md`.
-4. Owner picks a design direction from `docs/design-directions.md`.
+3. Case studies approved and drafted (done; owner fills the TODO comments in `content/work/en/`).
+4. Further design exploration with the owner's chosen skills, then a direction is picked.
 5. Owner checks domain availability and registers one from the shortlist in section 8.
 6. Owner exports TikTok analytics into `content/data/creator-stats.yaml`.
 
@@ -286,12 +286,14 @@ Phase 3:
 | 2026-09-21 | The owner's CV and résumé are the source for case studies, timeline, CV data, and publications | Owner |
 | 2026-09-21 | TikTok and Instagram handle is @takumyi; LinkedIn is linkedin.com/in/takumioshiyama | Owner |
 | 2026-09-21 | Design direction to be chosen from three proposals in `docs/design-directions.md` | Owner asked for proposals |
+| 2026-09-21 | All eleven Tier 1 and Tier 2 case studies approved; drafted in `content/work/en/` | Owner |
+| 2026-09-21 | Owner wants further design exploration with the taste, impeccable, and emil skills, which are not available in this environment | Owner; pending source of those skills |
 | 2026-09-21 | Astro static site, Cloudflare Pages recommended | Proposal, not yet confirmed |
 
 ## 13. Open items
 
-1. Case studies: approve, hold, or drop each row in `docs/case-study-candidates.md`, and answer the confidentiality check for Edsy and the 2025 Bangkok work.
-2. Design: pick one of the three directions in `docs/design-directions.md`, or say what to change.
+1. Case studies: answer the confidentiality check for Edsy and the 2025 Bangkok work, and fill the TODO comments in each draft.
+2. Design: point to where the taste, impeccable, and emil skills come from so they can be installed, then explore further; the three directions in `docs/design-directions.md` stay as the baseline.
 3. Domain: check the shortlist in section 8 at a registrar and register one.
 4. Hosting: confirm Cloudflare Pages, or name a preference from the table in section 8.
 5. Creator statistics: export from TikTok analytics and fill `content/data/creator-stats.yaml`.
