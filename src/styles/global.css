@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+/* Tokens. Two colours on the home page: ink and cream. Panel is the drawer only. */
+@theme {
+  --color-ink: #0C0C0C;
+  --color-cream: #efeee9;
+  --color-panel: #141414;
+  --font-sans: "Kanit", "Noto Sans Thai", system-ui, sans-serif;
+  --ease-out-expo: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in-out-quart: cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+html, body { background: var(--color-ink); color: var(--color-cream); }
+body { font-family: var(--font-sans); margin: 0; -webkit-text-size-adjust: 100%; }
+*, *::before, *::after { box-sizing: border-box; }
+
+/* Gradient text for the section headings below the fold. */
+.hero-heading {
+  background: linear-gradient(180deg, #646973 0%, #BBCCD7 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+/* Hero entrance choreography. Delays are set inline per element. */
+@keyframes fade-in { from { opacity: 0 } to { opacity: 1 } }
+@keyframes rise-in { from { opacity: 0; transform: translateY(4vh) scale(1.03) } to { opacity: 1; transform: none } }
+@keyframes fade-up { from { opacity: 0; transform: translateY(28px) } to { opacity: 1; transform: none } }
+@keyframes line { from { transform: scaleX(0) } to { transform: scaleX(1) } }
+@keyframes marquee { from { transform: translateX(0) } to { transform: translateX(-50%) } }
+
+.anim-fade-in { animation: fade-in 1.2s ease-out both; }
+.anim-rise-in { animation: rise-in 1.4s var(--ease-out-expo) both; }
+.anim-fade-up { animation: fade-up 0.9s var(--ease-out-expo) both; }
+.anim-line { animation: line 1.1s var(--ease-in-out-quart) both; transform-origin: left; }
+.marquee { animation: marquee 30s linear infinite; }
+
+/* Touch and in-app-browser fixes for the phone audience. */
+a, button { -webkit-tap-highlight-color: transparent; touch-action: manipulation; }
+img { max-width: 100%; height: auto; }
+
+@media (prefers-reduced-motion: reduce) {
+  .anim-fade-in, .anim-rise-in, .anim-fade-up, .anim-line {
+    animation-duration: 0.01ms;
+    animation-delay: 0ms !important;
+  }
+  .marquee { animation: none; }
+}
+
+/* Rendered Markdown on case-study pages. */
+.prose-dark h2 { margin-top: 2.5rem; margin-bottom: 0.75rem; font-size: 1.5rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.02em; }
+.prose-dark p { margin: 0 0 1rem; line-height: 1.7; font-weight: 300; }
+.prose-dark ul { margin: 0 0 1rem 1.25rem; line-height: 1.7; font-weight: 300; list-style: disc; }
+.prose-dark code { font-family: ui-monospace, monospace; font-size: 0.9em; opacity: 0.8; }

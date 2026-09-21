@@ -8,7 +8,7 @@ Everything the site shows lives in this folder. No code here, only Markdown and 
 content/
 ├── README.md              this file
 ├── _templates/            copy one of these to start a new entry
-├── pages/{en,th,ja}/      one Markdown file per site page (prose sections)
+├── pages/{en,th,ja}/      one Markdown file per site page (prose sections); en/home.yaml holds the landing-page copy and settings
 ├── work/{en,th,ja}/       one Markdown file per case study
 ├── writing/{en,th,ja}/    one Markdown file per post
 ├── data/                  shared structured data (YAML), not translated
@@ -37,6 +37,7 @@ content/
 - **A post:** copy `_templates/post.md` to `writing/en/<slug>.md`.
 - **A publication, talk, video, or collaboration:** add an entry to the matching file in `data/`. Each file starts with a commented example.
 - **A timeline event:** add an entry to `data/timeline.yaml`.
+- **Home page copy or settings:** edit `pages/en/home.yaml`. Values marked `default` were chosen by the builder and are waiting for the owner's confirmation.
 - **CV changes:** edit `data/cv.yaml`. The web CV and the PDF are both generated from it.
 - **Creator statistics:** paste the figures from a TikTok analytics export into `data/creator-stats.yaml` and set `asOf`. Leave a field empty rather than estimate it.
 

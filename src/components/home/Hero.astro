@@ -1,0 +1,53 @@
+---
+import HeroChrome from './HeroChrome';
+import Magnet from '../ui/Magnet';
+import type { HomeContent } from '../../lib/content';
+
+interface Props { data: HomeContent }
+const { data } = Astro.props;
+const nbsp = ' ';
+---
+<section class="relative h-[100dvh] w-full overflow-hidden bg-ink" aria-labelledby="hero-name">
+  {data.hero.background && (
+    <img src={data.hero.background} alt="" class="anim-fade-in absolute inset-0 h-full w-full object-cover" decoding="async" fetchpriority="high" />
+  )}
+
+  <h1 id="hero-name" class="sr-only">{data.marquee}</h1>
+  <div class="anim-fade-up absolute inset-x-0 top-[16vh] z-10 overflow-hidden sm:top-[14vh]" style="animation-delay: 500ms" aria-hidden="true">
+    <div class="marquee flex w-max whitespace-nowrap text-[16vh] font-medium leading-none text-cream sm:text-[26vh]">
+      <span class="pr-[6vw]">{data.marquee}{nbsp}</span>
+      <span class="pr-[6vw]">{data.marquee}{nbsp}</span>
+    </div>
+  </div>
+
+  <div class="anim-line absolute inset-x-6 bottom-[5.5rem] z-10 h-0.5 bg-cream sm:inset-x-10 sm:bottom-28" style="animation-delay: 1200ms" aria-hidden="true"></div>
+
+  <div class="absolute inset-x-0 bottom-0 z-30 flex items-end justify-between px-6 pb-5 text-xs leading-relaxed sm:z-10 sm:px-10 sm:pb-8 sm:text-sm" style="padding-bottom: calc(1.25rem + env(safe-area-inset-bottom, 0px))">
+    <div class="anim-fade-up" style="animation-delay: 1400ms">
+      {data.footer.left.map((line) => <p>{line}</p>)}
+    </div>
+    <div class="anim-fade-up text-right" style="animation-delay: 1550ms">
+      {data.footer.right.map((line) => <p>{line}</p>)}
+    </div>
+  </div>
+
+  <div class="anim-rise-in pointer-events-none absolute inset-0 z-20" style="animation-delay: 300ms">
+    {data.hero.magnet ? (
+      <Magnet client:media="(min-width: 640px) and (hover: hover)" padding={150} strength={14} className="h-full w-full">
+        <img src={data.hero.cutout} alt={data.hero.cutoutAlt} class="h-full w-full object-cover" decoding="async" fetchpriority="high" />
+      </Magnet>
+    ) : (
+      <img src={data.hero.cutout} alt={data.hero.cutoutAlt} class="h-full w-full object-cover" decoding="async" fetchpriority="high" />
+    )}
+  </div>
+
+  <HeroChrome
+    client:load
+    brand={data.brand}
+    year={data.year}
+    nav={data.nav}
+    social={data.social}
+    navLabel={data.drawer.navLabel}
+    socialLabel={data.drawer.socialLabel}
+  />
+</section>

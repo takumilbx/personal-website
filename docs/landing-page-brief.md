@@ -1,6 +1,6 @@
 # Landing page brief: two reference prompts combined
 
-Status: draft v1, 2026-09-21. Waiting on the owner's answers in section 9 before anything is built.
+Status: v2, 2026-09-21. The owner answered question 1 (this is the home page, built inside Astro) and the page is built; section 11 lists the defaults applied for the other questions and what is still needed.
 Sources: Prompt A ("Jack, 3D Creator": five scrolling sections, Kanit, Framer Motion) and Prompt B ("Marcus, Bennet": one non-scrolling editorial hero, cream on black, CSS entrance choreography). Both describe other people's pages. Their copy, image URLs, and one font are references only and are replaced below by placeholders written as `{{like-this}}`.
 
 ## 1. How the two prompts were combined
@@ -128,3 +128,22 @@ Reduced motion: under `prefers-reduced-motion: reduce`, every keyframe collapses
 ## 10. Relationship to the existing plan
 
 This brief departs from three earlier decisions: the neutral look, the switchboard home page, and the light-plus-dark themes. Nothing in the plan is changed until Q1 and Q11 are answered. The three baseline directions and the four skill-based explorations in `docs/design-exploration/` still apply to the section pages, and their motion and mobile rules apply to this landing page as well.
+
+## 11. Build status, 2026-09-21
+
+Built as `src/pages/en/index.astro` with the hero as static Astro plus a React island for the header and drawer, and React islands for the media rows, About, What I do, and Projects. Copy and settings are in `content/pages/en/home.yaml`; every value chosen by the builder is marked `default` there with the question it answers.
+
+| Question | Default applied | Change it in |
+|---|---|---|
+| Q2 names | Marquee and title "Takumi — Oshiyama", brand "Takumi" | `home.yaml`: marquee, title, brand |
+| Q3 header | Work, Creator, About; TikTok, Instagram, LinkedIn; 2026 | `home.yaml`: nav, social, year |
+| Q5 font | Kanit 300 to 900 | `src/layouts/Base.astro` and `src/styles/global.css` |
+| Q6 colours | Ink and cream only; What I do painted cream | `src/styles/global.css` |
+| Q7 portrait | Follows the cursor on pointer devices, still on touch | `home.yaml`: hero.magnet |
+| Q8 language | English only | n/a |
+| Q9 copy | Footer lines, About paragraph, five What I do items, drawer labels, button labels, all drafted from the CV | `home.yaml` |
+| Q10 projects | The three featured case studies | `home.yaml`: projects.items |
+| Q11 theme | Dark only | n/a |
+| Q12 contact | The contact page, which lists the socials; no email yet | `home.yaml`: about.cta, and `src/pages/en/contact.astro` |
+
+Still needed: every asset in section 8. Placeholders are in `public/placeholders/` and referenced from `home.yaml`; replace the paths there once the files are in `public/images/`.

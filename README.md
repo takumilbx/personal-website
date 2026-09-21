@@ -1,13 +1,27 @@
 # personal-website
 
-Personal portfolio site for Takumi Oshiyama: EdTech research and Thailand↔Japan work on one side, the @takumyi channel on the other.
+Personal site for Takumi Oshiyama: education research and Thailand↔Japan work on one side, the @takumyi channel on the other. Built with Astro, React islands, Tailwind CSS 4, and Framer Motion; static output for Cloudflare Pages.
 
-Planning documents in `docs/`:
+## Running it
 
-- [`site-structure.md`](docs/site-structure.md): audiences, sitemap, page specifications, content model, stack, hosting and domain, build order, decision log, open items.
-- [`case-study-candidates.md`](docs/case-study-candidates.md): proposed case studies drawn from the CV and résumé, in three tiers, awaiting approval.
-- [`design-directions.md`](docs/design-directions.md): three proposed visual directions with trilingual typography and light and dark tokens, awaiting a choice. [`design-preview.html`](docs/design-preview.html) renders them side by side (open locally, or at the published link in the plan).
+```
+npm install
+npm run dev        # http://localhost:4321/en/
+npm run build      # static output in dist/
+npm run preview    # serve dist/
+npm run check      # type-check Astro and TypeScript
+```
 
-Content in [`content/`](content/README.md): all site content as Markdown and YAML. English is the source; Thai and Japanese are placeholders until translated. Start with `content/README.md`.
+The root `/` redirects to `/en/`. Thai and Japanese routes are configured but not built yet.
 
-The site code (Astro) is not scaffolded yet. See the build order in the plan.
+## Where things are
+
+- `content/` is all site content as Markdown and YAML. Start with [`content/README.md`](content/README.md). The home page reads `content/pages/en/home.yaml`; case studies are `content/work/en/*.md`.
+- `src/` is the Astro site: `pages/en/` for routes, `components/home/` for the landing page, `components/ui/` for shared motion pieces, `styles/global.css` for tokens and keyframes.
+- `docs/` holds the plan and its decisions:
+  - [`site-structure.md`](docs/site-structure.md): audiences, sitemap, content model, stack, hosting, build order, decision log, open items.
+  - [`landing-page-brief.md`](docs/landing-page-brief.md): the home page specification, the defaults applied, and the assets still needed.
+  - [`case-study-candidates.md`](docs/case-study-candidates.md): the eleven approved case studies and what each still needs.
+  - [`design-directions.md`](docs/design-directions.md) and [`design-preview.html`](docs/design-preview.html): the three baseline directions for the section pages.
+  - [`design-exploration/`](docs/design-exploration/README.md): four skill-based explorations and their synthesis.
+- `.claude/skills/` holds vendored third-party design skills; see [its README](.claude/skills/README.md).

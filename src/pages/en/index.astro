@@ -1,0 +1,33 @@
+---
+import Base from '../../layouts/Base.astro';
+import Hero from '../../components/home/Hero.astro';
+import MediaMarquee from '../../components/home/MediaMarquee';
+import About from '../../components/home/About';
+import Services from '../../components/home/Services';
+import Projects from '../../components/home/Projects';
+import ClosingFooter from '../../components/home/ClosingFooter.astro';
+import { readYaml, type HomeContent } from '../../lib/content';
+import { getCollection } from 'astro:content';
+
+const home = readYaml<HomeContent>('pages/en/home.yaml');
+const work = await getCollection('work');
+const projects = home.projects.items.map((item) => {
+  const entry = work.find((e) => e.data.slug === item.slug);
+  if (!entry) throw new Error(`home.yaml lists project "${item.slug}" but content/work/en/ has no such case study`);
+  return {
+    slug: item.slug,
+    category: item.category,
+    title: entry.data.title,
+    href: `/en/work/${item.slug}/`,
+    images: item.images,
+  };
+});
+---
+<Base title={home.title} description={home.description}>
+  <Hero data={home} />
+  <MediaMarquee client:visible items={home.media} />
+  <About client:visible heading={home.about.heading} paragraph={home.about.paragraph} cta={home.about.cta} />
+  <Services client:visible heading={home.services.heading} items={home.services.items} />
+  <Projects client:visible heading={home.projects.heading} buttonLabel={home.projects.buttonLabel} items={projects} />
+  <ClosingFooter text={home.closing} social={home.social} />
+</Base>

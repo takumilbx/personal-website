@@ -1,6 +1,6 @@
 # Personal website: structure plan
 
-Status: draft v3, 2026-09-21 (v1 and v2 reviewed by the owner; decisions recorded in section 12)
+Status: draft v4, 2026-09-21 (v1 to v3 reviewed by the owner; decisions recorded in section 12; the site is scaffolded and the home page is built)
 Owner: Takumi Oshiyama
 Domain: not yet chosen; takumyi.com is the working suggestion (section 8)
 Purpose of this document: agree on what the site is, who it serves, which pages exist, and how content is organised, before any code is written.
@@ -20,7 +20,7 @@ Four audiences arrive with different questions. They are weighted equally: no au
 | Brands, event organisers, media | TikTok / Instagram profile | Channel identity, audience, past collaborations, how to book | `/creator` |
 | Followers | TikTok / Instagram bio link | Quick links, latest content, who this person is | `/links`, `/` |
 
-Design consequence: the home page is a switchboard. Each section is its own sub-page; the home page links to them and never tries to be all of them.
+Design consequence, revised 2026-09-21: the home page is the dark landing page specified in `docs/landing-page-brief.md` (marquee name, portrait, media rows, About, What I do, Projects). Its header and drawer carry the switchboard role. Each section is still its own sub-page.
 
 ## 2. Positioning
 
@@ -71,12 +71,7 @@ The Markdown skeleton for every page below already exists in `content/pages/en/`
 
 ### Home `/`
 
-1. Hero: name, one-line identity, portrait, two buttons ("See my work", "Watch @takumyi").
-2. Three doors: Work and Research / Creator / Writing, one sentence each, equal size.
-3. Featured work: three case-study cards, each with organisation, role, and one headline number.
-4. Latest from @takumyi: three videos (thumbnail plus link, no autoplay).
-5. Latest writing: three posts. The section hides itself when there are no posts.
-6. Contact strip: "Research collaboration, speaking, or brand work: email."
+Built 2026-09-21 to `docs/landing-page-brief.md`, which replaces the earlier switchboard spec. Copy and settings live in `content/pages/en/home.yaml`; the three project cards are the case studies marked `featured: true`. Placeholders stand in for the portrait, the media rows, and the project images until the owner supplies assets.
 
 ### About `/about`
 
@@ -164,7 +159,7 @@ Templates for a page, a case study, and a post are in `content/_templates/`.
 
 ## 7. Recommended stack
 
-Recommendation: Astro with MDX content collections and Tailwind CSS, static output.
+Decision, 2026-09-21: Astro 7 with React islands for the animated sections, Tailwind CSS 4, Framer Motion, and Lucide, static output. Scaffolded and building; see the README for commands.
 
 Why Astro rather than Next.js for this site:
 
@@ -214,19 +209,26 @@ A reasonable path: deploy the first build to Cloudflare Pages on its free `*.pag
 
 ```
 personal-website/
-├── docs/
-│   └── site-structure.md        this plan
+├── docs/                        plan, briefs, candidates, design directions and exploration
 ├── content/                     all site content; see content/README.md
 │   ├── _templates/
-│   ├── pages/{en,th,ja}/
-│   ├── work/{en,th,ja}/
+│   ├── pages/{en,th,ja}/        page shells; en/home.yaml holds the landing-page copy
+│   ├── work/{en,th,ja}/         case studies (eleven English drafts)
 │   ├── writing/{en,th,ja}/
-│   ├── data/
+│   ├── data/                    cv, timeline, publications, talks, videos, collabs, creator stats
 │   └── i18n/
-├── public/                      (after scaffolding) CV PDF, media kit, images, robots.txt
-├── src/                         (after scaffolding) Astro components, layouts, pages, styles
-├── astro.config.mjs             (after scaffolding)
-├── package.json                 (after scaffolding)
+├── public/                      favicon, placeholders, _redirects (Cloudflare), later images and PDFs
+├── src/
+│   ├── content.config.ts        the work collection, read from content/work/en
+│   ├── lib/content.ts           YAML reader for content/
+│   ├── styles/global.css        Tailwind theme tokens, keyframes, reduced-motion rules
+│   ├── layouts/                 Base (document head) and Page (section pages)
+│   ├── components/home/         Hero, HeroChrome, MediaMarquee, About, Services, Projects, ClosingFooter
+│   ├── components/ui/           FadeIn, Magnet, AnimatedText, GhostButton
+│   └── pages/                   index (redirect), en/ (home, work, work/[slug], links, stubs)
+├── .claude/skills/              vendored design skills; see its README
+├── astro.config.mjs
+├── package.json
 └── README.md
 ```
 
@@ -252,13 +254,13 @@ Phase 0, now:
 
 Phase 1, launchable minimum, English only:
 
-4. Scaffold the Astro project reading `content/`, with i18n configured for en, th, ja and only en enabled.
-5. Base layout, navigation, footer, theme tokens.
-6. Home, About, Contact, `/links`.
-7. Work index plus the approved case studies.
-8. Creator page with selected videos, statistics, and collaborations.
-9. CV page plus PDF.
-10. Deploy to Cloudflare Pages, attach takumyi.com, add analytics.
+4. Scaffold the Astro project reading `content/`, with i18n configured for en, th, ja and only en enabled (done).
+5. Base layout, navigation, footer, theme tokens (done, dark only).
+6. Home (done, with placeholder assets), `/links` (done), Contact (stub, socials only), About (stub).
+7. Work index plus the approved case studies (done; drafts render with a draft marker).
+8. Creator page with selected videos, statistics, and collaborations (stub).
+9. CV page plus PDF (stub).
+10. Replace placeholders with the owner's assets, deploy to Cloudflare Pages, attach the domain, add analytics.
 
 Phase 2:
 
@@ -289,15 +291,19 @@ Phase 3:
 | 2026-09-21 | All eleven Tier 1 and Tier 2 case studies approved; drafted in `content/work/en/` | Owner |
 | 2026-09-21 | Owner wants further design exploration with the taste, impeccable, and emil skills, which are not available in this environment | Owner; pending source of those skills |
 | 2026-09-21 | Astro static site, Cloudflare Pages recommended | Proposal, not yet confirmed |
+| 2026-09-21 | The combined landing page in `docs/landing-page-brief.md` is the home page, built inside Astro with React islands | Owner |
+| 2026-09-21 | Kanit, ink `#0C0C0C` and cream `#efeee9`, dark only, three nav labels, confirmed socials, and CV-derived copy applied as defaults on the home page until the owner answers the brief's questions | Builder; every default is marked in `content/pages/en/home.yaml` |
 
 ## 13. Open items
 
-1. Case studies: answer the confidentiality check for Edsy and the 2025 Bangkok work, and fill the TODO comments in each draft.
-2. Design: point to where the taste, impeccable, and emil skills come from so they can be installed, then explore further; the three directions in `docs/design-directions.md` stay as the baseline.
-3. Domain: check the shortlist in section 8 at a registrar and register one.
-4. Hosting: confirm Cloudflare Pages, or name a preference from the table in section 8.
-5. Creator statistics: export from TikTok analytics and fill `content/data/creator-stats.yaml`.
-6. YouTube and X: confirm whether these accounts exist and should be linked.
-7. The @takumyi channel start date for the timeline (the CV does not give it).
-8. Whether the public email on the site should be the Gmail address from the CV, and confirmation that phone numbers stay off the site (they were left out).
-9. Source PDFs for the research plan, the senior thesis, and the ESCAP paper, so `/research` can link to them.
+1. Home page assets: portrait cutout, background photo, 16 to 21 media items, nine project images, favicon and social image (specs in `docs/landing-page-brief.md`, section 8).
+2. Home page copy: confirm or replace the defaults marked in `content/pages/en/home.yaml` (marquee text, title, nav labels, footer lines, About paragraph, What I do items, project categories).
+3. Case studies: answer the confidentiality check for Edsy and the 2025 Bangkok work, and fill the TODO comments in each draft.
+4. Section pages: choose a direction for them from `docs/design-exploration/README.md`, or keep the landing page's two colours, then build About, Creator, Research, Writing, CV, and Contact.
+5. Domain: check the shortlist in section 8 at a registrar and register one, then set `site` in `astro.config.mjs`.
+6. Hosting: confirm Cloudflare Pages, or name a preference from the table in section 8.
+7. Creator statistics: export from TikTok analytics and fill `content/data/creator-stats.yaml`.
+8. YouTube and X: confirm whether these accounts exist and should be linked.
+9. The @takumyi channel start date for the timeline (the CV does not give it).
+10. Whether the public email on the site should be the Gmail address from the CV, and confirmation that phone numbers stay off the site (they were left out).
+11. Source PDFs for the research plan, the senior thesis, and the ESCAP paper, so `/research` can link to them.

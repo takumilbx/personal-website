@@ -1,0 +1,26 @@
+---
+import Base from '../../layouts/Base.astro';
+import { readYaml, type HomeContent } from '../../lib/content';
+const home = readYaml<HomeContent>('pages/en/home.yaml');
+const buttons = [
+  { label: 'Latest video', href: home.social[0].href },
+  { label: '@takumyi', href: '/en/creator/' },
+  { label: 'Work', href: '/en/work/' },
+  ...home.social.slice(1),
+  { label: 'Contact', href: '/en/contact/' },
+];
+---
+<Base title={`Links · ${home.brand}`} description="Links for the @takumyi bio.">
+  <main class="mx-auto flex min-h-[100dvh] w-full max-w-sm flex-col items-center px-4 py-12" style="padding-top: calc(3rem + env(safe-area-inset-top, 0px)); padding-bottom: calc(3rem + env(safe-area-inset-bottom, 0px))">
+    <img src={home.hero.cutout} alt={home.hero.cutoutAlt} class="h-24 w-24 rounded-full bg-panel object-cover" />
+    <h1 class="mt-4 text-xl font-medium">{home.marquee}</h1>
+    <p class="mt-1 text-sm text-cream/60">{home.footer.left[0]} · {home.footer.left[1]}</p>
+    <ul class="mt-8 flex w-full flex-col gap-3">
+      {buttons.map((b) => (
+        <li>
+          <a href={b.href} class="flex min-h-[48px] w-full items-center justify-center rounded-full border-2 border-cream px-6 text-sm font-medium uppercase tracking-widest transition-[background-color,transform] duration-200 hover:bg-cream/10 active:scale-[0.98]">{b.label}</a>
+        </li>
+      ))}
+    </ul>
+  </main>
+</Base>

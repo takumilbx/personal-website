@@ -1,0 +1,29 @@
+---
+import Page from '../../../layouts/Page.astro';
+import { getCollection, render } from 'astro:content';
+
+export async function getStaticPaths() {
+  const entries = await getCollection('work', (e) => e.data.status !== 'placeholder');
+  return entries.map((entry) => ({ params: { slug: entry.data.slug }, props: { entry } }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+const d = entry.data;
+---
+<Page title={d.title} description={d.summary} heading={d.title}>
+  <p class="text-xs uppercase tracking-widest text-cream/60">{d.type} · {d.location} · {d.period.start}{d.period.end !== d.period.start ? ` to ${d.period.end}` : ''}</p>
+  <p class="mt-2 text-sm text-cream/80">{d.org}. {d.role}.</p>
+  {d.headlineNumber && <p class="mt-6 font-black leading-none" style="font-size: clamp(3rem, 10vw, 140px)">{d.headlineNumber}</p>}
+  <p class="mt-8 text-lg font-light leading-relaxed">{d.summary}</p>
+  {d.status === 'draft' && <p class="mt-4 text-xs uppercase tracking-widest text-cream/40">draft, awaiting the owner's review</p>}
+  <div class="prose-dark mt-6">
+    <Content />
+  </div>
+  {d.links.length > 0 && (
+    <ul class="mt-10 flex flex-wrap gap-5 text-sm">
+      {d.links.map((l) => <li><a href={l.url} target="_blank" rel="noopener" class="underline underline-offset-4 hover:opacity-60">{l.label}</a></li>)}
+    </ul>
+  )}
+  <p class="mt-12 text-sm"><a href="/en/work/" class="underline underline-offset-4 hover:opacity-60">All work</a></p>
+</Page>

@@ -1,0 +1,92 @@
+# Copy and settings for the home page (the landing page brief in docs/landing-page-brief.md).
+# Every value marked "default" was chosen by the builder on 2026-09-21 because the owner had not
+# answered that question yet. Change any of them here; no code change is needed.
+
+title: "Takumi — Oshiyama"            # default (brief Q2)
+description: "Takumi Oshiyama: education researcher working between Thailand and Japan, and the creator behind @takumyi."
+brand: "Takumi"                       # default (Q2)
+year: "2026"                          # default (Q3)
+marquee: "Takumi — Oshiyama"          # default (Q2)
+
+nav:                                  # default (Q3): three labels, as in the reference
+  - { label: "Work", href: "/en/work/" }
+  - { label: "Creator", href: "/en/creator/" }
+  - { label: "About", href: "/en/about/" }
+
+social:                               # confirmed handles; YouTube and X still unconfirmed (Q3)
+  - { label: "TikTok", href: "https://www.tiktok.com/@takumyi" }
+  - { label: "Instagram", href: "https://www.instagram.com/takumyi" }
+  - { label: "LinkedIn", href: "https://linkedin.com/in/takumioshiyama" }
+
+drawer:
+  navLabel: "Site index"              # default (Q9)
+  socialLabel: "Find me"              # default (Q9)
+
+footer:                               # default (Q9), facts from the CV
+  left:
+    - "Education researcher"
+    - "Creator behind @takumyi"
+    - "Between Bangkok and Tokyo"
+  right:
+    - "Master's student"
+    - "The University of Tokyo"
+
+hero:
+  background: ""                      # asset needed: /images/home/hero-background.jpg (empty = plain ink)
+  cutout: "/placeholders/portrait-cutout.svg"   # asset needed: transparent PNG, at least 2000 px tall
+  cutoutAlt: "Portrait"
+  magnet: true                        # default (Q7): cutout follows the cursor on desktop only
+
+media:                                # asset needed: 16 to 21 stills or thumbnails from @takumyi; placeholders for now
+  - { src: "/placeholders/media-01.svg", alt: "" }
+  - { src: "/placeholders/media-02.svg", alt: "" }
+  - { src: "/placeholders/media-03.svg", alt: "" }
+  - { src: "/placeholders/media-04.svg", alt: "" }
+  - { src: "/placeholders/media-05.svg", alt: "" }
+  - { src: "/placeholders/media-06.svg", alt: "" }
+  - { src: "/placeholders/media-07.svg", alt: "" }
+  - { src: "/placeholders/media-08.svg", alt: "" }
+  - { src: "/placeholders/media-09.svg", alt: "" }
+  - { src: "/placeholders/media-10.svg", alt: "" }
+  - { src: "/placeholders/media-11.svg", alt: "" }
+  - { src: "/placeholders/media-12.svg", alt: "" }
+  - { src: "/placeholders/media-13.svg", alt: "" }
+  - { src: "/placeholders/media-14.svg", alt: "" }
+  - { src: "/placeholders/media-15.svg", alt: "" }
+  - { src: "/placeholders/media-16.svg", alt: "" }
+
+about:
+  heading: "About me"
+  # default (Q9): drafted from the CV in the owner's voice; confirm or replace
+  paragraph: "I work between Thailand and Japan on one question: why a device in every student's hands so rarely becomes a better lesson. I study it at the University of Tokyo, I have worked on it inside Bangkok's city government and an EdTech startup, and as @takumyi I explain Japan to a Thai audience."
+  cta: { label: "Contact me", href: "/en/contact/" }   # default (Q12): the contact page, not a mailto
+
+services:
+  heading: "What I do"                # default (Q9)
+  items:                              # default (Q9): five items from the CV, one sentence each
+    - name: "Education research"
+      description: "Classroom observation and teacher interviews on one-device-per-student programmes, comparing Japan's GIGA School with Bangkok's Digital Classroom."
+    - name: "Policy analysis and data"
+      description: "From 47 municipal policies sorted into 8 focus areas to 10,849 public submissions read with NLP, for the Bangkok Metropolitan Administration."
+    - name: "EdTech market entry"
+      description: "Regulatory and competitive analysis, pilot-school lists, and curriculum-matched demo lessons that took Edsy into Japan, Korea, Turkey and Saudi Arabia."
+    - name: "Interpreting and translation"
+      description: "Simultaneous Japanese, Thai and English interpreting at international summits, and field support for four cohorts of Japanese students in Thailand."
+    - name: "Film, photography and content"
+      description: "Event films and short-form content for UNDP Thailand, UNICEF Thailand and others, and the @takumyi channel explaining Japan to a Thai audience."
+
+projects:
+  heading: "Projects"
+  buttonLabel: "Read the case study"  # default (Q9)
+  items:                              # default (Q10): the three featured case studies; images are placeholders
+    - slug: bangkok-education-policy-map
+      category: "Policy"
+      images: ["/placeholders/project-1-1.svg", "/placeholders/project-1-2.svg", "/placeholders/project-1-3.svg"]
+    - slug: digital-classroom-vs-giga-school
+      category: "Research"
+      images: ["/placeholders/project-2-1.svg", "/placeholders/project-2-2.svg", "/placeholders/project-2-3.svg"]
+    - slug: edsy-japan-market-entry
+      category: "EdTech"
+      images: ["/placeholders/project-3-1.svg", "/placeholders/project-3-2.svg", "/placeholders/project-3-3.svg"]
+
+closing: "Takumi Oshiyama, 2026"      # default (Q9)

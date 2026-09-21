@@ -1,0 +1,12 @@
+---
+import Page from '../../layouts/Page.astro';
+import { readYaml, type HomeContent } from '../../lib/content';
+const home = readYaml<HomeContent>('pages/en/home.yaml');
+---
+<Page title="Contact" description="Research collaboration, speaking, or brand work: how to reach Takumi Oshiyama.">
+  <p class="text-lg font-light leading-relaxed">Research collaboration, speaking, interpreting, or brand work. The quickest route for now is a direct message on Instagram or TikTok, or a note on LinkedIn.</p>
+  <ul class="mt-8 flex flex-col gap-3 text-base">
+    {home.social.map((s) => <li><a href={s.href} target="_blank" rel="noopener" class="underline underline-offset-4 hover:opacity-60">{s.label}</a></li>)}
+  </ul>
+  <!-- TODO owner: add the public email address and a form once confirmed (site-structure.md, open item 8). -->
+</Page>
