@@ -12,7 +12,7 @@ order: 1
 <!-- One or two sentences on what these case studies have in common. -->
 
 ## Filters
-- Type: research · policy · edtech · interpreting
+- Type: research · policy · edtech · learning-design · interpreting · media
 - Country: TH · JP · international
 
 ## Index

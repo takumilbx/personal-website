@@ -1,8 +1,8 @@
 # Personal website: structure plan
 
-Status: draft v2, 2026-09-21 (v1 reviewed by the owner; decisions recorded in section 12)
+Status: draft v3, 2026-09-21 (v1 and v2 reviewed by the owner; decisions recorded in section 12)
 Owner: Takumi Oshiyama
-Domain: takumyi.com
+Domain: not yet chosen; takumyi.com is the working suggestion (section 8)
 Purpose of this document: agree on what the site is, who it serves, which pages exist, and how content is organised, before any code is written.
 
 ---
@@ -46,7 +46,7 @@ Decision: English only at launch. Thai and Japanese exist as placeholder files i
 ```
 /                          Home (switchboard)
 ├── /about                 Story, timeline, values, portrait, CV download
-├── /work                  Case-study index (filters: research · policy · edtech · interpreting; TH · JP · international)
+├── /work                  Case-study index (filters: research · policy · edtech · learning-design · interpreting · media; TH · JP · international)
 │   └── /work/[slug]       One case study
 ├── /research              Research interests, research-plan summary, publications, talks
 │   └── /research/[slug]   Optional: one publication or talk page (otherwise link out to the PDF)
@@ -100,14 +100,7 @@ Every case study uses the same fixed structure so the collection reads consisten
 6. What I would do differently
 7. Related: other case studies, publications, or videos.
 
-Candidate case studies, awaiting the owner's approval before any is written (drawn from existing writing samples):
-
-- Broadband School case study
-- Digital Classroom (Thailand) versus GIGA School (Japan)
-- Education-policy sorting: 47 policies into 8 focus areas, deck presented by the deputy governor to 437 principals
-- Scholarship database: 564 organisations, 700+ scholarships
-- ESCAP case studies across Japan, Korea, and China
-- Thai–Japanese interpreting engagements
+Candidate case studies are drawn from the owner's CV and résumé and listed in `docs/case-study-candidates.md` in three tiers, with proposed slugs, types, headline numbers, and a confidentiality check. None is written until the owner approves it.
 
 ### Research `/research`
 
@@ -186,7 +179,17 @@ Supporting pieces: Plausible or Umami for analytics (cookieless, no banner), Res
 
 ## 8. Hosting and domain
 
-Domain: takumyi.com. As of 2026-09-21 the name has no DNS records. Registration status could not be verified from the build environment because WHOIS and RDAP lookups are blocked there, so the owner should confirm at a registrar before anything else.
+Domain: not yet registered. takumyi.com is the owner's suggestion, not a name he holds. As of 2026-09-21 it has no DNS records, but availability could not be verified from the build environment because WHOIS and RDAP lookups are blocked there. Check it at a registrar (Cloudflare Registrar, Porkbun, or Namecheap all show availability without an account).
+
+The domain should match the @takumyi handle, because the TikTok and Instagram bios are the largest source of visitors and a name that matches the handle is the one people will type. Shortlist, in order of preference:
+
+1. `takumyi.com`: matches the handle; first choice if free.
+2. `takumyi.me`: same name, common for personal sites; second choice.
+3. `takumyi.co`: short, but often confused with .com.
+4. `takumioshiyama.com`: full name, formal; better for academic readers, weaker for followers.
+5. `oshiyama.me`: surname only; short but not obviously him.
+
+Whichever is chosen, register the .com of the same name if it is also free, and redirect it.
 
 Recommendation: Cloudflare Pages for hosting, with DNS at Cloudflare and the domain registered or transferred to Cloudflare Registrar so all three sit in one account.
 
@@ -234,15 +237,18 @@ personal-website/
 - SEO: per-page title and description, Open Graph image, `hreflang`, Person structured data on `/about`, `sitemap.xml`, RSS for `/writing`.
 - Privacy: cookieless analytics only. The contact form forwards messages and does not store them on the site.
 - Typography: Latin, Thai, and Japanese faces that harmonise, chosen now even though only English ships first. Candidates: Inter + Noto Sans Thai + Noto Sans JP, or the IBM Plex family, which covers all three scripts.
-- Design: neutral. One accent colour, generous white space, no audience-specific styling. A short design pass (typography, colour tokens, spacing) happens before scaffolding the layout.
+- Design: neutral. One accent colour, generous white space, no audience-specific styling. Three candidate directions, each with trilingual typography and light and dark tokens, are proposed in `docs/design-directions.md` with a preview page; the owner picks one before the layout is scaffolded.
 
 ## 11. Build order
 
 Phase 0, now:
 
 1. Content skeleton in `content/` (done).
-2. Owner approves the case-study list and confirms the domain registration.
-3. Owner exports TikTok analytics into `content/data/creator-stats.yaml`.
+2. CV, timeline, and publications data filled from the owner's CV and résumé (done; owner reviews `content/data/`).
+3. Owner approves case studies from `docs/case-study-candidates.md`.
+4. Owner picks a design direction from `docs/design-directions.md`.
+5. Owner checks domain availability and registers one from the shortlist in section 8.
+6. Owner exports TikTok analytics into `content/data/creator-stats.yaml`.
 
 Phase 1, launchable minimum, English only:
 
@@ -276,15 +282,20 @@ Phase 3:
 | 2026-09-21 | Content is Markdown and YAML in GitHub, no CMS; skeleton built first | Owner |
 | 2026-09-21 | Case studies are listed for approval before any is written | Owner |
 | 2026-09-21 | Creator statistics come from a real TikTok analytics export | Owner |
-| 2026-09-21 | Domain is takumyi.com | Owner |
+| 2026-09-21 | takumyi.com is a suggestion, not a domain the owner holds; availability unverified | Owner |
+| 2026-09-21 | The owner's CV and résumé are the source for case studies, timeline, CV data, and publications | Owner |
+| 2026-09-21 | TikTok and Instagram handle is @takumyi; LinkedIn is linkedin.com/in/takumioshiyama | Owner |
+| 2026-09-21 | Design direction to be chosen from three proposals in `docs/design-directions.md` | Owner asked for proposals |
 | 2026-09-21 | Astro static site, Cloudflare Pages recommended | Proposal, not yet confirmed |
 
 ## 13. Open items
 
-1. Case-study approval: which of the six candidates in section 5 may be published, and are there others? Some employer work may be confidential.
-2. Domain: confirm whether takumyi.com is already registered to you. If not, register it before the first deploy.
-3. Hosting: confirm Cloudflare Pages, or name a preference from the table in section 8.
-4. Creator statistics: export from TikTok analytics and fill `content/data/creator-stats.yaml`.
-5. Social and profile URLs (TikTok, Instagram, YouTube, X, LinkedIn) for the contact page, footer, and links page.
-6. Design references: any sites whose look you like, and one accent colour, or leave it to the design pass.
-7. Source PDFs for the research plan and any publications, so the research page can link to them.
+1. Case studies: approve, hold, or drop each row in `docs/case-study-candidates.md`, and answer the confidentiality check for Edsy and the 2025 Bangkok work.
+2. Design: pick one of the three directions in `docs/design-directions.md`, or say what to change.
+3. Domain: check the shortlist in section 8 at a registrar and register one.
+4. Hosting: confirm Cloudflare Pages, or name a preference from the table in section 8.
+5. Creator statistics: export from TikTok analytics and fill `content/data/creator-stats.yaml`.
+6. YouTube and X: confirm whether these accounts exist and should be linked.
+7. The @takumyi channel start date for the timeline (the CV does not give it).
+8. Whether the public email on the site should be the Gmail address from the CV, and confirmation that phone numbers stay off the site (they were left out).
+9. Source PDFs for the research plan, the senior thesis, and the ESCAP paper, so `/research` can link to them.

@@ -34,5 +34,5 @@ order: 5
 
 ## Links
 - CV (PDF) → /cv
-- LinkedIn →
+- LinkedIn → https://linkedin.com/in/takumioshiyama
 - Contact → /contact

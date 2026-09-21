@@ -3,7 +3,7 @@ title: ""
 slug: ""
 lang: en
 status: draft            # placeholder | draft | published
-type: research           # research | policy | edtech | interpreting
+type: research           # research | policy | edtech | learning-design | interpreting | media
 org: ""
 role: ""
 period:

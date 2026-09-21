@@ -4,7 +4,7 @@ asOf: ""                 # YYYY-MM-DD of the export
 platforms:
   tiktok:
     handle: "@takumyi"
-    url: ""
+    url: "https://www.tiktok.com/@takumyi"
     followers:
     views28d:
     likes:
@@ -13,8 +13,8 @@ platforms:
       gender: {}         # { female: , male: , other: }
       age: []            # - { range: "18-24", percent: }
   instagram:
-    handle: ""
-    url: ""
+    handle: "@takumyi"
+    url: "https://www.instagram.com/takumyi"
     followers:
   youtube:
     handle: ""
