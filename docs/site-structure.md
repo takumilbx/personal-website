@@ -237,7 +237,7 @@ personal-website/
 - SEO: per-page title and description, Open Graph image, `hreflang`, Person structured data on `/about`, `sitemap.xml`, RSS for `/writing`.
 - Privacy: cookieless analytics only. The contact form forwards messages and does not store them on the site.
 - Typography: Latin, Thai, and Japanese faces that harmonise, chosen now even though only English ships first. Candidates: Inter + Noto Sans Thai + Noto Sans JP, or the IBM Plex family, which covers all three scripts.
-- Design: neutral. One accent colour, generous white space, no audience-specific styling. Three candidate directions, each with trilingual typography and light and dark tokens, are proposed in `docs/design-directions.md` with a preview page; the owner picks one before the layout is scaffolded.
+- Design: neutral. One accent colour, generous white space, no audience-specific styling. Three candidate directions (Register, Feature, Explainer), each with trilingual typography and light and dark tokens, are proposed in `docs/design-directions.md`, with the recommendation being Register. The rendered comparison is `docs/design-preview.html`, published at https://claude.ai/artifact/7pu1sUws3qpYnMmRPe95di. The owner picks one before the layout is scaffolded.
 
 ## 11. Build order
 

@@ -1,0 +1,539 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Takumyi Design Directions</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Sans+Thai:wght@400;500;600&family=IBM+Plex+Sans+JP:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&family=Noto+Serif+Thai:wght@400;500;600&family=Noto+Serif+JP:wght@400;500;600&family=Source+Sans+3:wght@400;500;600&family=Noto+Sans+Thai:wght@400;500&family=Noto+Sans+JP:wght@400;500&family=Anuphan:wght@400;500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap">
+<style>
+/* ---------- Tokens: page chrome plus the three directions (light) ---------- */
+:root{
+  color-scheme:light;
+  --page-bg:#E7E7E4; --page-surface:#FFFFFF; --page-text:#1B1B1A; --page-muted:#5C5C58; --page-border:#CBCBC6;
+
+  --a-bg:#F8F8F6; --a-surface:#FFFFFF; --a-text:#1A1F1E; --a-muted:#5A6360; --a-border:#D5DAD8; --a-accent:#0B6B60; --a-accent-text:#FFFFFF;
+  --b-bg:#FAF8F9; --b-surface:#F2EEF1; --b-text:#221A20; --b-muted:#675C64; --b-border:#DDD4DA; --b-accent:#6D2A56; --b-accent-text:#FFFFFF;
+  --c-bg:#FFFFFF; --c-surface:#F5F4EF; --c-text:#1C1B18; --c-muted:#5D5A52; --c-border:#D9D6CC; --c-accent:#F0B429; --c-accent-text:#1C1B18;
+}
+/* ---------- Dark: system preference, unless the viewer chose light ---------- */
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    color-scheme:dark;
+    --page-bg:#0B0B0C; --page-surface:#161617; --page-text:#E8E8E5; --page-muted:#A3A39E; --page-border:#2C2C2E;
+    --a-bg:#111615; --a-surface:#1A2120; --a-text:#E6EBE9; --a-muted:#9AA6A2; --a-border:#2B3533; --a-accent:#5BC9BA; --a-accent-text:#0A1F1C;
+    --b-bg:#171317; --b-surface:#211B20; --b-text:#ECE6EA; --b-muted:#A99DA5; --b-border:#3A3038; --b-accent:#D797C1; --b-accent-text:#23101D;
+    --c-bg:#141311; --c-surface:#1E1D19; --c-text:#EEEBE3; --c-muted:#A5A197; --c-border:#36342D; --c-accent:#F5C453; --c-accent-text:#1C1B18;
+  }
+}
+/* ---------- Dark: explicit choice wins in both directions ---------- */
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --page-bg:#0B0B0C; --page-surface:#161617; --page-text:#E8E8E5; --page-muted:#A3A39E; --page-border:#2C2C2E;
+  --a-bg:#111615; --a-surface:#1A2120; --a-text:#E6EBE9; --a-muted:#9AA6A2; --a-border:#2B3533; --a-accent:#5BC9BA; --a-accent-text:#0A1F1C;
+  --b-bg:#171317; --b-surface:#211B20; --b-text:#ECE6EA; --b-muted:#A99DA5; --b-border:#3A3038; --b-accent:#D797C1; --b-accent-text:#23101D;
+  --c-bg:#141311; --c-surface:#1E1D19; --c-text:#EEEBE3; --c-muted:#A5A197; --c-border:#36342D; --c-accent:#F5C453; --c-accent-text:#1C1B18;
+}
+
+/* ---------- Base ---------- */
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--page-bg);color:var(--page-text);font:16px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;overflow-x:hidden}
+.wrap{max-width:1120px;margin-inline:auto;padding-inline:16px}
+p,h1,h2,h3{margin:0;overflow-wrap:anywhere}
+h1,h2,h3{text-wrap:balance}
+button{font:inherit;cursor:pointer}
+:focus-visible{outline:2px solid var(--focus,var(--page-text));outline-offset:2px}
+
+/* ---------- Page chrome ---------- */
+.page-head{padding-block:24px 20px}
+.page-head .wrap{display:flex;flex-wrap:wrap;gap:16px 32px;align-items:flex-start;justify-content:space-between}
+.page-head h1{font-size:18px;font-weight:600;margin-bottom:6px}
+.page-head p{color:var(--page-muted);font-size:14px;max-width:62ch}
+.page-head p+p{margin-top:6px}
+.theme{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.theme button{border:1px solid var(--page-border);background:var(--page-surface);color:var(--page-text);padding:8px 14px;border-radius:6px;font-size:14px;font-weight:500}
+.theme button[aria-pressed="true"]{background:var(--page-text);color:var(--page-bg);border-color:var(--page-text)}
+.page-foot{padding-block:24px 40px;color:var(--page-muted);font-size:13px}
+
+/* ---------- Direction sections ---------- */
+.dir{background:var(--bg);color:var(--text);padding-block:40px 56px;margin-top:12px;border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.dir-head{display:grid;gap:10px;max-width:72ch;margin-bottom:40px}
+.kicker{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:500}
+.dir-name{font-size:clamp(28px,5vw,36px);line-height:1.15;font-weight:600}
+.dir-concept{font-size:18px;line-height:1.5}
+.dir-fonts{font-size:14px;color:var(--muted);line-height:1.6}
+.block{margin-top:40px}
+.block-label{display:flex;align-items:center;gap:12px;margin-bottom:16px;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:500}
+.block-label::after{content:"";flex:1;height:1px;background:var(--border)}
+
+/* Hero mock */
+.hero{display:flex;flex-wrap:wrap;gap:24px 32px;align-items:flex-start}
+.hero-text{flex:1 1 320px;min-width:0;display:grid;gap:16px}
+.portrait{background:var(--border);flex:0 0 auto}
+.name{line-height:1.1;font-weight:600}
+.identity{line-height:1.45;max-width:36ch}
+.actions{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:40px;padding:0 18px;border:1px solid transparent;text-decoration:none;font-weight:500;transition:background-color .12s,color .12s,border-color .12s,transform .12s}
+.btn-primary{background:var(--accent);color:var(--accent-text);border-color:var(--accent)}
+.btn-secondary{background:transparent;color:var(--text);border-color:var(--text)}
+.doors{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin-top:32px}
+.door{background:var(--surface);border:1px solid var(--border);padding:20px;display:grid;gap:6px;transition:border-color .15s,transform .15s}
+.door-title{font-weight:600;font-size:19px}
+.door-line{color:var(--muted);font-size:15px;line-height:1.5}
+.door-arrow{margin-top:6px;color:var(--accent);font-size:15px}
+
+/* Cards */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px;align-items:start}
+.card{background:var(--surface);border:1px solid var(--border);overflow:hidden;transition:border-color .15s,transform .15s}
+.card-body{padding:18px 20px 20px;display:grid;gap:10px}
+.meta{font-size:13px;color:var(--muted);line-height:1.5}
+.card-title{font-size:23px;line-height:1.25;font-weight:600}
+.tags{display:flex;flex-wrap:wrap;gap:8px}
+.tag{font-size:12px;letter-spacing:.06em;text-transform:uppercase;padding:3px 8px;border:1px solid var(--border);color:var(--muted);line-height:1.4}
+.cover{aspect-ratio:16/10;max-width:100%;display:flex;align-items:flex-end;padding:20px;background:var(--accent);color:var(--accent-text)}
+.cover-num{font-size:clamp(40px,8vw,64px);line-height:1;font-weight:600;font-variant-numeric:tabular-nums}
+.cover-num .arrow{font-size:.55em;margin:0 .15em;vertical-align:.25em;opacity:.8}
+.video{display:flex;align-items:stretch}
+.thumb{flex:0 0 108px;aspect-ratio:9/16;max-width:100%;background:var(--muted);display:flex;align-items:center;justify-content:center;position:relative}
+.play{width:0;height:0;border-style:solid;border-width:11px 0 11px 20px;border-color:transparent transparent transparent var(--bg);margin-left:4px}
+.video .card-body{flex:1;min-width:0;align-content:start}
+
+/* Specimen */
+.specimen{display:grid;gap:28px}
+.spec-row{display:grid;gap:6px;border-top:1px solid var(--border);padding-top:14px}
+.spec-label{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:500;margin-bottom:6px}
+.spec-h{font-size:28px;line-height:1.25;font-weight:600;max-width:28em}
+.spec-b{max-width:65ch}
+
+/* Palette */
+.palette{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:12px}
+.swatch{display:grid;gap:6px}
+.chip{height:64px;border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:20px;font-weight:600}
+.sw-name{font-size:13px;font-weight:500}
+.sw-hex{font-size:12px;color:var(--muted);font-variant-numeric:tabular-nums;line-height:1.5}
+.contrast{margin-top:16px;font-size:14px;color:var(--muted);max-width:70ch;line-height:1.6}
+
+/* ---------- Direction A: Register ---------- */
+.dir-a{
+  --bg:var(--a-bg);--surface:var(--a-surface);--text:var(--a-text);--muted:var(--a-muted);--border:var(--a-border);--accent:var(--a-accent);--accent-text:var(--a-accent-text);--focus:var(--accent);
+  --sans:"IBM Plex Sans","IBM Plex Sans Thai","IBM Plex Sans JP",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  font-family:var(--sans);font-size:16px;line-height:1.6;
+}
+.dir-a .name{font-size:clamp(30px,8.5vw,40px)}
+.dir-a .identity{font-size:19px}
+.dir-a .portrait{width:96px;height:96px}
+.dir-a .btn{border-radius:0}
+.dir-a .btn-primary:hover{background:var(--text);border-color:var(--text);color:var(--bg)}
+.dir-a .btn-secondary:hover{background:var(--surface)}
+.dir-a .kicker,.dir-a .block-label,.dir-a .meta,.dir-a .tag,.dir-a .spec-label,.dir-a .sw-hex,.dir-a .door-arrow{font-family:var(--mono)}
+.dir-a .meta{letter-spacing:.01em}
+.dir-a .door:hover,.dir-a .card:hover{border-color:var(--text)}
+.dir-a .cover-num{font-family:var(--mono);font-weight:500}
+.dir-a .spec-h{font-size:28px}
+.dir-a .spec-b{font-size:16px}
+.dir-a [lang="th"]{line-height:1.7}
+.dir-a [lang="ja"]{line-height:1.8}
+.dir-a [lang="ja"] .spec-h{font-weight:500}
+.dir-a .card-title[lang="th"]{line-height:1.35}
+
+/* ---------- Direction B: Feature ---------- */
+.dir-b{
+  --bg:var(--b-bg);--surface:var(--b-surface);--text:var(--b-text);--muted:var(--b-muted);--border:var(--b-border);--accent:var(--b-accent);--accent-text:var(--b-accent-text);--focus:var(--accent);
+  --serif:"Source Serif 4","Noto Serif Thai","Noto Serif JP",Georgia,"Times New Roman",serif;
+  --sans:"Source Sans 3","Noto Sans Thai","Noto Sans JP",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  font-family:var(--serif);font-size:18px;line-height:1.6;font-optical-sizing:auto;
+}
+.dir-b .kicker,.dir-b .block-label,.dir-b .dir-fonts,.dir-b .meta,.dir-b .tag,.dir-b .btn,.dir-b .spec-label,.dir-b .sw-name,.dir-b .sw-hex,.dir-b .contrast,.dir-b .door-line,.dir-b .door-arrow{font-family:var(--sans)}
+.dir-b .dir-name{font-weight:600}
+.dir-b .name{font-size:clamp(34px,9.5vw,48px);font-weight:600;letter-spacing:-.01em}
+.dir-b .identity{font-size:22px;line-height:1.4}
+.dir-b .portrait{width:160px;height:200px;border-radius:3px}
+.dir-b .btn{border-radius:3px;min-height:44px;font-size:17px}
+.dir-b .btn-primary:hover{background:var(--text);border-color:var(--text);color:var(--bg)}
+.dir-b .btn-secondary{border-color:transparent;padding-inline:4px;text-decoration:underline;text-decoration-color:var(--accent);text-underline-offset:5px;text-decoration-thickness:1px}
+.dir-b .btn-secondary:hover{color:var(--accent);text-decoration-thickness:2px}
+.dir-b .door,.dir-b .card{background:transparent;border:0;border-top:1px solid var(--border);padding:24px 0 0}
+.dir-b .doors{gap:24px 36px}
+.dir-b .door-title{font-size:24px;font-weight:500}
+.dir-b .door-line{font-size:16px}
+.dir-b .door:hover .door-title,.dir-b .card:hover .card-title{color:var(--accent)}
+.dir-b .cards{gap:36px}
+.dir-b .card-body{padding:18px 0 0}
+.dir-b .card-title{font-size:24px;font-weight:500;line-height:1.3}
+.dir-b .meta{font-size:14px;font-weight:500;letter-spacing:.01em}
+.dir-b .tag{border:0;padding:0;font-size:13px;letter-spacing:.08em;font-weight:500}
+.dir-b .tag+.tag::before{content:"\00b7";margin-right:8px;color:var(--muted)}
+.dir-b .cover{background:var(--surface);color:var(--accent);border-radius:3px}
+.dir-b .cover-num{font-weight:600;letter-spacing:-.02em}
+.dir-b .thumb{border-radius:3px;flex-basis:120px}
+.dir-b .video{gap:20px}
+.dir-b .spec-h{font-size:30px;font-weight:600;line-height:1.2}
+.dir-b .spec-b{font-size:18px}
+.dir-b .chip{border-radius:3px}
+.dir-b [lang="th"]{font-size:1.05em;line-height:1.75}
+.dir-b [lang="ja"]{line-height:1.85;letter-spacing:.02em}
+.dir-b [lang="ja"] .spec-h{font-weight:500}
+.dir-b .card-title[lang="th"]{line-height:1.4}
+
+/* ---------- Direction C: Explainer ---------- */
+.dir-c{
+  --bg:var(--c-bg);--surface:var(--c-surface);--text:var(--c-text);--muted:var(--c-muted);--border:var(--c-border);--accent:var(--c-accent);--accent-text:var(--c-accent-text);--focus:var(--text);
+  --sans:"Anuphan","Zen Kaku Gothic New",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  font-family:var(--sans);font-size:17px;line-height:1.55;
+}
+.dir-c .dir-name{font-weight:700}
+.dir-c .name{font-size:clamp(32px,9vw,44px);font-weight:700;letter-spacing:-.01em}
+.dir-c .identity{font-size:20px}
+.dir-c .portrait{width:120px;height:160px;border-radius:12px}
+.dir-c .btn{border-radius:10px;min-height:44px;font-weight:600;padding-inline:20px}
+.dir-c .btn-primary:hover{background:var(--text);border-color:var(--text);color:var(--bg)}
+.dir-c .btn-secondary{border-color:var(--border)}
+.dir-c .btn-secondary:hover{border-color:var(--text)}
+.dir-c .btn:active{transform:translateY(1px)}
+.dir-c .door,.dir-c .card{border-radius:12px}
+.dir-c .door:hover,.dir-c .card:hover{border-color:var(--text);transform:translateY(-2px)}
+.dir-c .door-title{font-size:20px;font-weight:600}
+.dir-c .door-arrow{color:var(--text);text-decoration:underline;text-decoration-color:var(--accent);text-decoration-thickness:2px;text-underline-offset:4px}
+.dir-c .card-title{font-size:22px;font-weight:600}
+.dir-c .meta{font-weight:500}
+.dir-c .tag{border:0;background:var(--bg);color:var(--text);border-radius:999px;padding:4px 10px;text-transform:none;letter-spacing:0;font-size:13px;font-weight:500}
+.dir-c .card .tag{background:var(--bg)}
+.dir-c .cover{background:var(--surface);color:var(--text);border-bottom:1px solid var(--border)}
+.dir-c .cover-num{font-weight:700;letter-spacing:-.02em}
+.dir-c .cover-num .arrow{color:var(--text)}
+.dir-c .thumb{border-radius:0}
+.dir-c .spec-h{font-size:27px;font-weight:700;line-height:1.2}
+.dir-c .spec-b{font-size:17px}
+.dir-c .chip{border-radius:10px}
+.dir-c [lang="ja"]{line-height:1.8}
+.dir-c [lang="ja"] .spec-h{font-weight:700}
+.dir-c .card-title[lang="th"]{line-height:1.35}
+
+@media (max-width:480px){
+  .dir{padding-block:32px 44px}
+  .dir-head{margin-bottom:32px}
+  .block{margin-top:32px}
+  .card-body{padding:16px}
+  .dir-b .card-body{padding:16px 0 0}
+}
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{transition:none !important}
+  .dir-c .door:hover,.dir-c .card:hover{transform:none}
+}
+</style>
+
+<header class="page-head">
+  <div class="wrap">
+    <div>
+      <h1>Takumyi Design Directions</h1>
+      <p>Three visual directions for Takumi Oshiyama's personal site, stacked so they can be compared. Each block below is styled only with its own fonts and colour tokens, so the differences are rendered rather than described. Portrait and thumbnails are solid placeholders.</p>
+      <p>Switch the theme to compare light and dark. Narrow the window to phone width to check how each direction stacks. Details, contrast figures and the recommendation are in docs/design-directions.md.</p>
+    </div>
+    <div class="theme" role="group" aria-label="Theme">
+      <button type="button" id="theme-light" aria-pressed="false">Light</button>
+      <button type="button" id="theme-dark" aria-pressed="false">Dark</button>
+      <button type="button" id="theme-system" aria-pressed="true">System</button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<!-- ============================== A: REGISTER ============================== -->
+<section class="dir dir-a" id="register" aria-labelledby="register-name">
+  <div class="wrap">
+    <div class="dir-head">
+      <p class="kicker">Direction A</p>
+      <h2 class="dir-name" id="register-name">Register</h2>
+      <p class="dir-concept">A well-kept record. One type family carries English, Thai and Japanese; numbers and metadata sit in monospace; corners are square and lists look like lists.</p>
+      <p class="dir-fonts">IBM Plex Sans · IBM Plex Sans Thai · IBM Plex Sans JP · IBM Plex Mono for metadata. Accent: teal. Radius: 0.</p>
+    </div>
+
+    <div class="block">
+      <p class="block-label">Home hero</p>
+      <div class="hero">
+        <div class="portrait" aria-hidden="true"></div>
+        <div class="hero-text">
+          <h3 class="name">Takumi Oshiyama</h3>
+          <p class="identity">EdTech researcher working across Thailand and Japan. Creator behind @takumyi.</p>
+          <div class="actions">
+            <button type="button" class="btn btn-primary">See my work</button>
+            <button type="button" class="btn btn-secondary">Watch @takumyi</button>
+          </div>
+        </div>
+      </div>
+      <div class="doors">
+        <div class="door"><span class="door-title">Work and Research</span><span class="door-line">Case studies from Bangkok and Tokyo, and the current research plan.</span><span class="door-arrow">→</span></div>
+        <div class="door"><span class="door-title">Creator</span><span class="door-line">@takumyi: Japanese music and society, explained for a Thai audience.</span><span class="door-arrow">→</span></div>
+        <div class="door"><span class="door-title">Writing</span><span class="door-line">Essays, literature notes, and the study-abroad journal.</span><span class="door-arrow">→</span></div>
+      </div>
+    </div>
+
+    <div class="block">
+      <p class="block-label">Cards</p>
+      <div class="cards">
+        <article class="card">
+          <div class="cover" aria-hidden="true"><span class="cover-num">47<span class="arrow">→</span>8</span></div>
+          <div class="card-body">
+            <p class="meta">Bangkok Metropolitan Administration · 2023 · 437 principals</p>
+            <h3 class="card-title">Bangkok's 47 education policies, sorted into 8 focus areas</h3>
+            <div class="tags"><span class="tag">Policy</span><span class="tag">TH</span></div>
+          </div>
+        </article>
+        <article class="card video">
+          <div class="thumb" aria-hidden="true"><span class="play"></span></div>
+          <div class="card-body">
+            <p class="meta">Artist showcase · TikTok</p>
+            <h3 class="card-title" lang="th">มารู้จัก harha กัน</h3>
+            <div class="tags"><span class="tag">J-rock</span><span class="tag">JP</span></div>
+          </div>
+        </article>
+      </div>
+    </div>
+
+    <div class="block">
+      <p class="block-label">Type specimen</p>
+      <div class="specimen">
+        <div class="spec-row" lang="en">
+          <p class="spec-label">EN · IBM Plex Sans 600 at 28 px, 400 at 16 px</p>
+          <p class="spec-h">Why one device per student does not become one lesson per device.</p>
+          <p class="spec-b">Why one device per student does not become one lesson per device.</p>
+        </div>
+        <div class="spec-row" lang="th">
+          <p class="spec-label" lang="en">TH · IBM Plex Sans Thai 600 at 28 px, 400 at 16 px</p>
+          <p class="spec-h">ทำไมแจกแท็บเล็ตให้เด็กทุกคนแล้วห้องเรียนถึงยังไม่เปลี่ยน</p>
+          <p class="spec-b">ทำไมแจกแท็บเล็ตให้เด็กทุกคนแล้วห้องเรียนถึงยังไม่เปลี่ยน</p>
+        </div>
+        <div class="spec-row" lang="ja">
+          <p class="spec-label" lang="en">JA · IBM Plex Sans JP 500 at 28 px, 400 at 16 px</p>
+          <p class="spec-h">一人一台の端末が、なぜ授業を変えないのか</p>
+          <p class="spec-b">一人一台の端末が、なぜ授業を変えないのか</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="block">
+      <p class="block-label">Palette</p>
+      <div class="palette">
+        <div class="swatch"><div class="chip" style="background:var(--bg)"></div><p class="sw-name">bg</p><p class="sw-hex">L #F8F8F6<br>D #111615</p></div>
+        <div class="swatch"><div class="chip" style="background:var(--surface)"></div><p class="sw-name">surface</p><p class="sw-hex">L #FFFFFF<br>D #1A2120</p></div>
+        <div class="swatch"><div class="chip" style="background:var(--text);color:var(--bg)">Aa</div><p class="sw-name">text</p><p class="sw-hex">L #1A1F1E<br>D #E6EBE9</p></div>
+        <div class="swatch"><div class="chip" style="background:var(--muted);color:var(--bg)">Aa</div><p class="sw-name">text-muted</p><p class="sw-hex">L #5A6360<br>D #9AA6A2</p></div>
+        <div class="swatch"><div class="chip" style="background:var(--border)"></div><p class="sw-name">border</p><p class="sw-hex">L #D5DAD8<br>D #2B3533</p></div>
+        <div class="swatch"><div class="chip" style="background:var(--accent);color:var(--accent-text)">Aa</div><p class="sw-name">accent</p><p class="sw-hex">L #0B6B60<br>D #5BC9BA</p></div>
+        <div class="swatch"><div class="chip" style="background:var(--accent-text);color:var(--accent)">Aa</div><p class="sw-name">accent-text</p><p class="sw-hex">L #FFFFFF<br>D #0A1F1C</p></div>
+      </div>
+      <p class="contrast">Text on bg 15.7:1 light, 15.2:1 dark. Accent-text on accent 6.4:1 light, 8.6:1 dark. Text-muted on bg 5.8:1 light, 7.3:1 dark. The accent also passes as link text on bg: 6.0:1 light, 9.1:1 dark.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== B: FEATURE ============================== -->
+<section class="dir dir-b" id="feature" aria-labelledby="feature-name">
+  <div class="wrap">
+    <div class="dir-head">
+      <p class="kicker">Direction B</p>
+      <h2 class="dir-name" id="feature-name">Feature</h2>
+      <p class="dir-concept">A magazine feature rather than a journal article. A serif reading face at 18 px, borderless cards separated by space and a single rule, and a plum accent that appears only on buttons and underlines.</p>
+      <p class="dir-fonts">Source Serif 4 · Noto Serif Thai · Noto Serif JP for reading. Source Sans 3 · Noto Sans Thai · Noto Sans JP for buttons, tags and meta. Accent: plum. Radius: 3 px.</p>
+    </div>
+
+    <div class="block">
+      <p class="block-label">Home hero</p>
+      <div class="hero">
+        <div class="portrait" aria-hidden="true"></div>
+        <div class="hero-text">
+          <h3 class="name">Takumi Oshiyama</h3>
+          <p class="identity">EdTech researcher working across Thailand and Japan. Creator behind @takumyi.</p>
+          <div class="actions">
+            <button type="button" class="btn btn-primary">See my work</button>
+            <button type="button" class="btn btn-secondary">Watch @takumyi →</button>
+          </div>
+        </div>
+      </div>
+      <div class="doors">
+        <div class="door"><span class="door-title">Work and Research</span><span class="door-line">Case studies from Bangkok and Tokyo, and the current research plan.</span><span class="door-arrow">→</span></div>
+        <div class="door"><span class="door-title">Creator</span><span class="door-line">@takumyi: Japanese music and society, explained for a Thai audience.</span><span class="door-arrow">→</span></div>
+        <div class="door"><span class="door-title">Writing</span><span class="door-line">Essays, literature notes, and the study-abroad journal.</span><span class="door-arrow">→</span></div>
+      </div>
+    </div>
+
+    <div class="block">
+      <p class="block-label">Cards</p>
+      <div class="cards">
+        <article class="card">
+          <div class="cover" aria-hidden="true"><span class="cover-num">47<span class="arrow">→</span>8</span></div>
+          <div class="card-body">
+            <p class="meta">Bangkok Metropolitan Administration · 2023 · 437 principals</p>
+            <h3 class="card-title">Bangkok's 47 education policies, sorted into 8 focus areas</h3>
+            <div class="tags"><span class="tag">Policy</span><span class="tag">Thailand</span></div>
+          </div>
+        </article>
+        <article class="card video">
+          <div class="thumb" aria-hidden="true"><span class="play"></span></div>
+          <div class="card-body">
+            <p class="meta">Artist showcase · TikTok</p>
+            <h3 class="card-title" lang="th">มารู้จัก harha กัน</h3>
+            <div class="tags"><span class="tag">J-rock</span><span class="tag">Japan</span></div>
+          </div>
+        </article>
+      </div>
+    </div>
+
+    <div class="block">
+      <p class="block-label">Type specimen</p>
+      <div class="specimen">
+        <div class="spec-row" lang="en">
+          <p class="spec-label">EN · Source Serif 4 600 at 30 px, 400 at 18 px</p>
+          <p class="spec-h">Why one device per student does not become one lesson per device.</p>
+          <p class="spec-b">Why one device per student does not become one lesson per device.</p>
+        </div>
+        <div class="spec-row" lang="th">
+          <p class="spec-label" lang="en">TH · Noto Serif Thai 600 at 30 px, 400 at 19 px</p>
+          <p class="spec-h">ทำไมแจกแท็บเล็ตให้เด็กทุกคนแล้วห้องเรียนถึงยังไม่เปลี่ยน</p>
+          <p class="spec-b">ทำไมแจกแท็บเล็ตให้เด็กทุกคนแล้วห้องเรียนถึงยังไม่เปลี่ยน</p>
+        </div>
+        <div class="spec-row" lang="ja">
+          <p class="spec-label" lang="en">JA · Noto Serif JP 500 at 30 px, 400 at 18 px</p>
+          <p class="spec-h">一人一台の端末が、なぜ授業を変えないのか</p>
+          <p class="spec-b">一人一台の端末が、なぜ授業を変えないのか</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="block">
+      <p class="block-label">Palette</p>
+      <div class="palette">
+        <div class="swatch"><div class="chip" style="background:var(--bg)"></div><p class="sw-name">bg</p><p class="sw-hex">L #FAF8F9<br>D #171317</p></div>
+        <div class="swatch"><div class="chip" style="background:var(--surface)"></div><p class="sw-name">surface</p><p class="sw-hex">L #F2EEF1<br>D #211B20</p></div>
+        <div class="swatch"><div class="chip" style="background:var(--text);color:var(--bg)">Aa</div><p class="sw-name">text</p><p class="sw-hex">L #221A20<br>D #ECE6EA</p></div>
+        <div class="swatch"><div class="chip" style="background:var(--muted);color:var(--bg)">Aa</div><p class="sw-name">text-muted</p><p class="sw-hex">L #675C64<br>D #A99DA5</p></div>
+        <div class="swatch"><div class="chip" style="background:var(--border)"></div><p class="sw-name">border</p><p class="sw-hex">L #DDD4DA<br>D #3A3038</p></div>
+        <div class="swatch"><div class="chip" style="background:var(--accent);color:var(--accent-text)">Aa</div><p class="sw-name">accent</p><p class="sw-hex">L #6D2A56<br>D #D797C1</p></div>
+        <div class="swatch"><div class="chip" style="background:var(--accent-text);color:var(--accent)">Aa</div><p class="sw-name">accent-text</p><p class="sw-hex">L #FFFFFF<br>D #23101D</p></div>
+      </div>
+      <p class="contrast">Text on bg 16.1:1 light, 15.0:1 dark. Accent-text on accent 9.9:1 light, 7.8:1 dark. Text-muted on bg 6.0:1 light, 7.1:1 dark. The accent also passes as link text on bg: 9.4:1 light, 8.0:1 dark.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== C: EXPLAINER ============================== -->
+<section class="dir dir-c" id="explainer" aria-labelledby="explainer-name">
+  <div class="wrap">
+    <div class="dir-head">
+      <p class="kicker">Direction C</p>
+      <h2 class="dir-name" id="explainer-name">Explainer</h2>
+      <p class="dir-concept">The site explains things plainly, the way the channel does: heavier headings, short lines, filled chips, and one amber button that is unmistakably the thing to press. Latin and Thai come from one Bangkok-drawn family.</p>
+      <p class="dir-fonts">Anuphan for Latin and Thai · Zen Kaku Gothic New for Japanese. Accent: amber, used as a fill and never as text. Radius: 10 to 12 px.</p>
+    </div>
+
+    <div class="block">
+      <p class="block-label">Home hero</p>
+      <div class="hero">
+        <div class="portrait" aria-hidden="true"></div>
+        <div class="hero-text">
+          <h3 class="name">Takumi Oshiyama</h3>
+          <p class="identity">EdTech researcher working across Thailand and Japan. Creator behind @takumyi.</p>
+          <div class="actions">
+            <button type="button" class="btn btn-primary">See my work</button>
+            <button type="button" class="btn btn-secondary">Watch @takumyi</button>
+          </div>
+        </div>
+      </div>
+      <div class="doors">
+        <div class="door"><span class="door-title">Work and Research</span><span class="door-line">Case studies from Bangkok and Tokyo, and the current research plan.</span><span class="door-arrow">Open</span></div>
+        <div class="door"><span class="door-title">Creator</span><span class="door-line">@takumyi: Japanese music and society, explained for a Thai audience.</span><span class="door-arrow">Open</span></div>
+        <div class="door"><span class="door-title">Writing</span><span class="door-line">Essays, literature notes, and the study-abroad journal.</span><span class="door-arrow">Open</span></div>
+      </div>
+    </div>
+
+    <div class="block">
+      <p class="block-label">Cards</p>
+      <div class="cards">
+        <article class="card">
+          <div class="cover" aria-hidden="true"><span class="cover-num">47<span class="arrow">→</span>8</span></div>
+          <div class="card-body">
+            <div class="tags"><span class="tag">Policy analysis</span><span class="tag">Thailand</span></div>
+            <h3 class="card-title">Bangkok's 47 education policies, sorted into 8 focus areas</h3>
+            <p class="meta">Bangkok Metropolitan Administration · 2023 · 437 principals</p>
+          </div>
+        </article>
+        <article class="card video">
+          <div class="thumb" aria-hidden="true"><span class="play"></span></div>
+          <div class="card-body">
+            <div class="tags"><span class="tag">J-rock</span><span class="tag">Japan</span></div>
+            <h3 class="card-title" lang="th">มารู้จัก harha กัน</h3>
+            <p class="meta">Artist showcase · TikTok</p>
+          </div>
+        </article>
+      </div>
+    </div>
+
+    <div class="block">
+      <p class="block-label">Type specimen</p>
+      <div class="specimen">
+        <div class="spec-row" lang="en">
+          <p class="spec-label">EN · Anuphan 700 at 27 px, 400 at 17 px</p>
+          <p class="spec-h">Why one device per student does not become one lesson per device.</p>
+          <p class="spec-b">Why one device per student does not become one lesson per device.</p>
+        </div>
+        <div class="spec-row" lang="th">
+          <p class="spec-label" lang="en">TH · Anuphan 700 at 27 px, 400 at 17 px</p>
+          <p class="spec-h">ทำไมแจกแท็บเล็ตให้เด็กทุกคนแล้วห้องเรียนถึงยังไม่เปลี่ยน</p>
+          <p class="spec-b">ทำไมแจกแท็บเล็ตให้เด็กทุกคนแล้วห้องเรียนถึงยังไม่เปลี่ยน</p>
+        </div>
+        <div class="spec-row" lang="ja">
+          <p class="spec-label" lang="en">JA · Zen Kaku Gothic New 700 at 27 px, 400 at 17 px</p>
+          <p class="spec-h">一人一台の端末が、なぜ授業を変えないのか</p>
+          <p class="spec-b">一人一台の端末が、なぜ授業を変えないのか</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="block">
+      <p class="block-label">Palette</p>
+      <div class="palette">
+        <div class="swatch"><div class="chip" style="background:var(--bg)"></div><p class="sw-name">bg</p><p class="sw-hex">L #FFFFFF<br>D #141311</p></div>
+        <div class="swatch"><div class="chip" style="background:var(--surface)"></div><p class="sw-name">surface</p><p class="sw-hex">L #F5F4EF<br>D #1E1D19</p></div>
+        <div class="swatch"><div class="chip" style="background:var(--text);color:var(--bg)">Aa</div><p class="sw-name">text</p><p class="sw-hex">L #1C1B18<br>D #EEEBE3</p></div>
+        <div class="swatch"><div class="chip" style="background:var(--muted);color:var(--bg)">Aa</div><p class="sw-name">text-muted</p><p class="sw-hex">L #5D5A52<br>D #A5A197</p></div>
+        <div class="swatch"><div class="chip" style="background:var(--border)"></div><p class="sw-name">border</p><p class="sw-hex">L #D9D6CC<br>D #36342D</p></div>
+        <div class="swatch"><div class="chip" style="background:var(--accent);color:var(--accent-text)">Aa</div><p class="sw-name">accent</p><p class="sw-hex">L #F0B429<br>D #F5C453</p></div>
+        <div class="swatch"><div class="chip" style="background:var(--accent-text);color:var(--accent)">Aa</div><p class="sw-name">accent-text</p><p class="sw-hex">L #1C1B18<br>D #1C1B18</p></div>
+      </div>
+      <p class="contrast">Text on bg 17.2:1 light, 15.6:1 dark. Accent-text on accent 9.2:1 light, 10.6:1 dark. Text-muted on bg 6.9:1 light, 7.2:1 dark. Amber on white is 1.9:1, so in this direction the accent is a fill (buttons, chips, underlines) and never a text colour.</p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="page-foot">
+  <div class="wrap">Proposal v1, 2026-09-21. Fonts load from Google Fonts; the first paint may show fallbacks for a moment.</div>
+</footer>
+
+<script>
+(function(){
+  var root=document.documentElement;
+  var mq=window.matchMedia('(prefers-color-scheme: dark)');
+  var buttons={light:document.getElementById('theme-light'),dark:document.getElementById('theme-dark'),system:document.getElementById('theme-system')};
+  function current(){ return root.getAttribute('data-theme') || 'system'; }
+  function render(){
+    var c=current();
+    Object.keys(buttons).forEach(function(k){ buttons[k].setAttribute('aria-pressed', k===c ? 'true' : 'false'); });
+    buttons.system.textContent = 'System (' + (mq.matches ? 'dark' : 'light') + ')';
+  }
+  function set(mode){
+    if(mode==='system'){ root.removeAttribute('data-theme'); }
+    else { root.setAttribute('data-theme', mode); }
+    try{ if(mode==='system'){ localStorage.removeItem('theme'); } else { localStorage.setItem('theme', mode); } }catch(e){}
+    render();
+  }
+  try{ var saved=localStorage.getItem('theme'); if(saved==='light'||saved==='dark'){ root.setAttribute('data-theme', saved); } }catch(e){}
+  buttons.light.addEventListener('click', function(){ set('light'); });
+  buttons.dark.addEventListener('click', function(){ set('dark'); });
+  buttons.system.addEventListener('click', function(){ set('system'); });
+  if(mq.addEventListener){ mq.addEventListener('change', render); }
+  render();
+})();
+</script>
