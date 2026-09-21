@@ -1,0 +1,15 @@
+# Python caches from vendored skill scripts
+__pycache__/
+*.pyc
+
+# Local state written by the impeccable skill if its launcher is ever run
+.impeccable/config.local.json
+.claude/settings.local.json
+
+# Node and build output, for when the site is scaffolded
+node_modules/
+dist/
+.astro/
+
+# OS files
+.DS_Store
