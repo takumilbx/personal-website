@@ -295,6 +295,7 @@ Phase 3:
 | 2026-09-21 | Astro static site, Cloudflare Pages recommended | Proposal, not yet confirmed |
 | 2026-09-21 | The combined landing page in `docs/landing-page-brief.md` is the home page, built inside Astro with React islands | Owner |
 | 2026-09-21 | Kanit, ink `#0C0C0C` and cream `#efeee9`, dark only, three nav labels, confirmed socials, and CV-derived copy applied as defaults on the home page until the owner answers the brief's questions | Builder; every default is marked in `content/pages/en/home.yaml` |
+| 2026-09-22 | Interim hosting on GitHub Pages from the working branch; the owner enabled Pages with the GitHub Actions source and allowed the `claude/**` branch in the `github-pages` environment | Owner |
 
 ## 13. Open items
 
