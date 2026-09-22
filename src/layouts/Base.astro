@@ -8,6 +8,8 @@ interface Props {
   lang?: string;
 }
 const { title, description = '', lang = 'en' } = Astro.props;
+// The GitHub Pages address is a preview with placeholder assets; keep it out of search results.
+const preview = (import.meta.env.SITE ?? '').includes('github.io');
 ---
 <!doctype html>
 <html lang={lang} class="bg-ink">
@@ -16,6 +18,7 @@ const { title, description = '', lang = 'en' } = Astro.props;
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <title>{title}</title>
     {description && <meta name="description" content={description} />}
+    {preview && <meta name="robots" content="noindex" />}
     <meta name="color-scheme" content="dark" />
     <meta name="theme-color" content="#0C0C0C" />
     <link rel="icon" href={withBase('/favicon.svg')} type="image/svg+xml" />
