@@ -137,7 +137,7 @@ Built as `src/pages/en/index.astro` with the hero as static Astro plus a React i
 |---|---|---|
 | Q2 names | Marquee and title "Takumi — Oshiyama", brand "Takumi" | `home.yaml`: marquee, title, brand |
 | Q3 header | Work, Creator, About; TikTok, Instagram, LinkedIn; 2026 | `home.yaml`: nav, social, year |
-| Q5 font | Kanit 300 to 900 | `src/layouts/Base.astro` and `src/styles/global.css` |
+| Q5 font | Hanken Grotesk 300 to 600 for Latin with Noto Sans Thai for Thai, the closest licensed match to the reference's Helvetica Neue. Kanit was the first default and read too geometric; changed 2026-09-22 with a premium pass (medium-weight headings instead of black, tight tracking, hairlines instead of 2px borders, nested card shells, light numerals, a nested arrow in the ghost button, custom easing, film grain) | `src/layouts/Base.astro` and `src/styles/global.css` |
 | Q6 colours | Ink and cream only; What I do painted cream | `src/styles/global.css` |
 | Q7 portrait | Follows the cursor on pointer devices, still on touch | `home.yaml`: hero.magnet |
 | Q8 language | English only | n/a |

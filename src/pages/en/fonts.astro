@@ -4,13 +4,13 @@ import '../../styles/global.css';
 import { withBase } from '../../lib/url';
 
 const candidates = [
-  { id: 'kanit', name: 'Kanit (current)', note: 'Thai and Latin in one family. Geometric, wide, rounded terminals.', stack: "'Kanit', sans-serif" },
+  { id: 'hanken', name: 'Hanken Grotesk + Noto Sans Thai (current)', note: 'Lighter grotesk, Helvetica-like, with a wide range of weights. Thai from Noto.', stack: "'Hanken Grotesk', 'Noto Sans Thai', sans-serif" },
+  { id: 'kanit', name: 'Kanit (previous)', note: 'Thai and Latin in one family. Geometric, wide, rounded terminals.', stack: "'Kanit', sans-serif" },
   { id: 'prompt', name: 'Prompt', note: 'Thai and Latin in one family, from the same Bangkok foundry as Kanit. Softer and more even.', stack: "'Prompt', sans-serif" },
   { id: 'anuphan', name: 'Anuphan', note: 'Thai and Latin in one family. Contemporary, plainer than Kanit, no italics.', stack: "'Anuphan', sans-serif" },
   { id: 'sarabun', name: 'Sarabun', note: 'Thai and Latin in one family. Humanist and quiet; the Thai government document face.', stack: "'Sarabun', sans-serif" },
   { id: 'plex', name: 'IBM Plex Sans + IBM Plex Sans Thai', note: 'Two matched families with one weight scale. Neutral, slightly technical.', stack: "'IBM Plex Sans', 'IBM Plex Sans Thai', sans-serif" },
   { id: 'archivo', name: 'Archivo + Noto Sans Thai', note: 'Closest licensed match to the Helvetica look of the reference hero. Thai from Noto.', stack: "'Archivo', 'Noto Sans Thai', sans-serif" },
-  { id: 'hanken', name: 'Hanken Grotesk + Noto Sans Thai', note: 'Lighter grotesk, also Helvetica-like, with a wider range of weights. Thai from Noto.', stack: "'Hanken Grotesk', 'Noto Sans Thai', sans-serif" },
   { id: 'instrument', name: 'Instrument Sans + Noto Sans Thai', note: 'Grotesk with a little more character in the Latin. Thai from Noto.', stack: "'Instrument Sans', 'Noto Sans Thai', sans-serif" },
 ];
 
@@ -51,8 +51,8 @@ const thai = 'ทำไมแจกแท็บเล็ตให้เด็ก
         <section class="mt-14 border-t border-cream/15 pt-8" style={`font-family: ${c.stack}`}>
           <p class="text-xs uppercase tracking-[0.2em] text-cream/50" style="font-family: system-ui, sans-serif">{i + 1}. {c.name}</p>
           <p class="mt-1 text-sm text-cream/60" style="font-family: system-ui, sans-serif">{c.note}</p>
-          <p class="mt-6 whitespace-nowrap overflow-hidden font-medium leading-none" style="font-size: clamp(3rem, 12vw, 9rem)">Takumi — Oshiyama</p>
-          <p class="hero-heading mt-6 font-black uppercase leading-none tracking-tight" style="font-size: clamp(2.5rem, 8vw, 6rem)">About me</p>
+          <p class="mt-6 whitespace-nowrap overflow-hidden font-normal leading-none tracking-[-0.02em]" style="font-size: clamp(3rem, 12vw, 9rem)">Takumi — Oshiyama</p>
+          <p class="hero-heading mt-6 leading-none" style="font-size: clamp(2.5rem, 8vw, 6rem)">About me</p>
           <p class="mt-6 max-w-[560px] font-medium leading-relaxed" style="font-size: clamp(1rem, 2vw, 1.35rem)">{paragraph}</p>
           <p class="mt-4 max-w-[560px] font-light leading-relaxed opacity-70" style="font-size: 1.05rem">{paragraph}</p>
           <p class="mt-4 text-sm">Work &nbsp;·&nbsp; Creator &nbsp;·&nbsp; About &nbsp;·&nbsp; 2026 &nbsp;·&nbsp; <span class="uppercase tracking-widest">Read the case study</span></p>

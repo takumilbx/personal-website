@@ -13,8 +13,8 @@ interface Props {
 export default function Magnet({
   padding = 150,
   strength = 3,
-  activeTransition = 'transform 0.3s ease-out',
-  inactiveTransition = 'transform 0.6s ease-in-out',
+  activeTransition = 'transform 0.35s cubic-bezier(0.32, 0.72, 0, 1)',
+  inactiveTransition = 'transform 0.7s cubic-bezier(0.32, 0.72, 0, 1)',
   className,
   children,
 }: Props) {

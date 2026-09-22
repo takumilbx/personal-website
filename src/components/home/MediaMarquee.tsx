@@ -49,7 +49,7 @@ export default function MediaMarquee({ items }: { items: Item[] }) {
           decoding="async"
           width={420}
           height={270}
-          className="h-[180px] w-[280px] shrink-0 rounded-2xl object-cover sm:h-[270px] sm:w-[420px]"
+          className="h-[180px] w-[280px] shrink-0 rounded-xl object-cover ring-1 ring-cream/10 sm:h-[270px] sm:w-[420px]"
         />
       ))}
     </div>

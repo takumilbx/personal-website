@@ -5,23 +5,23 @@ interface Props { heading: string; items: Item[] }
 
 export default function Services({ heading, items }: Props) {
   return (
-    <section id="services" className="rounded-t-[40px] bg-cream px-5 py-20 text-ink sm:rounded-t-[50px] sm:px-8 sm:py-24 md:rounded-t-[60px] md:px-10 md:py-32">
+    <section id="services" className="rounded-t-[32px] bg-cream px-5 py-28 text-ink sm:rounded-t-[40px] sm:px-8 md:rounded-t-[48px] md:px-10 md:py-40">
       <FadeIn y={40}>
-        <h2 className="mb-16 text-center font-black uppercase leading-none tracking-tight sm:mb-20 md:mb-28" style={{ fontSize: 'clamp(3rem, 12vw, 160px)' }}>
+        <h2 className="mb-20 text-center font-medium leading-[0.95] tracking-[-0.03em] sm:mb-24 md:mb-32" style={{ fontSize: 'clamp(2.75rem, 9vw, 8rem)' }}>
           {heading}
         </h2>
       </FadeIn>
-      <ol className="mx-auto max-w-5xl divide-y divide-ink/15 border-y border-ink/15">
+      <ol className="mx-auto max-w-5xl divide-y divide-ink/10 border-y border-ink/10">
         {items.map((it, i) => (
-          <li key={it.name} className="py-8 sm:py-10 md:py-12">
-            <FadeIn delay={i * 0.1}>
-              <div className="flex items-start gap-5 sm:gap-10 md:gap-14">
-                <span className="font-black leading-none" style={{ fontSize: 'clamp(3rem, 10vw, 140px)' }} aria-hidden="true">
+          <li key={it.name} className="py-9 sm:py-12 md:py-14">
+            <FadeIn delay={i * 0.08}>
+              <div className="grid grid-cols-[3.5rem_1fr] items-start gap-5 sm:grid-cols-[8rem_1fr] sm:gap-10 md:grid-cols-[10rem_1fr] md:gap-14">
+                <span className="font-light leading-none tracking-[-0.03em] text-ink/35" style={{ fontSize: 'clamp(2rem, 6vw, 5.5rem)' }} aria-hidden="true">
                   {String(i + 1).padStart(2, '0')}
                 </span>
-                <div className="pt-1 sm:pt-3">
-                  <h3 className="font-medium uppercase" style={{ fontSize: 'clamp(1rem, 2.2vw, 2.1rem)' }}>{it.name}</h3>
-                  <p className="mt-2 max-w-2xl font-light leading-relaxed opacity-60" style={{ fontSize: 'clamp(0.85rem, 1.6vw, 1.25rem)' }}>{it.description}</p>
+                <div className="pt-1 sm:pt-2">
+                  <h3 className="font-medium leading-tight tracking-[-0.015em]" style={{ fontSize: 'clamp(1.25rem, 2vw, 1.75rem)' }}>{it.name}</h3>
+                  <p className="mt-3 max-w-[38em] font-normal leading-[1.55] text-ink/65" style={{ fontSize: 'clamp(0.95rem, 1.3vw, 1.125rem)' }}>{it.description}</p>
                 </div>
               </div>
             </FadeIn>

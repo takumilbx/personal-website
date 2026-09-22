@@ -15,7 +15,7 @@ const d = entry.data;
 <Page title={d.title} description={d.summary} heading={d.title}>
   <p class="text-xs uppercase tracking-widest text-cream/60">{d.type} · {d.location} · {d.period.start}{d.period.end !== d.period.start ? ` to ${d.period.end}` : ''}</p>
   <p class="mt-2 text-sm text-cream/80">{d.org}. {d.role}.</p>
-  {d.headlineNumber && <p class="mt-6 font-black leading-none" style="font-size: clamp(3rem, 10vw, 140px)">{d.headlineNumber}</p>}
+  {d.headlineNumber && <p class="mt-6 font-light leading-none tracking-[-0.03em] text-cream/90" style="font-size: clamp(3rem, 9vw, 120px)">{d.headlineNumber}</p>}
   <p class="mt-8 text-lg font-light leading-relaxed">{d.summary}</p>
   {d.status === 'draft' && <p class="mt-4 text-xs uppercase tracking-widest text-cream/40">draft, awaiting the owner's review</p>}
   <div class="prose-dark mt-6">

@@ -14,12 +14,12 @@ const buttons = [
 <Base title={`Links · ${home.brand}`} description="Links for the @takumyi bio.">
   <main class="mx-auto flex min-h-[100dvh] w-full max-w-sm flex-col items-center px-4 py-12" style="padding-top: calc(3rem + env(safe-area-inset-top, 0px)); padding-bottom: calc(3rem + env(safe-area-inset-bottom, 0px))">
     <img src={home.hero.cutout} alt={home.hero.cutoutAlt} class="h-24 w-24 rounded-full bg-panel object-cover" />
-    <h1 class="mt-4 text-xl font-medium">{home.marquee}</h1>
+    <h1 class="mt-4 text-xl font-medium tracking-[-0.02em]">{home.marquee}</h1>
     <p class="mt-1 text-sm text-cream/60">{home.footer.left[0]} · {home.footer.left[1]}</p>
     <ul class="mt-8 flex w-full flex-col gap-3">
       {buttons.map((b) => (
         <li>
-          <a href={b.href} class="flex min-h-[48px] w-full items-center justify-center rounded-full border-2 border-cream px-6 text-sm font-medium uppercase tracking-widest transition-[background-color,transform] duration-200 hover:bg-cream/10 active:scale-[0.98]">{b.label}</a>
+          <a href={b.href} class="flex min-h-[48px] w-full items-center justify-center rounded-full border border-cream/40 px-6 text-[12px] font-medium uppercase tracking-[0.16em] transition-[background-color,border-color,transform] duration-300 ease-premium hover:border-cream hover:bg-cream/5 active:scale-[0.98]">{b.label}</a>
         </li>
       ))}
     </ul>

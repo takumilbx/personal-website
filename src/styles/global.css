@@ -5,22 +5,25 @@
   --color-ink: #0C0C0C;
   --color-cream: #efeee9;
   --color-panel: #141414;
-  --font-sans: "Kanit", "Noto Sans Thai", system-ui, sans-serif;
+  --font-sans: "Hanken Grotesk", "Noto Sans Thai", system-ui, sans-serif;
   --ease-out-expo: cubic-bezier(0.22, 1, 0.36, 1);
   --ease-in-out-quart: cubic-bezier(0.76, 0, 0.24, 1);
+  --ease-premium: cubic-bezier(0.32, 0.72, 0, 1);
 }
 
 html, body { background: var(--color-ink); color: var(--color-cream); }
-body { font-family: var(--font-sans); margin: 0; -webkit-text-size-adjust: 100%; }
+body { font-family: var(--font-sans); margin: 0; -webkit-text-size-adjust: 100%; font-weight: 400; letter-spacing: -0.005em; font-feature-settings: "ss01", "cv11"; }
+:lang(th) { letter-spacing: 0; }
 *, *::before, *::after { box-sizing: border-box; }
 
-/* Gradient text for the section headings below the fold. */
-.hero-heading {
-  background: linear-gradient(180deg, #646973 0%, #BBCCD7 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  color: transparent;
+/* Section headings below the fold: solid cream, medium weight, tight tracking. */
+.hero-heading { color: var(--color-cream); font-weight: 500; letter-spacing: -0.03em; }
+
+/* Fine film grain over the whole page; fixed so it never repaints on scroll. */
+.grain {
+  position: fixed; inset: 0; z-index: 60; pointer-events: none; opacity: 0.045;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0'/></filter><rect width='160' height='160' filter='url(%23n)'/></svg>");
+  background-size: 160px 160px;
 }
 
 /* Hero entrance choreography. Delays are set inline per element. */

@@ -14,15 +14,15 @@ const nbsp = ' ';
 
   <h1 id="hero-name" class="sr-only">{data.marquee}</h1>
   <div class="anim-fade-up absolute inset-x-0 top-[16vh] z-10 overflow-hidden sm:top-[14vh]" style="animation-delay: 500ms" aria-hidden="true">
-    <div class="marquee flex w-max whitespace-nowrap text-[16vh] font-medium leading-none text-cream sm:text-[26vh]">
+    <div class="marquee flex w-max whitespace-nowrap text-[16vh] font-normal leading-none tracking-[-0.02em] text-cream sm:text-[26vh]">
       <span class="pr-[6vw]">{data.marquee}{nbsp}</span>
       <span class="pr-[6vw]">{data.marquee}{nbsp}</span>
     </div>
   </div>
 
-  <div class="anim-line absolute inset-x-6 bottom-[5.5rem] z-10 h-0.5 bg-cream sm:inset-x-10 sm:bottom-28" style="animation-delay: 1200ms" aria-hidden="true"></div>
+  <div class="anim-line absolute inset-x-6 bottom-[5.5rem] z-10 h-px bg-cream/70 sm:inset-x-10 sm:bottom-28" style="animation-delay: 1200ms" aria-hidden="true"></div>
 
-  <div class="absolute inset-x-0 bottom-0 z-30 flex items-end justify-between px-6 pb-5 text-xs leading-relaxed sm:z-10 sm:px-10 sm:pb-8 sm:text-sm" style="padding-bottom: calc(1.25rem + env(safe-area-inset-bottom, 0px))">
+  <div class="absolute inset-x-0 bottom-0 z-30 flex items-end justify-between px-6 pb-5 text-[12px] leading-[1.6] text-cream/80 sm:z-10 sm:px-10 sm:pb-8 sm:text-[13px]" style="padding-bottom: calc(1.25rem + env(safe-area-inset-bottom, 0px))">
     <div class="anim-fade-up" style="animation-delay: 1400ms">
       {data.footer.left.map((line) => <p>{line}</p>)}
     </div>

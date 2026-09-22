@@ -8,17 +8,17 @@ const { title, description, heading } = Astro.props;
 const home = readYaml<HomeContent>('pages/en/home.yaml');
 ---
 <Base title={`${title} · ${home.brand}`} description={description}>
-  <header class="flex items-start justify-between px-6 pt-6 text-sm sm:px-10 sm:pt-8">
-    <a href={withBase('/en/')} class="text-lg tracking-wide">{home.brand}</a>
+  <header class="flex items-start justify-between px-6 pt-6 text-[13px] sm:px-10 sm:pt-8">
+    <a href={withBase('/en/')} class="text-[15px] font-medium tracking-[0.02em]">{home.brand}</a>
     <nav aria-label="Site" class="flex gap-5">
       {home.nav.map((l) => <a href={withBase(l.href)} class="transition-opacity duration-300 hover:opacity-60">{l.label}</a>)}
     </nav>
   </header>
   <main class="mx-auto w-full max-w-3xl px-6 py-16 sm:px-10 sm:py-24">
-    <h1 class="mb-10 font-black uppercase leading-none tracking-tight" style="font-size: clamp(2.5rem, 8vw, 96px)">{heading ?? title}</h1>
+    <h1 class="mb-10 font-medium leading-[1.02] tracking-[-0.03em]" style="font-size: clamp(2.25rem, 6.5vw, 80px)">{heading ?? title}</h1>
     <slot />
   </main>
-  <footer class="px-6 py-10 text-xs text-cream/60 sm:px-10 sm:text-sm">
+  <footer class="border-t border-cream/10 px-6 py-10 text-[12px] text-cream/55 sm:px-10 sm:text-[13px]">
     <ul class="flex flex-wrap gap-5">
       {home.social.map((s) => <li><a href={s.href} target="_blank" rel="noopener" class="transition-opacity duration-300 hover:opacity-60">{s.label}</a></li>)}
     </ul>
