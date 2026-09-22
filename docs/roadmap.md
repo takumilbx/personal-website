@@ -1,6 +1,6 @@
 # Roadmap to launch
 
-Status: 2026-09-22. Where the site stands and what remains, in order. Sizes are rough: S is under an hour of build work, M is a session, L is several sessions. "Owner" marks steps only Takumi can do.
+Status: 2026-09-22. Where the site stands and what remains, in order. The owner's tickable version is `checklist.md`. Sizes are rough: S is under an hour of build work, M is a session, L is several sessions. "Owner" marks steps only Takumi can do.
 
 ## Done
 
