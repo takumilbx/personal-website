@@ -23,7 +23,8 @@ The root `/` redirects to `/en/`. Thai and Japanese routes are configured but no
 - `content/` is all site content as Markdown and YAML. Start with [`content/README.md`](content/README.md). The home page reads `content/pages/en/home.yaml`; case studies are `content/work/en/*.md`.
 - `src/` is the Astro site: `pages/en/` for routes, `components/home/` for the landing page, `components/ui/` for shared motion pieces, `styles/global.css` for tokens and keyframes.
 - `docs/` holds the plan and its decisions:
-  - [`site-structure.md`](docs/site-structure.md): audiences, sitemap, content model, stack, hosting, build order, decision log, open items.
+  - [`roadmap.md`](docs/roadmap.md): what is done, what remains, who does each step, and the critical path to launch.
+  - [`site-structure.md`](docs/site-structure.md): audiences, sitemap, content model, stack, hosting, decision log, open items.
   - [`landing-page-brief.md`](docs/landing-page-brief.md): the home page specification, the defaults applied, and the assets still needed.
   - [`case-study-candidates.md`](docs/case-study-candidates.md): the eleven approved case studies and what each still needs.
   - [`design-directions.md`](docs/design-directions.md) and [`design-preview.html`](docs/design-preview.html): the three baseline directions for the section pages.
