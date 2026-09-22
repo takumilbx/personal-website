@@ -12,6 +12,20 @@ export function readYaml<T>(relative: string): T {
 
 export interface Link { label: string; href: string }
 
+/** Apply a URL mapper to every internal link and asset path in the home content. */
+export function mapHomeUrls(home: HomeContent, map: (p: string) => string): HomeContent {
+  const link = (l: Link): Link => ({ ...l, href: map(l.href) });
+  return {
+    ...home,
+    nav: home.nav.map(link),
+    social: home.social.map(link),
+    hero: { ...home.hero, background: map(home.hero.background), cutout: map(home.hero.cutout) },
+    media: home.media.map((m) => ({ ...m, src: map(m.src) })),
+    about: { ...home.about, cta: link(home.about.cta) },
+    projects: { ...home.projects, items: home.projects.items.map((p) => ({ ...p, images: p.images.map(map) })) },
+  };
+}
+
 export interface HomeContent {
   title: string;
   description: string;

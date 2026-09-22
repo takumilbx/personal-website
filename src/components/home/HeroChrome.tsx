@@ -3,6 +3,7 @@ import { X } from 'lucide-react';
 import type { Link } from '../../lib/content';
 
 interface Props {
+  homeHref: string;
   brand: string;
   year: string;
   nav: Link[];
@@ -14,7 +15,7 @@ interface Props {
 const EASE = 'cubic-bezier(0.76, 0, 0.24, 1)';
 
 /** Header, hamburger, and the mobile drawer. Entrance delays follow the brief's schedule. */
-export default function HeroChrome({ brand, year, nav, social, navLabel, socialLabel }: Props) {
+export default function HeroChrome({ homeHref, brand, year, nav, social, navLabel, socialLabel }: Props) {
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
@@ -39,7 +40,7 @@ export default function HeroChrome({ brand, year, nav, social, navLabel, socialL
     <>
       <header className="absolute inset-x-0 top-0 z-30 flex items-start justify-between px-6 pt-6 sm:px-10 sm:pt-8">
         <span className="anim-fade-up" style={{ animationDelay: '800ms' }}>
-          <a href="/en/" className="text-lg tracking-wide text-cream">{brand}</a>
+          <a href={homeHref} className="text-lg tracking-wide text-cream">{brand}</a>
         </span>
         <div className="hidden items-start gap-16 sm:flex lg:gap-24">
           <span className="anim-fade-up text-sm" style={{ animationDelay: '900ms' }}>{year}</span>

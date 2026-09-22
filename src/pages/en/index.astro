@@ -6,10 +6,11 @@ import About from '../../components/home/About';
 import Services from '../../components/home/Services';
 import Projects from '../../components/home/Projects';
 import ClosingFooter from '../../components/home/ClosingFooter.astro';
-import { readYaml, type HomeContent } from '../../lib/content';
+import { mapHomeUrls, readYaml, type HomeContent } from '../../lib/content';
+import { withBase } from '../../lib/url';
 import { getCollection } from 'astro:content';
 
-const home = readYaml<HomeContent>('pages/en/home.yaml');
+const home = mapHomeUrls(readYaml<HomeContent>('pages/en/home.yaml'), withBase);
 const work = await getCollection('work');
 const projects = home.projects.items.map((item) => {
   const entry = work.find((e) => e.data.slug === item.slug);
@@ -18,13 +19,13 @@ const projects = home.projects.items.map((item) => {
     slug: item.slug,
     category: item.category,
     title: entry.data.title,
-    href: `/en/work/${item.slug}/`,
+    href: withBase(`/en/work/${item.slug}/`),
     images: item.images,
   };
 });
 ---
 <Base title={home.title} description={home.description}>
-  <Hero data={home} />
+  <Hero data={home} homeHref={withBase('/en/')} />
   <MediaMarquee client:visible items={home.media} />
   <About client:visible heading={home.about.heading} paragraph={home.about.paragraph} cta={home.about.cta} />
   <Services client:visible heading={home.services.heading} items={home.services.items} />

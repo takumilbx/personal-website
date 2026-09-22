@@ -1,7 +1,8 @@
 ---
 import Page from '../../layouts/Page.astro';
+import { withBase } from '../../lib/url';
 ---
 <Page title="Research" description="Research interests, the current research plan, publications, and talks. Being written.">
   <p class="text-lg font-light leading-relaxed">Research interests, the current research plan, publications, and talks. Being written.</p>
-  <p class="mt-8 text-sm"><a href="/en/" class="underline underline-offset-4 hover:opacity-60">Back to the start</a></p>
+  <p class="mt-8 text-sm"><a href={withBase('/en/')} class="underline underline-offset-4 hover:opacity-60">Back to the start</a></p>
 </Page>

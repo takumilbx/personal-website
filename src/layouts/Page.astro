@@ -1,6 +1,7 @@
 ---
 import Base from './Base.astro';
 import { readYaml, type HomeContent } from '../lib/content';
+import { withBase } from '../lib/url';
 
 interface Props { title: string; description?: string; heading?: string }
 const { title, description, heading } = Astro.props;
@@ -8,9 +9,9 @@ const home = readYaml<HomeContent>('pages/en/home.yaml');
 ---
 <Base title={`${title} · ${home.brand}`} description={description}>
   <header class="flex items-start justify-between px-6 pt-6 text-sm sm:px-10 sm:pt-8">
-    <a href="/en/" class="text-lg tracking-wide">{home.brand}</a>
+    <a href={withBase('/en/')} class="text-lg tracking-wide">{home.brand}</a>
     <nav aria-label="Site" class="flex gap-5">
-      {home.nav.map((l) => <a href={l.href} class="transition-opacity duration-300 hover:opacity-60">{l.label}</a>)}
+      {home.nav.map((l) => <a href={withBase(l.href)} class="transition-opacity duration-300 hover:opacity-60">{l.label}</a>)}
     </nav>
   </header>
   <main class="mx-auto w-full max-w-3xl px-6 py-16 sm:px-10 sm:py-24">

@@ -1,6 +1,7 @@
 ---
 import Page from '../../../layouts/Page.astro';
 import { getCollection, render } from 'astro:content';
+import { withBase } from '../../../lib/url';
 
 export async function getStaticPaths() {
   const entries = await getCollection('work', (e) => e.data.status !== 'placeholder');
@@ -25,5 +26,5 @@ const d = entry.data;
       {d.links.map((l) => <li><a href={l.url} target="_blank" rel="noopener" class="underline underline-offset-4 hover:opacity-60">{l.label}</a></li>)}
     </ul>
   )}
-  <p class="mt-12 text-sm"><a href="/en/work/" class="underline underline-offset-4 hover:opacity-60">All work</a></p>
+  <p class="mt-12 text-sm"><a href={withBase('/en/work/')} class="underline underline-offset-4 hover:opacity-60">All work</a></p>
 </Page>

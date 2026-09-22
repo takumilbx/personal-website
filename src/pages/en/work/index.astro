@@ -1,6 +1,7 @@
 ---
 import Page from '../../../layouts/Page.astro';
 import { getCollection } from 'astro:content';
+import { withBase } from '../../../lib/url';
 
 const entries = (await getCollection('work', (e) => e.data.status !== 'placeholder'))
   .sort((a, b) => Number(b.data.featured) - Number(a.data.featured) || b.data.period.start.localeCompare(a.data.period.start));
@@ -9,7 +10,7 @@ const entries = (await getCollection('work', (e) => e.data.status !== 'placehold
   <ul class="divide-y divide-cream/15 border-y border-cream/15">
     {entries.map((e) => (
       <li class="py-6">
-        <a href={`/en/work/${e.data.slug}/`} class="group block">
+        <a href={withBase(`/en/work/${e.data.slug}/`)} class="group block">
           <p class="text-xs uppercase tracking-widest text-cream/60">{e.data.type} · {e.data.org} · {e.data.period.start}{e.data.period.end !== e.data.period.start ? ` to ${e.data.period.end}` : ''}</p>
           <h2 class="mt-1 text-xl font-medium transition-opacity duration-300 group-hover:opacity-60 sm:text-2xl">{e.data.title}</h2>
           {e.data.headlineNumber && <p class="mt-1 text-sm text-cream/70">{e.data.headlineNumber}</p>}

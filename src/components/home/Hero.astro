@@ -3,8 +3,8 @@ import HeroChrome from './HeroChrome';
 import Magnet from '../ui/Magnet';
 import type { HomeContent } from '../../lib/content';
 
-interface Props { data: HomeContent }
-const { data } = Astro.props;
+interface Props { data: HomeContent; homeHref: string }
+const { data, homeHref } = Astro.props;
 const nbsp = ' ';
 ---
 <section class="relative h-[100dvh] w-full overflow-hidden bg-ink" aria-labelledby="hero-name">
@@ -43,6 +43,7 @@ const nbsp = ' ';
 
   <HeroChrome
     client:load
+    homeHref={homeHref}
     brand={data.brand}
     year={data.year}
     nav={data.nav}

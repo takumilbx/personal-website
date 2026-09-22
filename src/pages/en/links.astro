@@ -1,13 +1,14 @@
 ---
 import Base from '../../layouts/Base.astro';
-import { readYaml, type HomeContent } from '../../lib/content';
-const home = readYaml<HomeContent>('pages/en/home.yaml');
+import { mapHomeUrls, readYaml, type HomeContent } from '../../lib/content';
+import { withBase } from '../../lib/url';
+const home = mapHomeUrls(readYaml<HomeContent>('pages/en/home.yaml'), withBase);
 const buttons = [
   { label: 'Latest video', href: home.social[0].href },
-  { label: '@takumyi', href: '/en/creator/' },
-  { label: 'Work', href: '/en/work/' },
+  { label: '@takumyi', href: withBase('/en/creator/') },
+  { label: 'Work', href: withBase('/en/work/') },
   ...home.social.slice(1),
-  { label: 'Contact', href: '/en/contact/' },
+  { label: 'Contact', href: withBase('/en/contact/') },
 ];
 ---
 <Base title={`Links · ${home.brand}`} description="Links for the @takumyi bio.">
