@@ -245,6 +245,8 @@ personal-website/
 
 ## 11. Build order
 
+Superseded on 2026-09-22 by `docs/roadmap.md`, which tracks progress milestone by milestone. The phases below are kept for the record.
+
 Phase 0, now:
 
 1. Content skeleton in `content/` (done).
