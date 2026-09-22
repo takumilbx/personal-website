@@ -203,7 +203,9 @@ Alternatives, in order of fit:
 | Netlify | Similar to Cloudflare Pages, mature forms feature | Free tier caps bandwidth per month |
 | GitHub Pages | Simplest, free, already where the code is | Static only: the root locale redirect must be client-side, no server redirects, soft bandwidth cap; fine for a first deploy, weaker long term |
 
-A reasonable path: deploy the first build to Cloudflare Pages on its free `*.pages.dev` subdomain, then attach takumyi.com once the registration is sorted.
+A reasonable path: deploy the first build to Cloudflare Pages on its free `*.pages.dev` subdomain, then attach the domain once the registration is sorted.
+
+Interim hosting, 2026-09-22: the owner asked to see the site on GitHub first. `.github/workflows/deploy.yml` builds on every push to `main` or a `claude/**` branch with `SITE_BASE=/personal-website` and publishes to GitHub Pages at https://takumilbx.github.io/personal-website/. Every internal link and asset path goes through `withBase()` so the same code serves at the root on a custom domain. Two settings live outside the repository and must be set once by the owner: Pages must be switched on (Settings, Pages, Build and deployment, Source: GitHub Actions), and if the `github-pages` environment restricts deployment branches, the `claude/**` branch must be allowed or the work merged to `main`.
 
 ## 9. Repository layout
 

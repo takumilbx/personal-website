@@ -14,6 +14,10 @@ npm run check      # type-check Astro and TypeScript
 
 The root `/` redirects to `/en/`. Thai and Japanese routes are configured but not built yet.
 
+## Deploying
+
+`.github/workflows/deploy.yml` builds and publishes to GitHub Pages on every push to `main` or a `claude/**` branch, at https://takumilbx.github.io/personal-website/. It sets `SITE_URL` and `SITE_BASE` for the build; a custom domain later sets `SITE_URL` to the domain and leaves `SITE_BASE` unset. Pages must be enabled once in the repository settings with "GitHub Actions" as the source.
+
 ## Where things are
 
 - `content/` is all site content as Markdown and YAML. Start with [`content/README.md`](content/README.md). The home page reads `content/pages/en/home.yaml`; case studies are `content/work/en/*.md`.
