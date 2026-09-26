@@ -57,23 +57,23 @@ media:                                # asset needed: 16 to 21 stills or thumbna
 
 about:
   heading: "About me"
-  # Owner direction 2026-09-26: many roles, one thread (education made accessible). Draft A; alternative B below.
-  paragraph: "I translate between Thai and Japanese, research classrooms in Tokyo and Bangkok, make TikToks about Japan, and helped take an EdTech startup into four countries. It looks like four jobs. It's really one: taking something hard to reach, a Japanese fact, a better lesson, a chance to learn, and making it easier to get to."
-  # Alternative B: "Translator, researcher, creator, business developer. Four titles, one thread: I want learning to be within reach. A hard Japanese fact explained so anyone can follow it, a classroom that actually changes, an opportunity that exists because a business made it possible."
+  # Owner direction 2026-09-26: several roles, all around education and making it accessible. Plain statement, no aphorism.
+  paragraph: "I translate between Thai and Japanese, research classrooms in Tokyo and Bangkok, make TikToks about Japan, and helped take an EdTech startup into four countries. Almost all of it comes back to education, and to the people who still can't easily get to it."
   cta: { label: "Contact me", href: "/en/contact/" }   # default (Q12): the contact page, not a mailto
 
 services:
-  # Owner direction 2026-09-26 and docs/copy-style.md: four verb-led roles that echo the About paragraph, one concrete detail each.
-  heading: "Four jobs, one thread"
+  # Owner feedback 2026-09-26: no AI-style aphorisms. The heading is the word for work in the three languages he works in.
+  # Item names are his own words. Alternatives for the heading: "Day jobs, plural" or plain "Work".
+  heading: "งาน 仕事 Work"
   items:
-    - name: "Translate"
-      description: "I've subtitled more than 70 anime series from Japanese into Thai, some within hours of the Japanese broadcast. These days I interpret at summits and walk visiting Japanese students through fieldwork in Thailand, four cohorts so far."
+    - name: "Translation"
+      description: "I've subtitled more than 70 anime series from Japanese into Thai, some released within hours of the Japanese broadcast. Now I interpret at international summits and for Japanese students on fieldwork in Thailand, four cohorts so far."
     - name: "Research"
-      description: "I study why a tablet on every desk so rarely changes how a class is taught, now at the University of Tokyo and before that inside Bangkok's city government. The goal is simple to say and hard to reach: quality education for everyone."
-    - name: "Create"
-      description: "As @takumyi I explain Japan to Thai viewers on TikTok: bands, concerts, school, work, the facts that are hard to find in Thai. Alongside it, ten years of photography and film for UNDP Thailand, UNICEF Thailand and others."
-    - name: "Build"
-      description: "Business is how good ideas reach more classrooms. At Edsy I helped take an AI English tutor into Japan, then Korea, Turkey and Saudi Arabia, matching every demo lesson to each country's own textbooks."
+      description: "I study why a tablet on every desk so rarely changes how a class is taught, first from inside Bangkok's city government and now at the University of Tokyo. ICT is not a silver bullet. I want to find out what else a classroom needs."
+    - name: "Content creation"
+      description: "As @takumyi I explain Japan to Thai viewers, from J-rock bands to Japanese work culture, the kind of facts that are hard to find in Thai. I've also spent ten years behind a camera, filming events for UNDP Thailand, UNICEF Thailand and others."
+    - name: "Business development"
+      description: "At Edsy I helped take an AI English tutor into Japan, then Korea, Turkey and Saudi Arabia, rebuilding every demo lesson around each country's own textbooks. I see business as an enabler, often the only way a good idea reaches a school at all."
 
 projects:
   heading: "Projects"

@@ -22,9 +22,12 @@ Researched 2026-09-26 through web search (direct page fetches were blocked in th
 6. **Headings that say something.** Not "About me", "Services", "Projects" if a line with a point of view fits.
 7. **Leave a question open.** Each section should make the reader want the next one.
 8. **From the voice charter:** real numbers, the Thailand and Japan throughline, no "passionate about", no em-dashes.
+9. **No AI aphorisms.** The owner rejected "Four jobs, one thread" on sight. Avoid neat reveals and slogans: "It looks like X. It's really Y", "not X but Y", "X, one Y", a colon followed by a punchline, and lists of three for rhythm. Say the thing plainly, in his words.
+10. **Use his own words.** Translation, research, content creation, business development, education, accessible, enabler. Do not upgrade them to fancier synonyms.
+11. **Let the three languages show.** A Thai or Japanese word where it is genuinely his is more distinctive than any clever English line. The What I do heading uses the word for work in all three: งาน 仕事 Work.
 
 ## Applied so far
 
-- About paragraph: roles listed, then the thread ("It looks like four jobs. It's really one").
-- What I do: renamed "Four jobs, one thread"; four verb-led items (Translate, Research, Create, Build), each with one concrete detail. Film and photography folded into Create so the count matches the About paragraph.
+- About paragraph: the four roles in one sentence, then a plain line on why: education, and the people who still can't easily get to it.
+- What I do: heading "งาน 仕事 Work"; four items named in the owner's words (Translation, Research, Content creation, Business development), each with one concrete detail and his reason for caring. Film and photography sit inside Content creation.
 - Still to apply: hero footer lines (on hold with the hero), case-study summaries, the About page, the Creator page.

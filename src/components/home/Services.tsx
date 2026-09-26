@@ -3,12 +3,24 @@ import FadeIn from '../ui/FadeIn';
 interface Item { name: string; description: string }
 interface Props { heading: string; items: Item[] }
 
+/** Tag each word of a mixed-script heading with its language so Thai and Japanese get their own spacing. */
+function scriptSpans(text: string) {
+  return text.split(' ').map((word, i) => {
+    const lang = /[฀-๿]/.test(word) ? 'th' : /[぀-ヿ一-鿿]/.test(word) ? 'ja' : undefined;
+    return (
+      <span key={i} lang={lang} className="mx-[0.18em] inline-block">
+        {word}
+      </span>
+    );
+  });
+}
+
 export default function Services({ heading, items }: Props) {
   return (
     <section id="services" className="rounded-t-[32px] bg-cream px-5 py-28 text-ink sm:rounded-t-[40px] sm:px-8 md:rounded-t-[48px] md:px-10 md:py-40">
       <FadeIn y={40}>
-        <h2 className="mb-20 text-center font-medium leading-[0.95] tracking-[-0.03em] sm:mb-24 md:mb-32" style={{ fontSize: 'clamp(2.75rem, 9vw, 8rem)' }}>
-          {heading}
+        <h2 className="mb-20 text-center font-medium leading-[1.1] tracking-[-0.03em] sm:mb-24 md:mb-32" style={{ fontSize: 'clamp(2.75rem, 9vw, 8rem)' }}>
+          {scriptSpans(heading)}
         </h2>
       </FadeIn>
       <ol className="mx-auto max-w-5xl divide-y divide-ink/10 border-y border-ink/10">

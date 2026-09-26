@@ -25,6 +25,8 @@ const preview = (import.meta.env.SITE ?? '').includes('github.io');
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;500;600&family=Noto+Sans+Thai:wght@300;400;500;600&display=swap" />
+    {/* Japanese is only a few characters for now, so load just those glyphs. Widen when the Japanese pages arrive. */}
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500&text=%E4%BB%95%E4%BA%8B&display=swap" />
   </head>
   <body class="bg-ink text-cream font-sans antialiased">
     <div id="root" class="bg-ink" style="overflow-x: clip;">
