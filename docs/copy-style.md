@@ -23,11 +23,13 @@ Researched 2026-09-26 through web search (direct page fetches were blocked in th
 7. **Leave a question open.** Each section should make the reader want the next one.
 8. **From the voice charter:** real numbers, the Thailand and Japan throughline, no "passionate about", no em-dashes.
 9. **No AI aphorisms.** The owner rejected "Four jobs, one thread" on sight. Avoid neat reveals and slogans: "It looks like X. It's really Y", "not X but Y", "X, one Y", a colon followed by a punchline, and lists of three for rhythm. Say the thing plainly, in his words.
-10. **Use his own words.** Translation, research, content creation, business development, education, accessible, enabler. Do not upgrade them to fancier synonyms.
+10. **Use his own words.** Research, content creation, business development, education, accessible, enabler. Do not upgrade them to fancier synonyms.
 11. **Let the three languages show.** A Thai or Japanese word where it is genuinely his is more distinctive than any clever English line. The What I do heading uses the word for work in all three: งาน 仕事 Work.
+12. **Translation is not a main role.** The owner corrected this on 2026-09-26: subtitling and interpreting are side work. Mention them only where they are the point (the interpreting case study, the CV), never as the lead.
+13. **When in doubt, use his sentences.** Two drafts in a row read as AI to the owner. His own phrasing, with grammar cleaned, beats a polished line every time.
 
 ## Applied so far
 
-- About paragraph: the four roles in one sentence, then a plain line on why: education, and the people who still can't easily get to it.
-- What I do: heading "งาน 仕事 Work"; four items named in the owner's words (Translation, Research, Content creation, Business development), each with one concrete detail and his reason for caring. Film and photography sit inside Content creation.
+- About paragraph: interim version assembled from the owner's own chat sentences about education, content, research, and business; waiting for his own introduction.
+- What I do: heading "งาน 仕事 Work"; three items in the owner's words (Research, Content creation, Business development). Translation removed. Film and photography sit inside Content creation.
 - Still to apply: hero footer lines (on hold with the hero), case-study summaries, the About page, the Creator page.

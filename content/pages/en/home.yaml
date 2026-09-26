@@ -57,17 +57,17 @@ media:                                # asset needed: 16 to 21 stills or thumbna
 
 about:
   heading: "About me"
-  # Owner direction 2026-09-26: several roles, all around education and making it accessible. Plain statement, no aphorism.
-  paragraph: "I translate between Thai and Japanese, research classrooms in Tokyo and Bangkok, make TikToks about Japan, and helped take an EdTech startup into four countries. Almost all of it comes back to education, and to the people who still can't easily get to it."
+  # Interim, 2026-09-26: built from the owner's own sentences in chat, grammar cleaned only. Translation is not a main role
+  # and is left out. To be replaced by the owner's own introduction in his words.
+  paragraph: "Most of what I do is centered around education and technology. With content, I want to make hard facts about Japan accessible to Thai people. With research, I hope to help create quality education that everyone can access. And in business, I see my work as an enabler for more educational opportunities."
   cta: { label: "Contact me", href: "/en/contact/" }   # default (Q12): the contact page, not a mailto
 
 services:
   # Owner feedback 2026-09-26: no AI-style aphorisms. The heading is the word for work in the three languages he works in.
-  # Item names are his own words. Alternatives for the heading: "Day jobs, plural" or plain "Work".
+  # Item names are his own words. Translation removed 2026-09-26: the owner says it is not a main job.
+  # Alternatives for the heading: "Day jobs, plural" or plain "Work".
   heading: "งาน 仕事 Work"
   items:
-    - name: "Translation"
-      description: "I've subtitled more than 70 anime series from Japanese into Thai, some released within hours of the Japanese broadcast. Now I interpret at international summits and for Japanese students on fieldwork in Thailand, four cohorts so far."
     - name: "Research"
       description: "I study why a tablet on every desk so rarely changes how a class is taught, first from inside Bangkok's city government and now at the University of Tokyo. ICT is not a silver bullet. I want to find out what else a classroom needs."
     - name: "Content creation"
