@@ -57,8 +57,9 @@ media:                                # asset needed: 16 to 21 stills or thumbna
 
 about:
   heading: "About me"
-  # default (Q9): drafted from the CV in the owner's voice; confirm or replace
-  paragraph: "I work between Thailand and Japan on one question: why a device in every student's hands so rarely becomes a better lesson. I study it at the University of Tokyo, I have worked on it inside Bangkok's city government and an EdTech startup, and as @takumyi I explain Japan to a Thai audience."
+  # Owner direction 2026-09-26: many roles, one thread (education made accessible). Draft A; alternative B below.
+  paragraph: "I translate between Thai and Japanese, research classrooms in Tokyo and Bangkok, make TikToks about Japan, and helped take an EdTech startup into four countries. It looks like four jobs. It's really one: taking something hard to reach, a Japanese fact, a better lesson, a chance to learn, and making it easier to get to."
+  # Alternative B: "Translator, researcher, creator, business developer. Four titles, one thread: I want learning to be within reach. A hard Japanese fact explained so anyone can follow it, a classroom that actually changes, an opportunity that exists because a business made it possible."
   cta: { label: "Contact me", href: "/en/contact/" }   # default (Q12): the contact page, not a mailto
 
 services:
