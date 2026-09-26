@@ -63,18 +63,17 @@ about:
   cta: { label: "Contact me", href: "/en/contact/" }   # default (Q12): the contact page, not a mailto
 
 services:
-  heading: "What I do"                # default (Q9)
-  items:                              # default (Q9): five items from the CV, one sentence each
-    - name: "Education research"
-      description: "Classroom observation and teacher interviews on one-device-per-student programmes, comparing Japan's GIGA School with Bangkok's Digital Classroom."
-    - name: "Policy analysis and data"
-      description: "From 47 municipal policies sorted into 8 focus areas to 10,849 public submissions read with NLP, for the Bangkok Metropolitan Administration."
-    - name: "EdTech market entry"
-      description: "Regulatory and competitive analysis, pilot-school lists, and curriculum-matched demo lessons that took Edsy into Japan, Korea, Turkey and Saudi Arabia."
-    - name: "Interpreting and translation"
-      description: "Simultaneous Japanese, Thai and English interpreting at international summits, and field support for four cohorts of Japanese students in Thailand."
-    - name: "Film, photography and content"
-      description: "Event films and short-form content for UNDP Thailand, UNICEF Thailand and others, and the @takumyi channel explaining Japan to a Thai audience."
+  # Owner direction 2026-09-26 and docs/copy-style.md: four verb-led roles that echo the About paragraph, one concrete detail each.
+  heading: "Four jobs, one thread"
+  items:
+    - name: "Translate"
+      description: "I've subtitled more than 70 anime series from Japanese into Thai, some within hours of the Japanese broadcast. These days I interpret at summits and walk visiting Japanese students through fieldwork in Thailand, four cohorts so far."
+    - name: "Research"
+      description: "I study why a tablet on every desk so rarely changes how a class is taught, now at the University of Tokyo and before that inside Bangkok's city government. The goal is simple to say and hard to reach: quality education for everyone."
+    - name: "Create"
+      description: "As @takumyi I explain Japan to Thai viewers on TikTok: bands, concerts, school, work, the facts that are hard to find in Thai. Alongside it, ten years of photography and film for UNDP Thailand, UNICEF Thailand and others."
+    - name: "Build"
+      description: "Business is how good ideas reach more classrooms. At Edsy I helped take an AI English tutor into Japan, then Korea, Turkey and Saudi Arabia, matching every demo lesson to each country's own textbooks."
 
 projects:
   heading: "Projects"

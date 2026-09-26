@@ -26,6 +26,7 @@ The root `/` redirects to `/en/`. Thai and Japanese routes are configured but no
   - [`checklist.md`](docs/checklist.md): the owner's to-do list to launch, in order, with tick boxes.
   - [`roadmap.md`](docs/roadmap.md): what is done, what remains, who does each step, and the critical path to launch.
   - [`site-structure.md`](docs/site-structure.md): audiences, sitemap, content model, stack, hosting, decision log, open items.
+  - [`copy-style.md`](docs/copy-style.md): how the site's copy is written, from a study of well-loved personal sites.
   - [`landing-page-brief.md`](docs/landing-page-brief.md): the home page specification, the defaults applied, and the assets still needed.
   - [`case-study-candidates.md`](docs/case-study-candidates.md): the eleven approved case studies and what each still needs.
   - [`design-directions.md`](docs/design-directions.md) and [`design-preview.html`](docs/design-preview.html): the three baseline directions for the section pages.
