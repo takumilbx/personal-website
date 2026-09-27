@@ -57,9 +57,8 @@ media:                                # asset needed: 16 to 21 stills or thumbna
 
 about:
   heading: "About me"
-  # Interim, 2026-09-26: built from the owner's own sentences in chat, grammar cleaned only. Translation is not a main role
-  # and is left out. To be replaced by the owner's own introduction in his words.
-  paragraph: "Most of what I do is centered around education and technology. With content, I want to make hard facts about Japan accessible to Thai people. With research, I hope to help create quality education that everyone can access. And in business, I see my work as an enabler for more educational opportunities."
+  # Owner's own words, 2026-09-26 and 2026-09-27, grammar cleaned only. Opening line is his answer to "what is your main thing".
+  paragraph: "Education is my main focus, and I work on it from many aspects. With content, I want to make hard facts about Japan accessible to Thai people. With research, I hope to help create quality education that everyone can access. And in business, I see my work as an enabler for more educational opportunities."
   cta: { label: "Contact me", href: "/en/contact/" }   # default (Q12): the contact page, not a mailto
 
 services:
@@ -68,10 +67,10 @@ services:
   # Alternatives for the heading: "Day jobs, plural" or plain "Work".
   heading: "งาน 仕事 Work"
   items:
-    - name: "Research"
-      description: "I study why a tablet on every desk so rarely changes how a class is taught, first from inside Bangkok's city government and now at the University of Tokyo. ICT is not a silver bullet. I want to find out what else a classroom needs."
     - name: "Content creation"
       description: "As @takumyi I explain Japan to Thai viewers, from J-rock bands to Japanese work culture, the kind of facts that are hard to find in Thai. I've also spent ten years behind a camera, filming events for UNDP Thailand, UNICEF Thailand and others."
+    - name: "Research"
+      description: "I study why a tablet on every desk so rarely changes how a class is taught, first from inside Bangkok's city government and now at the University of Tokyo. ICT is not a silver bullet. I want to find out what else a classroom needs."
     - name: "Business development"
       description: "At Edsy I helped take an AI English tutor into Japan, then Korea, Turkey and Saudi Arabia, rebuilding every demo lesson around each country's own textbooks. I see business as an enabler, often the only way a good idea reaches a school at all."
 
