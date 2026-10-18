@@ -8,7 +8,7 @@ How to hand me files: drop them into the repository at the path given (GitHub, "
 
 ## 1. Now: make the home page real
 
-- [ ] Portrait cutout, PNG with a transparent background, at least 2000 px tall, head in the upper half. Path: `public/images/home/portrait.png`
+- [x] Portrait cutout, PNG with a transparent background, at least 2000 px tall, head in the upper half. Path: `public/images/home/portrait.png` (your street portrait, background removed 2026-10-18; now in the hero and on `/links`)
 - [ ] Background photo, at least 2560 px wide, dark enough for cream text. Optional; skip if you want plain black. Path: `public/images/home/background.jpg`
 - [ ] 16 to 21 media stills or thumbnails from @takumyi, 16:9 if possible. Path: `public/images/media/01.jpg` to `21.jpg`
 - [ ] 9 project images, three per featured case study, at least 1600 px on the long side. Paths: `public/images/work/bangkok-education-policy-map/1.jpg` to `3.jpg`, same for `digital-classroom-vs-giga-school` and `edsy-japan-market-entry`

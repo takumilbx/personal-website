@@ -33,7 +33,7 @@ footer:                               # default (Q9), facts from the CV
 
 hero:
   background: ""                      # asset needed: /images/home/hero-background.jpg (empty = plain ink)
-  cutout: "/placeholders/portrait-cutout.svg"   # asset needed: transparent PNG, at least 2000 px tall
+  cutout: "/images/home/portrait.png"   # owner's photo, background removed 2026-10-18
   cutoutAlt: "Portrait"
   magnet: true                        # default (Q7): cutout follows the cursor on desktop only
 

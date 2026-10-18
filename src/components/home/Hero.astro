@@ -34,10 +34,10 @@ const nbsp = ' ';
   <div class="anim-rise-in pointer-events-none absolute inset-0 z-20" style="animation-delay: 300ms">
     {data.hero.magnet ? (
       <Magnet client:media="(min-width: 640px) and (hover: hover)" padding={150} strength={14} className="h-full w-full">
-        <img src={data.hero.cutout} alt={data.hero.cutoutAlt} class="h-full w-full object-cover" decoding="async" fetchpriority="high" />
+        <img src={data.hero.cutout} alt={data.hero.cutoutAlt} class="h-full w-full object-cover object-bottom sm:object-contain" decoding="async" fetchpriority="high" />
       </Magnet>
     ) : (
-      <img src={data.hero.cutout} alt={data.hero.cutoutAlt} class="h-full w-full object-cover" decoding="async" fetchpriority="high" />
+      <img src={data.hero.cutout} alt={data.hero.cutoutAlt} class="h-full w-full object-cover object-bottom sm:object-contain" decoding="async" fetchpriority="high" />
     )}
   </div>
 

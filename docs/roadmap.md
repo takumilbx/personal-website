@@ -12,6 +12,7 @@ Status: 2026-10-18 (last build work 2026-09-27). Where the site stands and what 
 - Home page built to the combined landing-page brief, then given the premium pass: Hanken Grotesk and Noto Sans Thai, medium-weight headings, hairlines, nested card shells, custom easing, grain.
 - Copy style guide (`copy-style.md`), from a study of well-loved personal sites and the owner's feedback: the owner's own words, no AI aphorisms, translation never the lead role.
 - Home page About paragraph and What I do section rewritten in the owner's own words (2026-09-26 and 27). What I do is now three items (Content creation, Research, Business development) under the heading งาน 仕事 Work, with a Noto Sans JP subset loaded for those two characters.
+- Portrait cutout (2026-10-18): the owner's photo with the background removed, at `public/images/home/portrait.png`, used in the hero and on `/links`. The hero now fits a tall portrait (bottom-anchored, full height on desktop, full-bleed on phones), and an unlayered `img { height: auto }` rule that silently overrode every image height utility was removed.
 - Work index, eleven case-study pages, bio-link page, contact page listing the socials, stubs for the other sections.
 - GitHub Pages deployment on every push, live at https://takumilbx.github.io/personal-website/, marked noindex while it is a preview.
 
@@ -19,7 +20,7 @@ Status: 2026-10-18 (last build work 2026-09-27). Where the site stands and what 
 
 | # | Step | Who | Size |
 |---|---|---|---|
-| 1.1 | Portrait cutout: transparent PNG, at least 2000 px tall, head in the upper half | Owner | |
+| 1.1 | ~~Portrait cutout: transparent PNG, at least 2000 px tall, head in the upper half~~ Done 2026-10-18 | Owner | |
 | 1.2 | Background photo, at least 2560 px wide, dark enough for cream text, or none | Owner | |
 | 1.3 | Sixteen to twenty-one media stills or thumbnails from @takumyi, 16:9 preferred | Owner | |
 | 1.4 | Nine project images, three per featured case study, at least 1600 px on the long side | Owner | |
@@ -92,4 +93,4 @@ Copy on every section page follows `copy-style.md`. It has not yet been applied 
 
 Assets (1.1 to 1.6) unblock the home page. The case-study TODOs (2.5) and creator data (2.3) unblock the two most-visited section pages. The domain (4.1) unblocks launch. Everything else can proceed in parallel with those three owner inputs.
 
-As of 2026-10-18 none of the three has arrived: no images are in `public/images/`, all eleven case studies are still `status: draft` with their 45 TODOs open, and no domain choice is recorded. The work since 2026-09-22 was home-page copy.
+As of 2026-10-18 the portrait is the only asset in: the background, media stills, project images, and social image are still placeholders, all eleven case studies are still `status: draft` with their 45 TODOs open, and no domain choice is recorded. The work since 2026-09-22 was home-page copy.

@@ -41,7 +41,6 @@ body { font-family: var(--font-sans); margin: 0; -webkit-text-size-adjust: 100%;
 
 /* Touch and in-app-browser fixes for the phone audience. */
 a, button { -webkit-tap-highlight-color: transparent; touch-action: manipulation; }
-img { max-width: 100%; height: auto; }
 
 @media (prefers-reduced-motion: reduce) {
   .anim-fade-in, .anim-rise-in, .anim-fade-up, .anim-line {
