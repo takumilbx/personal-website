@@ -1,5 +1,7 @@
 # Launch checklist
 
+Last updated 2026-10-18.
+
 Your list, in the order to do things. Items marked **(me)** are mine and start as soon as the item above them is done. Tick a box by editing this file on GitHub (pencil icon) or just tell me and I will tick it.
 
 How to hand me files: drop them into the repository at the path given (GitHub, "Add file", "Upload files", on this branch), or send them in chat and I will place them.
@@ -11,13 +13,13 @@ How to hand me files: drop them into the repository at the path given (GitHub, "
 - [ ] 16 to 21 media stills or thumbnails from @takumyi, 16:9 if possible. Path: `public/images/media/01.jpg` to `21.jpg`
 - [ ] 9 project images, three per featured case study, at least 1600 px on the long side. Paths: `public/images/work/bangkok-education-policy-map/1.jpg` to `3.jpg`, same for `digital-classroom-vs-giga-school` and `edsy-japan-market-entry`
 - [ ] Favicon (512 px square) and a social preview image (1200 by 630 px). Paths: `public/images/icon.png`, `public/images/social.jpg`
-- [ ] Open `content/pages/en/home.yaml` and decide each line marked `default`:
+- [ ] Open `content/pages/en/home.yaml` and decide each line below:
   - [ ] Marquee text and browser title (now "Takumi — Oshiyama")
   - [ ] Brand word top left (now "Takumi") and year (now 2026)
   - [ ] Three nav labels (now Work, Creator, About)
   - [ ] Footer lines, three left and two right
-  - [ ] About paragraph (drafted from your CV, about 55 words)
-  - [ ] Five "What I do" items
+  - [ ] About paragraph: now your own sentences from chat (Sept 26 and 27), grammar cleaned only. Say it is final, or send your own introduction to replace it
+  - [ ] "What I do": now three items in your words (Content creation, Research, Business development), with translation dropped. Confirm the three descriptions and the heading "งาน 仕事 Work" (alternatives: "Day jobs, plural" or "Work")
   - [ ] Project categories and the button label
 - [ ] YouTube and X: say yes with the links, or no
 - [ ] **(me)** Wire the assets, replace every placeholder, tune the hero over the real photo, add font preloading and Open Graph tags
@@ -29,9 +31,9 @@ How to hand me files: drop them into the repository at the path given (GitHub, "
 - [ ] List brand or event collaborations: brand, campaign, date, what you delivered. Goes in `content/data/collabs.yaml`
 - [ ] **(me)** Build the Creator page from those files
 - [ ] Answer the confidentiality checks: what may be public about the Edsy work (Gakken, pilot-school list, market analysis) and the 2025 Bangkok work (dashboards, analysis)
-- [ ] Go through the 11 case-study files in `content/work/en/` and answer the `TODO owner` comments, especially "What I would do differently" in each
+- [ ] Go through the 11 case-study files in `content/work/en/` and answer the 45 `TODO owner` comments, especially "What I would do differently" in each. Also: how many BMA schools the teacher-student ratio map covers
 - [ ] Send links to public artefacts: the deck for the 47 policies, the ESCAP paper is already linked, thesis PDF, dashboard screenshots if allowed
-- [ ] **(me)** Publish the case studies, add filters and covers to the work index
+- [ ] **(me)** Rewrite the case-study summaries in the site's copy style, publish the case studies, add filters and covers to the work index
 
 ## 3. Then: the remaining pages
 

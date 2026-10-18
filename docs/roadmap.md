@@ -1,6 +1,6 @@
 # Roadmap to launch
 
-Status: 2026-09-22. Where the site stands and what remains, in order. The owner's tickable version is `checklist.md`. Sizes are rough: S is under an hour of build work, M is a session, L is several sessions. "Owner" marks steps only Takumi can do.
+Status: 2026-10-18 (last build work 2026-09-27). Where the site stands and what remains, in order. The owner's tickable version is `checklist.md`. Sizes are rough: S is under an hour of build work, M is a session, L is several sessions. "Owner" marks steps only Takumi can do.
 
 ## Done
 
@@ -10,6 +10,8 @@ Status: 2026-09-22. Where the site stands and what remains, in order. The owner'
 - Three baseline design directions, four skill-based explorations, and their synthesis (`design-directions.md`, `design-exploration/`).
 - Astro 7 site scaffolded: React islands, Tailwind 4, Framer Motion, locale-prefixed routes, base-path-aware links.
 - Home page built to the combined landing-page brief, then given the premium pass: Hanken Grotesk and Noto Sans Thai, medium-weight headings, hairlines, nested card shells, custom easing, grain.
+- Copy style guide (`copy-style.md`), from a study of well-loved personal sites and the owner's feedback: the owner's own words, no AI aphorisms, translation never the lead role.
+- Home page About paragraph and What I do section rewritten in the owner's own words (2026-09-26 and 27). What I do is now three items (Content creation, Research, Business development) under the heading งาน 仕事 Work, with a Noto Sans JP subset loaded for those two characters.
 - Work index, eleven case-study pages, bio-link page, contact page listing the socials, stubs for the other sections.
 - GitHub Pages deployment on every push, live at https://takumilbx.github.io/personal-website/, marked noindex while it is a preview.
 
@@ -22,12 +24,14 @@ Status: 2026-09-22. Where the site stands and what remains, in order. The owner'
 | 1.3 | Sixteen to twenty-one media stills or thumbnails from @takumyi, 16:9 preferred | Owner | |
 | 1.4 | Nine project images, three per featured case study, at least 1600 px on the long side | Owner | |
 | 1.5 | Favicon and a 1200 by 630 px social preview image | Owner | |
-| 1.6 | Confirm or replace the defaults in `content/pages/en/home.yaml`: marquee text, title, nav labels, year, footer lines, About paragraph, five What I do items, project categories, button labels; say whether YouTube or X should be linked | Owner | |
+| 1.6 | Confirm or replace the remaining defaults in `content/pages/en/home.yaml`: marquee text, title, brand word, nav labels, year, footer lines, project categories, button labels; say whether YouTube or X should be linked. The About paragraph and the three What I do items are now in the owner's words: confirm them as final, or send a written introduction to replace the About paragraph | Owner | |
 | 1.7 | Wire the assets through Astro's image pipeline (WebP and AVIF, responsive sizes, lazy loading below the fold, dimensions set to avoid layout shift), replace every placeholder, and tune the hero over the real photo | Builder | M |
 | 1.8 | Font loading: preload the Latin face, `font-display: swap`, metric-matched fallback for Noto Sans Thai | Builder | S |
 | 1.9 | Per-page titles, descriptions, Open Graph and Twitter cards using the social image | Builder | S |
 
 ## Milestone 2: the section pages, in the same visual system
+
+Copy on every section page follows `copy-style.md`. It has not yet been applied to the case-study summaries, About, or Creator.
 
 | # | Step | Who | Size |
 |---|---|---|---|
@@ -35,7 +39,7 @@ Status: 2026-09-22. Where the site stands and what remains, in order. The owner'
 | 2.2 | Creator: channel paragraph, formats, selected videos from `videos.yaml`, reach from `creator-stats.yaml`, collaborations from `collabs.yaml`, media-kit button | Builder | M |
 | 2.3 | Creator data: TikTok analytics export into `creator-stats.yaml`; six to nine selected videos with links and thumbnails; brand collaborations | Owner | |
 | 2.4 | Work index polish: filters by type and country, cover images, related links resolved to real routes, headline numbers in the meta line | Builder | M |
-| 2.5 | Case studies: fill the 45 TODO comments, answer the confidentiality checks for Edsy and the 2025 Bangkok work, supply artefact links; then flip each from draft to published | Owner, then builder | M |
+| 2.5 | Case studies: fill the 45 TODO comments and the number of BMA schools for the ratio-map headline, answer the confidentiality checks for Edsy and the 2025 Bangkok work, supply artefact links; then flip each from draft to published | Owner, then builder | M |
 | 2.6 | Research: interests, research-plan summary with PDF, publications and talks from YAML | Builder, PDFs and copy from owner | M |
 | 2.7 | Contact: public email decision, then a form (Formspree or Resend) or a mailto link | Owner decides, builder wires | S |
 | 2.8 | CV page rendered from `cv.yaml`, plus a generated PDF from the same data | Builder | M |
@@ -71,7 +75,7 @@ Status: 2026-09-22. Where the site stands and what remains, in order. The owner'
 | # | Step | Who | Size |
 |---|---|---|---|
 | 5.1 | Thai: `/creator` and `/links` first, then the rest; the placeholders and locale routing already exist | Owner translates or approves, builder wires | M |
-| 5.2 | Japanese: `/about` and `/research` first, with Noto Sans JP added to the font stack | Owner translates or approves, builder wires | M |
+| 5.2 | Japanese: `/about` and `/research` first, with the Noto Sans JP subset (now only 仕事) widened to the full face | Owner translates or approves, builder wires | M |
 | 5.3 | Media-kit PDF generated from the same data as `/creator` | Builder | M |
 | 5.4 | Section-page design decision: keep the landing page's dark two-colour system everywhere (current), or adopt one of the explored directions for the reading pages | Owner decides | |
 | 5.5 | Writing cadence, timeline updates, new case studies as they happen; update the CV data and regenerate the PDF | Owner, builder as needed | ongoing |
@@ -87,3 +91,5 @@ Status: 2026-09-22. Where the site stands and what remains, in order. The owner'
 ## The critical path
 
 Assets (1.1 to 1.6) unblock the home page. The case-study TODOs (2.5) and creator data (2.3) unblock the two most-visited section pages. The domain (4.1) unblocks launch. Everything else can proceed in parallel with those three owner inputs.
+
+As of 2026-10-18 none of the three has arrived: no images are in `public/images/`, all eleven case studies are still `status: draft` with their 45 TODOs open, and no domain choice is recorded. The work since 2026-09-22 was home-page copy.
