@@ -7,10 +7,10 @@ How to hand me files: drop them into the repository at the path given (GitHub, "
 ## 1. Now: make the home page real
 
 - [ ] Portrait cutout, PNG with a transparent background, at least 2000 px tall, head in the upper half. Path: `public/images/home/portrait.png`
-- [ ] Background photo, at least 2560 px wide, dark enough for cream text. Optional; skip if you want plain black. Path: `public/images/home/background.jpg`
-- [ ] 16 to 21 media stills or thumbnails from @takumyi, 16:9 if possible. Path: `public/images/media/01.jpg` to `21.jpg`
-- [ ] 9 project images, three per featured case study, at least 1600 px on the long side. Paths: `public/images/work/bangkok-education-policy-map/1.jpg` to `3.jpg`, same for `digital-classroom-vs-giga-school` and `edsy-japan-market-entry`
-- [ ] Favicon (512 px square) and a social preview image (1200 by 630 px). Paths: `public/images/icon.png`, `public/images/social.jpg`
+- [x] Background photo, at least 2560 px wide, dark enough for cream text. Path: `public/images/home/hero-background.jpg` (B2 Fuji at dusk)
+- [x] 16 to 21 media stills or thumbnails from @takumyi, 16:9. Path: `public/images/media/01.jpg` to `18.jpg`
+- [x] 9 project images, three per featured case study, at least 1600 px on the long side. Paths: `public/images/work/bangkok-education-policy-map/1.jpg` to `3.jpg`, same for `digital-classroom-vs-giga-school` and `edsy-japan-market-entry`
+- [x] Favicon (512 px square) and a social preview image (1200 by 630 px). Paths: `public/images/icon.png`, `public/images/social.jpg`
 - [ ] Open `content/pages/en/home.yaml` and decide each line marked `default`:
   - [ ] Marquee text and browser title (now "Takumi — Oshiyama")
   - [ ] Brand word top left (now "Takumi") and year (now 2026)
@@ -20,7 +20,7 @@ How to hand me files: drop them into the repository at the path given (GitHub, "
   - [ ] Five "What I do" items
   - [ ] Project categories and the button label
 - [ ] YouTube and X: say yes with the links, or no
-- [ ] **(me)** Wire the assets, replace every placeholder, tune the hero over the real photo, add font preloading and Open Graph tags
+- [x] **(me)** Wire the assets, replace every placeholder, tune the hero over the real photo, add font preloading and Open Graph tags
 
 ## 2. Next: the two most-visited section pages
 

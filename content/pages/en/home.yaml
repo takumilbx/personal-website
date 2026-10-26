@@ -32,28 +32,30 @@ footer:                               # default (Q9), facts from the CV
     - "The University of Tokyo"
 
 hero:
-  background: ""                      # asset needed: /images/home/hero-background.jpg (empty = plain ink)
+  background: "/images/home/hero-background.jpg"                      # asset needed: /images/home/hero-background.jpg (empty = plain ink)
   cutout: "/placeholders/portrait-cutout.svg"   # asset needed: transparent PNG, at least 2000 px tall
   cutoutAlt: "Portrait"
   magnet: true                        # default (Q7): cutout follows the cursor on desktop only
 
-media:                                # asset needed: 16 to 21 stills or thumbnails from @takumyi; placeholders for now
-  - { src: "/placeholders/media-01.svg", alt: "" }
-  - { src: "/placeholders/media-02.svg", alt: "" }
-  - { src: "/placeholders/media-03.svg", alt: "" }
-  - { src: "/placeholders/media-04.svg", alt: "" }
-  - { src: "/placeholders/media-05.svg", alt: "" }
-  - { src: "/placeholders/media-06.svg", alt: "" }
-  - { src: "/placeholders/media-07.svg", alt: "" }
-  - { src: "/placeholders/media-08.svg", alt: "" }
-  - { src: "/placeholders/media-09.svg", alt: "" }
-  - { src: "/placeholders/media-10.svg", alt: "" }
-  - { src: "/placeholders/media-11.svg", alt: "" }
-  - { src: "/placeholders/media-12.svg", alt: "" }
-  - { src: "/placeholders/media-13.svg", alt: "" }
-  - { src: "/placeholders/media-14.svg", alt: "" }
-  - { src: "/placeholders/media-15.svg", alt: "" }
-  - { src: "/placeholders/media-16.svg", alt: "" }
+media:                                # 18 stills extracted from showreel & video productions
+  - { src: "/images/media/01.jpg", alt: "UN IOM documentary filming" }
+  - { src: "/images/media/02.jpg", alt: "Great to Growth Forum" }
+  - { src: "/images/media/03.jpg", alt: "HackSolution youth innovation" }
+  - { src: "/images/media/04.jpg", alt: "DDA conference recap" }
+  - { src: "/images/media/05.jpg", alt: "Bluebik video production" }
+  - { src: "/images/media/06.jpg", alt: "Hin Lad Nai forest fieldwork" }
+  - { src: "/images/media/07.jpg", alt: "YOASOBI concert filming" }
+  - { src: "/images/media/08.jpg", alt: "YOASOBI Thailand interview" }
+  - { src: "/images/media/09.jpg", alt: "AAA tour filming" }
+  - { src: "/images/media/10.jpg", alt: "MBK commercial shoot" }
+  - { src: "/images/media/11.jpg", alt: "Showreel cinematic b-roll" }
+  - { src: "/images/media/12.jpg", alt: "Siam Paragon Songkran" }
+  - { src: "/images/media/13.jpg", alt: "Right to Love Bangkok Pride" }
+  - { src: "/images/media/14.jpg", alt: "Edsy speaking coach demo" }
+  - { src: "/images/media/15.jpg", alt: "Faculty interview shoot" }
+  - { src: "/images/media/16.jpg", alt: "Alumni interview shoot" }
+  - { src: "/images/media/17.jpg", alt: "Japan Fair @takumyi vlog" }
+  - { src: "/images/media/18.jpg", alt: "Tokyo street culture @takumyi" }
 
 about:
   heading: "About me"
@@ -77,15 +79,15 @@ services:
 projects:
   heading: "Projects"
   buttonLabel: "Read the case study"  # default (Q9)
-  items:                              # default (Q10): the three featured case studies; images are placeholders
+  items:                              # three featured case studies with real photography
     - slug: bangkok-education-policy-map
       category: "Policy"
-      images: ["/placeholders/project-1-1.svg", "/placeholders/project-1-2.svg", "/placeholders/project-1-3.svg"]
+      images: ["/images/work/bangkok-education-policy-map/1.jpg", "/images/work/bangkok-education-policy-map/2.jpg", "/images/work/bangkok-education-policy-map/3.jpg"]
     - slug: digital-classroom-vs-giga-school
       category: "Research"
-      images: ["/placeholders/project-2-1.svg", "/placeholders/project-2-2.svg", "/placeholders/project-2-3.svg"]
+      images: ["/images/work/digital-classroom-vs-giga-school/1.jpg", "/images/work/digital-classroom-vs-giga-school/2.jpg", "/images/work/digital-classroom-vs-giga-school/3.jpg"]
     - slug: edsy-japan-market-entry
       category: "EdTech"
-      images: ["/placeholders/project-3-1.svg", "/placeholders/project-3-2.svg", "/placeholders/project-3-3.svg"]
+      images: ["/images/work/edsy-japan-market-entry/1.jpg", "/images/work/edsy-japan-market-entry/2.jpg", "/images/work/edsy-japan-market-entry/3.jpg"]
 
 closing: "Takumi Oshiyama, 2026"      # default (Q9)

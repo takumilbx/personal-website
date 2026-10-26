@@ -9,7 +9,10 @@ const nbsp = ' ';
 ---
 <section class="relative h-[100dvh] w-full overflow-hidden bg-ink" aria-labelledby="hero-name">
   {data.hero.background && (
-    <img src={data.hero.background} alt="" class="anim-fade-in absolute inset-0 h-full w-full object-cover" decoding="async" fetchpriority="high" />
+    <>
+      <img src={data.hero.background} alt="" class="anim-fade-in absolute inset-0 h-full w-full object-cover" decoding="async" fetchpriority="high" />
+      <div class="pointer-events-none absolute inset-0 bg-gradient-to-b from-ink/60 via-ink/20 to-ink/75" aria-hidden="true" />
+    </>
   )}
 
   <h1 id="hero-name" class="sr-only">{data.marquee}</h1>
@@ -31,15 +34,17 @@ const nbsp = ' ';
     </div>
   </div>
 
-  <div class="anim-rise-in pointer-events-none absolute inset-0 z-20" style="animation-delay: 300ms">
-    {data.hero.magnet ? (
-      <Magnet client:media="(min-width: 640px) and (hover: hover)" padding={150} strength={14} className="h-full w-full">
+  {data.hero.cutout && (
+    <div class="anim-rise-in pointer-events-none absolute inset-0 z-20" style="animation-delay: 300ms">
+      {data.hero.magnet ? (
+        <Magnet client:media="(min-width: 640px) and (hover: hover)" padding={150} strength={14} className="h-full w-full">
+          <img src={data.hero.cutout} alt={data.hero.cutoutAlt} class="h-full w-full object-cover" decoding="async" fetchpriority="high" />
+        </Magnet>
+      ) : (
         <img src={data.hero.cutout} alt={data.hero.cutoutAlt} class="h-full w-full object-cover" decoding="async" fetchpriority="high" />
-      </Magnet>
-    ) : (
-      <img src={data.hero.cutout} alt={data.hero.cutoutAlt} class="h-full w-full object-cover" decoding="async" fetchpriority="high" />
-    )}
-  </div>
+      )}
+    </div>
+  )}
 
   <HeroChrome
     client:load

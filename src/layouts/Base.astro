@@ -6,10 +6,14 @@ interface Props {
   title: string;
   description?: string;
   lang?: string;
+  image?: string;
 }
-const { title, description = '', lang = 'en' } = Astro.props;
+const { title, description = '', lang = 'en', image = '/images/social.jpg' } = Astro.props;
 // The GitHub Pages address is a preview with placeholder assets; keep it out of search results.
 const preview = (import.meta.env.SITE ?? '').includes('github.io');
+const siteUrl = import.meta.env.SITE ?? 'https://takumilbx.github.io';
+const canonicalUrl = new URL(Astro.url.pathname, siteUrl).href;
+const socialImageUrl = new URL(withBase(image), siteUrl).href;
 ---
 <!doctype html>
 <html lang={lang} class="bg-ink">
@@ -21,7 +25,27 @@ const preview = (import.meta.env.SITE ?? '').includes('github.io');
     {preview && <meta name="robots" content="noindex" />}
     <meta name="color-scheme" content="dark" />
     <meta name="theme-color" content="#0C0C0C" />
+
+    <!-- Favicon & Touch Icons -->
     <link rel="icon" href={withBase('/favicon.svg')} type="image/svg+xml" />
+    <link rel="icon" type="image/png" sizes="512x512" href={withBase('/images/icon.png')} />
+    <link rel="apple-touch-icon" href={withBase('/images/icon.png')} />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:title" content={title} />
+    {description && <meta property="og:description" content={description} />}
+    <meta property="og:image" content={socialImageUrl} />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content={canonicalUrl} />
+    <meta name="twitter:title" content={title} />
+    {description && <meta name="twitter:description" content={description} />}
+    <meta name="twitter:image" content={socialImageUrl} />
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;500;600&family=Noto+Sans+Thai:wght@300;400;500;600&display=swap" />
