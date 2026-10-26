@@ -1,10 +1,36 @@
-# Brand and event collaborations. Newest first. Shared across languages.
-#
-# - brand: ""
-#   campaign: ""
-#   date: YYYY-MM
-#   deliverables: ""   # e.g. "2 TikTok videos, 1 event recap"
-#   result: ""         # a real number if there is one
-#   url: ""
-#   logo: ""           # /images/collabs/<brand>.svg
-collabs: []
+# Brand, institutional, and media collaborations
+collabs:
+  - brand: "bilibili"
+    campaign: "Anime Localization & Subtitling"
+    date: "2020-12 – 2024-04"
+    deliverables: "Japanese-to-Thai subtitle translation & proofreading for 70+ anime series including Attack on Titan and Naruto"
+    result: "70+ series localized for Thai streaming audiences"
+    url: "https://www.bilibili.tv/"
+
+  - brand: "Sea (Garena) Thailand"
+    campaign: "E-Sports Classroom Pilot"
+    date: "2023-08 – 2023-11"
+    deliverables: "Curriculum co-design across 5 industry careers, speaker recruitment, and student tournament"
+    result: "8 Bangkok schools, 245 students, 25 teachers"
+    url: ""
+
+  - brand: "UN ESCAP"
+    campaign: "Digital Inclusion for Older Persons"
+    date: "2024"
+    deliverables: "Research and case studies on Japan, Korea, and China digital inclusion models"
+    result: "Published in official UN ESCAP 2024 report"
+    url: "https://www.unescap.org/"
+
+  - brand: "TUSAA"
+    campaign: "Brand CI & Hin Lad Nai Youth Camp"
+    date: "2023-04 – 2025-05"
+    deliverables: "Brand guidelines, social media setup, and 3-day youth recovery camp in Chiang Rai"
+    result: "Active alumni network & flood recovery support"
+    url: ""
+
+  - brand: "TV Burabha"
+    campaign: "KOB Junior National Documentary Contest"
+    date: "2018"
+    deliverables: "Documentary director & editor for 'Education Upload'"
+    result: "2nd place nationally"
+    url: ""

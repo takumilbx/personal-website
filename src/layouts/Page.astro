@@ -3,8 +3,8 @@ import Base from './Base.astro';
 import { readYaml, type HomeContent } from '../lib/content';
 import { withBase } from '../lib/url';
 
-interface Props { title: string; description?: string; heading?: string }
-const { title, description, heading } = Astro.props;
+interface Props { title: string; description?: string; heading?: string; maxWidth?: string }
+const { title, description, heading, maxWidth = 'max-w-3xl' } = Astro.props;
 const home = readYaml<HomeContent>('pages/en/home.yaml');
 ---
 <Base title={`${title} · ${home.brand}`} description={description}>
@@ -14,7 +14,7 @@ const home = readYaml<HomeContent>('pages/en/home.yaml');
       {home.nav.map((l) => <a href={withBase(l.href)} class="transition-opacity duration-300 hover:opacity-60">{l.label}</a>)}
     </nav>
   </header>
-  <main class="mx-auto w-full max-w-3xl px-6 py-16 sm:px-10 sm:py-24">
+  <main class={`mx-auto w-full ${maxWidth} px-6 py-16 sm:px-10 sm:py-24`}>
     <h1 class="mb-10 font-medium leading-[1.02] tracking-[-0.03em]" style="font-size: clamp(2.25rem, 6.5vw, 80px)">{heading ?? title}</h1>
     <slot />
   </main>

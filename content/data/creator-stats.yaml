@@ -1,22 +1,26 @@
-# Audience and reach, from a platform analytics export.
-# Leave a field empty rather than estimate. The site shows asOf next to every figure.
-asOf: ""                 # YYYY-MM-DD of the export
+# Audience and reach, from @takumyi analytics
+asOf: "2026-04"
+overview:
+  followers: "66K+"
+  followersCount: 66400
+  likes: "1.2M+"
+  videosCount: 150
+  startedYear: 2020
+  formatLength: "1–2 min"
+  reachFocus: "Japan culture, language, society, and subculture for Thai audiences"
+
 platforms:
   tiktok:
     handle: "@takumyi"
     url: "https://www.tiktok.com/@takumyi"
-    followers:
-    views28d:
-    likes:
+    followers: 66400
+    likes: 1200000
     audience:
-      countries: []      # - { country: TH, percent: }
-      gender: {}         # { female: , male: , other: }
-      age: []            # - { range: "18-24", percent: }
+      countries:
+        - { country: "TH", percent: 85 }
+        - { country: "JP", percent: 10 }
+        - { country: "Other", percent: 5 }
   instagram:
     handle: "@takumyi"
-    url: "https://www.instagram.com/takumyi"
-    followers:
-  youtube:
-    handle: ""
-    url: ""
-    subscribers:
+    url: "https://www.tiktok.com/@takumyi"
+    followers: 4500

@@ -1,8 +1,228 @@
 ---
 import Page from '../../layouts/Page.astro';
+import TikTokGallery, { type VideoItem } from '../../components/creator/TikTokGallery';
+import { readYaml } from '../../lib/content';
 import { withBase } from '../../lib/url';
+
+interface VideosData {
+  videos: VideoItem[];
+}
+
+interface CollabItem {
+  brand: string;
+  campaign: string;
+  date: string;
+  deliverables: string;
+  result: string;
+  url?: string;
+}
+
+interface CollabsData {
+  collabs: CollabItem[];
+}
+
+interface CreatorStatsData {
+  asOf: string;
+  overview: {
+    followers: string;
+    likes: string;
+    videosCount: number;
+    startedYear: number;
+    formatLength: string;
+    reachFocus: string;
+  };
+}
+
+const videosData = readYaml<VideosData>('data/videos.yaml');
+const collabsData = readYaml<CollabsData>('data/collabs.yaml');
+const statsData = readYaml<CreatorStatsData>('data/creator-stats.yaml');
 ---
-<Page title="Creator" description="@takumyi: formats, selected videos, reach, and collaborations. Being written.">
-  <p class="text-lg font-light leading-relaxed">@takumyi: formats, selected videos, reach, and collaborations. Being written.</p>
-  <p class="mt-8 text-sm"><a href={withBase('/en/')} class="underline underline-offset-4 hover:opacity-60">Back to the start</a></p>
+
+<Page
+  title="Creator"
+  heading="@takumyi"
+  description="Japan content for Thai audiences: subculture, language, society, and informal education with 66K+ followers."
+  maxWidth="max-w-6xl"
+>
+  {/* Intro Header */}
+  <section class="mb-14">
+    <div class="mb-3 flex items-center gap-2">
+      <span class="inline-block h-2 w-2 rounded-full bg-[#c8a06a] animate-pulse"></span>
+      <span class="font-mono text-xs uppercase tracking-widest text-[#c8a06a]">
+        Content · @takumyi · {statsData.overview?.followers ?? '66K+'} followers
+      </span>
+    </div>
+    <h2 class="text-3xl font-medium tracking-tight text-cream sm:text-5xl sm:leading-[1.1]">
+      Japan Content,<br />
+      <span class="italic font-serif text-cream/75">for Thai audiences</span>
+    </h2>
+    <p class="mt-6 max-w-3xl text-base font-light leading-relaxed text-cream/80 sm:text-lg">
+      Started late 2020 as a joke, just imitating Japanese-related trends as a half-Japanese Thai creator.
+      But the content blew up. I leaned into it. Japanese subculture, music, anime, film, everyday culture.
+      My edge was making 1–2 minute videos when most TikTok content was far shorter. That, plus combining
+      videography, editing, and actual Japanese fluency, built something distinct. 66K+ followers. What it
+      taught me was that intrinsic motivation — people watching because they genuinely want to learn — makes
+      informal education remarkably sticky. Also my hairstyle changes everytime i shoot a vdo idk why lol.
+    </p>
+
+    {/* Metric Highlights */}
+    <div class="mt-10 grid grid-cols-2 gap-4 border-y border-cream/15 py-6 sm:grid-cols-4">
+      <div>
+        <p class="font-mono text-2xl font-medium text-cream sm:text-3xl">66K+</p>
+        <p class="mt-1 text-xs uppercase tracking-wider text-cream/50">Followers</p>
+      </div>
+      <div>
+        <p class="font-mono text-2xl font-medium text-cream sm:text-3xl">1.2M+</p>
+        <p class="mt-1 text-xs uppercase tracking-wider text-cream/50">Total Likes</p>
+      </div>
+      <div>
+        <p class="font-mono text-2xl font-medium text-[#c8a06a] sm:text-3xl">1–2 min</p>
+        <p class="mt-1 text-xs uppercase tracking-wider text-cream/50">Format Edge</p>
+      </div>
+      <div>
+        <p class="font-mono text-2xl font-medium text-cream sm:text-3xl">70+</p>
+        <p class="mt-1 text-xs uppercase tracking-wider text-cream/50">Anime Localized</p>
+      </div>
+    </div>
+  </section>
+
+  {/* Top Performing from Each Genre Interactive Showcase */}
+  <section class="mb-20">
+    <div class="mb-6 flex flex-wrap items-end justify-between gap-4">
+      <div>
+        <span class="font-mono text-xs uppercase tracking-widest text-[#c8a06a]">Selected Works</span>
+        <h3 class="mt-1 text-2xl font-medium tracking-tight text-cream sm:text-3xl">
+          Top performing from each genre
+        </h3>
+      </div>
+      <a
+        href="https://www.tiktok.com/@takumyi"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex items-center gap-2 rounded-full border border-cream/20 bg-cream/[0.04] px-4 py-2 text-xs font-medium uppercase tracking-wider text-cream transition hover:border-[#c8a06a] hover:text-[#c8a06a]"
+      >
+        <span>Follow @takumyi on TikTok</span>
+        <span>↗</span>
+      </a>
+    </div>
+
+    {/* TikTok interactive carousel component */}
+    <TikTokGallery client:load videos={videosData.videos} />
+  </section>
+
+  {/* Content Pillars / Formats */}
+  <section class="mb-20">
+    <span class="font-mono text-xs uppercase tracking-widest text-[#c8a06a]">Pillars</span>
+    <h3 class="mt-1 text-2xl font-medium tracking-tight text-cream sm:text-3xl">What the channel covers</h3>
+
+    <div class="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2">
+      <div class="rounded-2xl border border-cream/10 bg-cream/[0.02] p-6 transition hover:border-cream/25">
+        <div class="flex items-center gap-3">
+          <span class="text-2xl">🎵</span>
+          <h4 class="text-lg font-medium text-cream">J-Music & Artist Spotlights</h4>
+        </div>
+        <p class="mt-3 text-sm leading-relaxed text-cream/70">
+          Unpacking songs and lyrics from Fujii Kaze, Ado, YOASOBI, Vaundy, and Zutomayo. Translating nuance,
+          context, and the cultural landscape that mainstream coverage misses.
+        </p>
+      </div>
+
+      <div class="rounded-2xl border border-cream/10 bg-cream/[0.02] p-6 transition hover:border-cream/25">
+        <div class="flex items-center gap-3">
+          <span class="text-2xl">🇯🇵</span>
+          <h4 class="text-lg font-medium text-cream">Language & Nuance</h4>
+        </div>
+        <p class="mt-3 text-sm leading-relaxed text-cream/70">
+          Beyond dictionary definitions: untangling slang like "byou" (เบียว), idiom origins, and Studio Ghibli
+          dialogue lines that melt hearts, rooted in bilingual fluency.
+        </p>
+      </div>
+
+      <div class="rounded-2xl border border-cream/10 bg-cream/[0.02] p-6 transition hover:border-cream/25">
+        <div class="flex items-center gap-3">
+          <span class="text-2xl">🍣</span>
+          <h4 class="text-lg font-medium text-cream">Daily Culture & Urban Design</h4>
+        </div>
+        <p class="mt-3 text-sm leading-relaxed text-cream/70">
+          Why Japan loves salmon, how NHK fees work, police box (Koban) community policing, and the unspoken
+          rules of Tokyo public trash bins — everyday phenomena explained with field footage.
+        </p>
+      </div>
+
+      <div class="rounded-2xl border border-cream/10 bg-cream/[0.02] p-6 transition hover:border-cream/25">
+        <div class="flex items-center gap-3">
+          <span class="text-2xl">🎓</span>
+          <h4 class="text-lg font-medium text-cream">Study Abroad & Scholarship Truths</h4>
+        </div>
+        <p class="mt-3 text-sm leading-relaxed text-cream/70">
+          Honest debriefs on the Japanese Government (MEXT) scholarship, University of Tokyo graduate school
+          expectations, and life navigating two cultures.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  {/* Brand & Institutional Collaborations */}
+  {collabsData.collabs && collabsData.collabs.length > 0 && (
+    <section class="mb-20">
+      <span class="font-mono text-xs uppercase tracking-widest text-[#c8a06a]">Experience & Collabs</span>
+      <h3 class="mt-1 text-2xl font-medium tracking-tight text-cream sm:text-3xl">
+        Collaborations & Visual Production
+      </h3>
+      <p class="mt-2 text-sm text-cream/60">
+        Over 10 years of visual storytelling for international organizations, tech startups, and youth initiatives.
+      </p>
+
+      <div class="mt-8 divide-y divide-cream/10 border-y border-cream/10">
+        {collabsData.collabs.map((c) => (
+          <div class="flex flex-col justify-between py-6 sm:flex-row sm:items-start gap-4">
+            <div class="min-w-0 max-w-xl">
+              <div class="flex items-center gap-3">
+                <span class="text-base font-medium text-cream">{c.brand}</span>
+                <span class="font-mono text-xs text-[#c8a06a]">{c.campaign}</span>
+              </div>
+              <p class="mt-1 text-sm text-cream/75">{c.deliverables}</p>
+              {c.result && (
+                <p class="mt-2 text-xs font-mono text-cream/50">
+                  <span class="text-cream/80">Result:</span> {c.result}
+                </p>
+              )}
+            </div>
+            <div class="flex-shrink-0 text-left sm:text-right">
+              <span class="font-mono text-xs text-cream/40">{c.date}</span>
+              {c.url && (
+                <div class="mt-1">
+                  <a
+                    href={c.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="text-xs text-[#c8a06a] hover:underline"
+                  >
+                    View project ↗
+                  </a>
+                </div>
+              )}
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+  )}
+
+  {/* Contact / Collab CTA */}
+  <section class="rounded-3xl border border-cream/15 bg-gradient-to-b from-cream/[0.04] to-transparent p-8 sm:p-12 text-center sm:text-left flex flex-col sm:flex-row items-center justify-between gap-6">
+    <div>
+      <h3 class="text-xl font-medium text-cream sm:text-2xl">Want to collaborate on a video or project?</h3>
+      <p class="mt-2 max-w-lg text-sm text-cream/70 leading-relaxed">
+        Available for cultural consulting, video production, speaking engagements, and brand storytelling between
+        Thailand and Japan.
+      </p>
+    </div>
+    <a
+      href={withBase('/en/contact/')}
+      class="inline-flex min-h-[48px] flex-shrink-0 items-center justify-center rounded-full bg-cream px-8 text-xs font-medium uppercase tracking-[0.16em] text-ink transition hover:bg-cream/90 active:scale-95"
+    >
+      Get in touch
+    </a>
+  </section>
 </Page>

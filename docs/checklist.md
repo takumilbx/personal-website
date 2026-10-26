@@ -24,10 +24,10 @@ How to hand me files: drop them into the repository at the path given (GitHub, "
 
 ## 2. Next: the two most-visited section pages
 
-- [ ] Export TikTok analytics (followers, 28-day views, audience by country and age) and send it, or paste into `content/data/creator-stats.yaml`
-- [ ] Pick 6 to 9 videos for the Creator page: link, title, format, date. Goes in `content/data/videos.yaml`
-- [ ] List brand or event collaborations: brand, campaign, date, what you delivered. Goes in `content/data/collabs.yaml`
-- [ ] **(me)** Build the Creator page from those files
+- [x] Export TikTok analytics (followers, 28-day views, audience by country and age) and send it, or paste into `content/data/creator-stats.yaml`
+- [x] Pick 6 to 9 videos for the Creator page: link, title, format, date. Goes in `content/data/videos.yaml`
+- [x] List brand or event collaborations: brand, campaign, date, what you delivered. Goes in `content/data/collabs.yaml`
+- [x] **(me)** Build the Creator page from those files
 - [ ] Answer the confidentiality checks: what may be public about the Edsy work (Gakken, pilot-school list, market analysis) and the 2025 Bangkok work (dashboards, analysis)
 - [ ] Go through the 11 case-study files in `content/work/en/` and answer the `TODO owner` comments, especially "What I would do differently" in each
 - [ ] Send links to public artefacts: the deck for the 47 policies, the ESCAP paper is already linked, thesis PDF, dashboard screenshots if allowed
