@@ -35,13 +35,13 @@ const nbsp = ' ';
   </div>
 
   {data.hero.cutout && (
-    <div class="anim-rise-in pointer-events-none absolute inset-0 z-20" style="animation-delay: 300ms">
+    <div class="anim-rise-in pointer-events-none absolute inset-0 z-20 flex items-end justify-center" style="animation-delay: 300ms">
       {data.hero.magnet ? (
-        <Magnet client:media="(min-width: 640px) and (hover: hover)" padding={150} strength={14} className="h-full w-full">
-          <img src={data.hero.cutout} alt={data.hero.cutoutAlt} class="h-full w-full object-cover" decoding="async" fetchpriority="high" />
+        <Magnet client:media="(min-width: 640px) and (hover: hover)" padding={150} strength={14} className="h-full w-full flex items-end justify-center">
+          <img src={data.hero.cutout} alt={data.hero.cutoutAlt} class="h-full max-h-[85vh] w-auto max-w-full object-contain object-bottom" decoding="async" fetchpriority="high" />
         </Magnet>
       ) : (
-        <img src={data.hero.cutout} alt={data.hero.cutoutAlt} class="h-full w-full object-cover" decoding="async" fetchpriority="high" />
+        <img src={data.hero.cutout} alt={data.hero.cutoutAlt} class="h-full max-h-[85vh] w-auto max-w-full object-contain object-bottom" decoding="async" fetchpriority="high" />
       )}
     </div>
   )}

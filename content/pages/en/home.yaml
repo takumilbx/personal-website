@@ -33,8 +33,8 @@ footer:                               # default (Q9), facts from the CV
 
 hero:
   background: "/images/home/hero-background.jpg"                      # asset needed: /images/home/hero-background.jpg (empty = plain ink)
-  cutout: "/placeholders/portrait-cutout.svg"   # asset needed: transparent PNG, at least 2000 px tall
-  cutoutAlt: "Portrait"
+  cutout: "/images/home/portrait.png"           # transparent PNG portrait cutout
+  cutoutAlt: "Portrait of Takumi Oshiyama"
   magnet: true                        # default (Q7): cutout follows the cursor on desktop only
 
 media:                                # 18 stills extracted from showreel & video productions
