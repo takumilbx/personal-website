@@ -1,132 +1,131 @@
-# Top performing videos across each genre from @takumyi
-# Sourced from https://takumilbx.github.io/ITASIA302-Takumi/about/#work
+# Top performing videos grouped by TikTok profile genres:
+# J-MUSIC | Anime | Japanese Studies
 videos:
+  # ==========================================
+  # J-MUSIC
+  # ==========================================
   - id: "7136885477050731803"
     title: "Tot Musica ติดหูไม่หาย"
     description: "Why this One Piece Film Red track broke Thai TikTok"
-    tag: "J-Music · One Piece · Ado"
-    genre: "Anime Soundtracks"
+    tag: "Ado · One Piece"
+    genre: "J-Music"
     emoji: "🎵"
     likes: "175.1K"
     likesCount: 175100
     platform: tiktok
     url: "https://www.tiktok.com/@takumyi/video/7136885477050731803"
-    embedUrl: "https://www.tiktok.com/player/v1/7136885477050731803?embed_from=oembed&music_info=1&description=1&autoplay=1&muted=1"
-    featured: true
-
-  - id: "7029266715913620763"
-    title: "เบียวคืออะไร!?"
-    description: "Breaking down a word Thai people always get wrong"
-    tag: "Japanese Language"
-    genre: "Language & Slang"
-    emoji: "🇯🇵"
-    likes: "114.9K"
-    likesCount: 114900
-    platform: tiktok
-    url: "https://www.tiktok.com/@takumyi/video/7029266715913620763"
-    embedUrl: "https://www.tiktok.com/player/v1/7029266715913620763?embed_from=oembed&music_info=1&description=1&autoplay=1&muted=1"
     featured: true
 
   - id: "7208886544101346587"
     title: "Who is Fujii Kaze?"
     description: "Introducing one of Japan's most important artists to Thai fans"
-    tag: "J-Music · Artist"
-    genre: "Artist Spotlight"
+    tag: "Fujii Kaze"
+    genre: "J-Music"
     emoji: "🎤"
     likes: "101.4K"
     likesCount: 101400
     platform: tiktok
     url: "https://www.tiktok.com/@takumyi/video/7208886544101346587"
-    embedUrl: "https://www.tiktok.com/player/v1/7208886544101346587?embed_from=oembed&music_info=1&description=1&autoplay=1&muted=1"
-    featured: true
-
-  - id: "7354309899322543367"
-    title: "วงนี้ต้องมาไทย"
-    description: "The band behind the Chainsaw Man opening and why they matter"
-    tag: "Anime · Zutomayo"
-    genre: "Anime & J-Rock"
-    emoji: "🪚"
-    likes: "98.0K"
-    likesCount: 98000
-    platform: tiktok
-    url: "https://www.tiktok.com/@takumyi/video/7354309899322543367"
-    embedUrl: "https://www.tiktok.com/player/v1/7354309899322543367?embed_from=oembed&music_info=1&description=1&autoplay=1&muted=1"
     featured: true
 
   - id: "7133219549029174533"
     title: "YOASOBI 💙💗"
     description: "Why this duo is one of the most important J-Pop acts right now"
-    tag: "J-Music · YOASOBI"
-    genre: "J-Pop Duos"
+    tag: "YOASOBI"
+    genre: "J-Music"
     emoji: "💙"
     likes: "91.9K"
     likesCount: 91900
     platform: tiktok
     url: "https://www.tiktok.com/@takumyi/video/7133219549029174533"
-    embedUrl: "https://www.tiktok.com/player/v1/7133219549029174533?embed_from=oembed&music_info=1&description=1&autoplay=1&muted=1"
-    featured: true
-
-  - id: "7080492592051359003"
-    title: "ใครกินแซลมอนมูมูมาม 🤩"
-    description: "Japan's salmon obsession and how it reshaped Thai food culture"
-    tag: "Japanese Culture · Food"
-    genre: "Food & Lifestyle"
-    emoji: "🍣"
-    likes: "90.6K"
-    likesCount: 90600
-    platform: tiktok
-    url: "https://www.tiktok.com/@takumyi/video/7080492592051359003"
-    embedUrl: "https://www.tiktok.com/player/v1/7080492592051359003?embed_from=oembed&music_info=1&description=1&autoplay=1&muted=1"
     featured: true
 
   - id: "7022957664611175706"
     title: "Life Hack เพลงนี้คือ"
     description: "Vaundy's breakout track and what makes his sound so addictive"
-    tag: "J-Music · Vaundy"
-    genre: "Indie Pop"
+    tag: "Vaundy"
+    genre: "J-Music"
     emoji: "🎶"
     likes: "78.5K"
     likesCount: 78500
     platform: tiktok
     url: "https://www.tiktok.com/@takumyi/video/7022957664611175706"
-    embedUrl: "https://www.tiktok.com/player/v1/7022957664611175706?embed_from=oembed&music_info=1&description=1&autoplay=1&muted=1"
     featured: true
 
   - id: "7331898467364670738"
     title: "Ado LIVE IN TH 🎤"
     description: "Inside the historic first Ado concert in Thailand"
-    tag: "J-Music · Live"
-    genre: "Concert Recaps"
+    tag: "Live Concert"
+    genre: "J-Music"
     emoji: "🎫"
     likes: "52.5K"
     likesCount: 52500
     platform: tiktok
     url: "https://www.tiktok.com/@takumyi/video/7331898467364670738"
-    embedUrl: "https://www.tiktok.com/player/v1/7331898467364670738?embed_from=oembed&music_info=1&description=1&autoplay=1&muted=1"
+    featured: true
+
+  # ==========================================
+  # Anime
+  # ==========================================
+  - id: "7354309899322543367"
+    title: "วงนี้ต้องมาไทย"
+    description: "The band behind the Chainsaw Man opening and why they matter"
+    tag: "Zutomayo · Chainsaw Man"
+    genre: "Anime"
+    emoji: "🪚"
+    likes: "98.0K"
+    likesCount: 98000
+    platform: tiktok
+    url: "https://www.tiktok.com/@takumyi/video/7354309899322543367"
     featured: true
 
   - id: "7064530932656606491"
     title: "พระจันทร์สวยจังเลยนะ 🌙💗"
-    description: "The Japanese phrase hidden in a Studio Ghibli line that melts hearts"
-    tag: "Japanese Culture · Phrase"
-    genre: "Literature & Nuance"
+    description: "The Japanese phrase hidden in Studio Ghibli that melts hearts"
+    tag: "Studio Ghibli"
+    genre: "Anime"
     emoji: "🌙"
     likes: "51.3K"
     likesCount: 51300
     platform: tiktok
     url: "https://www.tiktok.com/@takumyi/video/7064530932656606491"
-    embedUrl: "https://www.tiktok.com/player/v1/7064530932656606491?embed_from=oembed&music_info=1&description=1&autoplay=1&muted=1"
+    featured: true
+
+  # ==========================================
+  # Japanese Studies
+  # ==========================================
+  - id: "7029266715913620763"
+    title: "เบียวคืออะไร!?"
+    description: "Breaking down a word Thai people always get wrong"
+    tag: "Language & Slang"
+    genre: "Japanese Studies"
+    emoji: "🇯🇵"
+    likes: "114.9K"
+    likesCount: 114900
+    platform: tiktok
+    url: "https://www.tiktok.com/@takumyi/video/7029266715913620763"
+    featured: true
+
+  - id: "7080492592051359003"
+    title: "ใครกินแซลมอนมูมูมาม 🤩"
+    description: "Japan's salmon obsession and how it reshaped Thai food culture"
+    tag: "Food & Culture"
+    genre: "Japanese Studies"
+    emoji: "🍣"
+    likes: "90.6K"
+    likesCount: 90600
+    platform: tiktok
+    url: "https://www.tiktok.com/@takumyi/video/7080492592051359003"
     featured: true
 
   - id: "7508352533316799762"
     title: "ทุน MEXT คุ้มไหม?"
     description: "An honest review of Japan's government scholarship after living it"
-    tag: "Study in Japan · MEXT"
-    genre: "Study Abroad & Education"
+    tag: "MEXT Scholarship"
+    genre: "Japanese Studies"
     emoji: "🎓"
     likes: "5.7K"
     likesCount: 5700
     platform: tiktok
     url: "https://www.tiktok.com/@takumyi/video/7508352533316799762"
-    embedUrl: "https://www.tiktok.com/player/v1/7508352533316799762?embed_from=oembed&music_info=1&description=1&autoplay=1&muted=1"
     featured: true

@@ -1,26 +1,24 @@
-# Audience and reach, from @takumyi analytics
+# Audience and reach, from @takumyi TikTok profile
 asOf: "2026-04"
 overview:
-  followers: "66K+"
-  followersCount: 66400
-  likes: "1.2M+"
-  videosCount: 150
+  followers: "66.9K"
+  followersCount: 66900
+  likes: "1.9M"
+  likesCount: 1900000
+  videosCount: 156
   startedYear: 2020
   formatLength: "1–2 min"
+  bio: "J-MUSIC | Anime | Japanese Studies"
   reachFocus: "Japan culture, language, society, and subculture for Thai audiences"
 
 platforms:
   tiktok:
     handle: "@takumyi"
     url: "https://www.tiktok.com/@takumyi"
-    followers: 66400
-    likes: 1200000
-    audience:
-      countries:
-        - { country: "TH", percent: 85 }
-        - { country: "JP", percent: 10 }
-        - { country: "Other", percent: 5 }
+    followers: 66900
+    likes: 1900000
+    bio: "23 🇯🇵🇹🇭\nJ-MUSIC | Anime | Japanese Studies"
   instagram:
     handle: "@takumyi"
-    url: "https://www.tiktok.com/@takumyi"
-    followers: 4500
+    url: "https://www.instagram.com/takumyi"
+    followers: 3200
